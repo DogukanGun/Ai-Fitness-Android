@@ -3,31 +3,33 @@ package com.deu.aifitness.ui.mainactivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.deu.aifitness.R
+import androidx.lifecycle.MutableLiveData
+import com.deu.aifitness.application.AppConstants
 import com.deu.aifitness.databinding.ActivityMainBinding
-import com.deu.aifitness.ui.user.login.LoginActivity
-import com.deu.aifitness.ui.user.register.RegisterActivity
+import com.deu.aifitness.ui.user.operation.UserOperationActivity
 import javax.inject.Inject
 
 class MainActivity: AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         binding.loginButton.setOnClickListener {
-            activityStart(LoginActivity())
+            activityStart(UserOperationActivity(),AppConstants.UserOperation.Login)
         }
 
         binding.registerButton.setOnClickListener {
-            activityStart(RegisterActivity())
+            activityStart(UserOperationActivity(),AppConstants.UserOperation.Register)
         }
 
         setContentView(binding.root)
     }
 
-    private fun activityStart(activity:AppCompatActivity){
+    private fun activityStart(activity:AppCompatActivity,type:AppConstants.UserOperation){
         val intent = Intent(this,activity::class.java)
+        intent.putExtra("type",type.value)
         startActivity(intent)
     }
 }

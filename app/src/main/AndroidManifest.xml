@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AiFitness">
         <activity
-            android:name=".ui.user.register.RegisterActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.user.login.LoginActivity"
+            android:name=".ui.user.operation.UserOperationActivity"
             android:exported="true" />
         <activity
             android:name=".ui.mainactivity.MainActivity"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AiFitness</string>
+    <string name="hello_blank_fragment">Hllo</string>
+    <string name="register_button">Kayıt Ol</string>
+    <string name="login_button">Giriş</string>
+    <string name="username">Kullancı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="birthday">Doğum Günü</string>
+    <string name="name">İsim</string>
+    <string name="email">Mail</string>
+    <string name="surname">Soyad</string>
+</resources>

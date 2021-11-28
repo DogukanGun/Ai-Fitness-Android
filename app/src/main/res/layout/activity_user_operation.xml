@@ -7,7 +7,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.user.register.RegisterActivity">
+    tools:context=".ui.user.operation.UserOperationActivity">
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -23,7 +23,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.deu.aifitness.ui.user.register.fragment.RegisterFragment"
+        android:name="com.deu.aifitness.ui.user.operation.fragment.UserOperationFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="70dp"
