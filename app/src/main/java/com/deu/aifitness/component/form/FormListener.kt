@@ -5,5 +5,5 @@ import com.deu.aifitness.data.form.FormFields
 
 interface FormListener {
 
-    fun onFormSubmit(list:List<FormFields>)
+    fun onFormSubmit(list:FormFields)
 }

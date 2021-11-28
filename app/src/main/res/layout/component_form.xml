@@ -61,11 +61,19 @@
         android:ems="10"
         android:inputType="date"
         android:hint="@string/birthday" />
+    <EditText
+        android:id="@+id/phone"
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/phone" />
 
     <View
         android:id="@+id/space"
         android:layout_width="match_parent"
-        android:layout_weight="0.4"
+        android:layout_weight="0.2"
         android:layout_height="0dp"/>
 
     <Button

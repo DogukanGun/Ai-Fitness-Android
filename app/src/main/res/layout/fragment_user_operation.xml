@@ -8,7 +8,7 @@
     tools:context=".ui.user.operation.fragment.UserOperationFragment">
 
 
-    <View
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
         android:layout_width="0dp"
         android:layout_height="0dp"

@@ -1,13 +1,14 @@
 <resources>
+
     <string name="app_name">AiFitness</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="register_button">Register</string>
-    <string name="login_button">Login</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
-    <string name="birthday">Birthday</string>
-    <string name="name">Name</string>
-    <string name="email">Email</string>
-    <string name="surname">Surname</string>
+    <string name="hello_blank_fragment">Hllo</string>
+    <string name="register_button">Kayıt Ol</string>
+    <string name="login_button">Giriş</string>
+    <string name="username">Kullancı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="birthday">Doğum Günü</string>
+    <string name="name">İsim</string>
+    <string name="email">Mail</string>
+    <string name="surname">Soyad</string>
+    <string name="phone">Phone</string>
 </resources>
