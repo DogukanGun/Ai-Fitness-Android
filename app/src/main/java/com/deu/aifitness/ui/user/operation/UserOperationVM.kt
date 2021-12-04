@@ -1,11 +1,11 @@
 package com.deu.aifitness.ui.user.operation
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.loginuser.LoginUserResponse
 import com.deu.aifitness.data.registeruser.RegisterUser
 import com.deu.aifitness.data.registeruser.RegisterUserResponse
+import com.deu.aifitness.network.ApiServiceImpl
 import com.deu.aifitness.network.ApiSource
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -15,10 +15,14 @@ import javax.inject.Inject
 
 // TODO: 28.11.2021 Buraya context eklenmeli
 
-class UserOperationVM : ViewModel() {
+class UserOperationVM: ViewModel() {
 
-    @Inject
     lateinit var apiSource:ApiSource
+
+    init {
+        apiSource = ApiServiceImpl.getInstance()
+    }
+
     fun registerUser(user:RegisterUser) {
         apiSource.registerUser(user)
             .observeOn(AndroidSchedulers.mainThread())

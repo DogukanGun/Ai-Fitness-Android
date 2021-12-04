@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.MutableLiveData
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AppConstants
@@ -14,8 +15,6 @@ import javax.inject.Inject
 
 class UserOperationActivity : AppCompatActivity() {
 
-    @Inject
-    lateinit var userOperationFragment: UserOperationFragment
     lateinit var binding:ActivityUserOperationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

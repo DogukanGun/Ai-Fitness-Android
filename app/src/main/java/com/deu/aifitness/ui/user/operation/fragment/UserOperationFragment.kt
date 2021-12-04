@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AppConstants
 import com.deu.aifitness.component.form.Form
@@ -14,16 +15,17 @@ import com.deu.aifitness.data.form.FormFields
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.registeruser.RegisterUser
 import com.deu.aifitness.databinding.FragmentUserOperationBinding
+import com.deu.aifitness.network.ApiSource
 import com.deu.aifitness.ui.user.operation.UserOperationState
 import com.deu.aifitness.ui.user.operation.UserOperationVM
 import javax.inject.Inject
 
-class UserOperationFragment : Fragment() {
-
+class UserOperationFragment
+    : Fragment() {
     lateinit var binding: FragmentUserOperationBinding
 
-    @Inject
-    lateinit var viewModel:UserOperationVM
+
+    val viewModel:UserOperationVM by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +37,10 @@ class UserOperationFragment : Fragment() {
                 false)
         createForm()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     val formListener=object :FormListener{

@@ -14,7 +14,6 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
     @Provides
-    @Singleton
     fun provideRetrofit():Retrofit{
         val logger = HttpLoggingInterceptor(ApiLogger())
         logger.level = HttpLoggingInterceptor.Level.BODY
@@ -30,6 +29,5 @@ class NetworkModule {
     }
 
     @Provides
-    @Singleton
     fun provideApiSource(retrofit: Retrofit):ApiSource = ApiServiceImpl(retrofit)
 }

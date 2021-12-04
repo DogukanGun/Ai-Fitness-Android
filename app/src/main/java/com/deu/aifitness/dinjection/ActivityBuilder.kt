@@ -10,11 +10,9 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuilder {
 
 
-    @ContributesAndroidInjector(modules = [UserModule::class])
-    abstract fun provideUserOperationActivity():UserOperationActivity
-
-    @ContributesAndroidInjector(modules = [UserModule::class])
+    @ContributesAndroidInjector(modules = [NetworkModule::class])
     abstract fun provideUserOperationFragment():UserOperationFragment
+
 
 
 

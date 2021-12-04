@@ -11,13 +11,6 @@ import retrofit2.Retrofit
 
 @Module
 class UserModule {
-    @Provides
-    fun provideViewModel():UserOperationVM = UserOperationVM()
 
-    @Provides
-    fun provideUserOperationFragment() = UserOperationFragment()
-
-    @Provides
-    fun provideApiSource(retrofit: Retrofit) = ApiServiceImpl(retrofit)
 
 }
