@@ -10,5 +10,7 @@
     <string name="name">İsim</string>
     <string name="email">Mail</string>
     <string name="surname">Soyad</string>
-    <string name="phone">Phone</string>
+    <string name="phone">Telefon</string>
+    <string name="rememberme">Beni hatırla</string>
+    <string name="forgotpassword">Şifremi unuttum</string>
 </resources>

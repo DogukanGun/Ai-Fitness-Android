@@ -11,5 +11,6 @@
     <string name="email">Email</string>
     <string name="surname">Surname</string>
     <string name="phone">Phone</string>
-
+    <string name="rememberme">Remember me</string>
+    <string name="forgotpassword">Forgot password</string>
 </resources>

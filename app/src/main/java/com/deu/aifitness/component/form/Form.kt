@@ -37,6 +37,10 @@ class Form(var userOperation: AppConstants.UserOperation=AppConstants.UserOperat
                     email.visibility=View.GONE
                     birthday.visibility=View.GONE
                     phone.visibility=View.GONE
+                    logo.visibility=View.VISIBLE
+                    appname.visibility=View.VISIBLE
+                    remembermelayout.visibility=View.VISIBLE
+                    forgotpassword.visibility=View.VISIBLE
                     submitButton.text=getText(R.string.login_button)
                 }else{
                     name.visibility=View.VISIBLE
@@ -44,6 +48,10 @@ class Form(var userOperation: AppConstants.UserOperation=AppConstants.UserOperat
                     email.visibility=View.VISIBLE
                     birthday.visibility=View.VISIBLE
                     phone.visibility=View.VISIBLE
+                    logo.visibility=View.GONE
+                    appname.visibility=View.GONE
+                    remembermelayout.visibility=View.GONE
+                    forgotpassword.visibility=View.GONE
                     submitButton.text=getText(R.string.register_button)
                 }
             phone.addTextChangedListener(phoneWatcher)
