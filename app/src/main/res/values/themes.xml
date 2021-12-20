@@ -15,7 +15,5 @@
         <!-- Customize your theme here. -->
 
         <item name="android:fontFamily">@font/poppinsmedium</item>
-        <item name="android:background">@color/app_bg_colour</item>
-        <item name="android:textColor">@color/app_text_colour</item>
     </style>
 </resources>

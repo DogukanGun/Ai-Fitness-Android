@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">AiFitness</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- USER OPERATION -->
     <string name="register_button">Register</string>
     <string name="login_button">Login</string>
     <string name="username">Username</string>
@@ -13,4 +15,14 @@
     <string name="phone">Phone</string>
     <string name="rememberme">Remember me</string>
     <string name="forgotpassword">Forgot password</string>
+
+    <!--  HOME  -->
+
+
+    <!-- BOTTOM MENU -->
+    <string name="home">Home</string>
+    <!-- TOP APP MENU -->
+    <string name="favorite">Favorite</string>
+    <string name="search">Search</string>
+
 </resources>

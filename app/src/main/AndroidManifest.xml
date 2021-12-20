@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AiFitness">
         <activity
+            android:name=".ui.homepage.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.user.operation.UserOperationActivity"
             android:exported="true" />
         <activity

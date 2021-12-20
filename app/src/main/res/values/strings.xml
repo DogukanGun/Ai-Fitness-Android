@@ -2,6 +2,8 @@
 
     <string name="app_name">AiFitness</string>
     <string name="hello_blank_fragment">Hllo</string>
+
+    <!-- USER OPERATION -->
     <string name="register_button">Kayıt Ol</string>
     <string name="login_button">Giriş</string>
     <string name="username">Kullancı Adı</string>
@@ -13,4 +15,15 @@
     <string name="phone">Telefon</string>
     <string name="rememberme">Beni hatırla</string>
     <string name="forgotpassword">Şifremi unuttum</string>
+
+    <!--  HOME  -->
+
+
+    <!-- BOTTOM MENU -->
+    <string name="home">Ana Sayfa</string>
+    <!-- TOP APP MENU -->
+    <string name="favorite">Favori</string>
+    <string name="search">Arama</string>
+
+
 </resources>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
 import com.deu.aifitness.application.AppConstants
 import com.deu.aifitness.databinding.ActivityMainBinding
+import com.deu.aifitness.ui.homepage.HomeActivity
 import com.deu.aifitness.ui.user.operation.UserOperationActivity
 import javax.inject.Inject
 
@@ -15,7 +16,8 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-
+        
+        startActivity(Intent(this,HomeActivity::class.java))
         binding.loginButton.setOnClickListener {
             activityStart(UserOperationActivity(),AppConstants.UserOperation.Login)
         }
