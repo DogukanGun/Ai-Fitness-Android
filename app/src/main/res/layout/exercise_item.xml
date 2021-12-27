@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exercise_item_cardview"
+    android:layout_width="120dp"
+    android:layout_height="180dp"
+    card_view:contentPadding="8dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="0dp"
+    android:paddingLeft="2dp"
+    card_view:cardBackgroundColor="@color/background"
+    android:focusable="true"
+    android:layout_marginLeft="2dp">
+
+    <ImageView
+        android:id="@+id/exercise_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded"
+        android:clipToOutline="true"
+        android:src="@drawable/workout"/>
+
+    <TextView
+        android:id="@+id/exercise_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity= "bottom|center"
+        android:singleLine="true"
+        android:textColor="@color/text2"
+        android:text="Deneme"
+        android:textSize="@dimen/item_text"/>
+
+</androidx.cardview.widget.CardView>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AiFitness</string>
+    <string name="app_name_2">AI Fitness Assistant</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- USER OPERATION -->
@@ -17,10 +18,19 @@
     <string name="forgotpassword">Forgot password</string>
 
     <!--  HOME  -->
+    <string name="popularWorkouts">Popular Workouts</string>
+    <string name="welcome">Welcome</string>
+    <string name="chest">Chest</string>
+    <string name="biceps">Biceps</string>
+    <string name="leg">Leg</string>
+    <string name="shoulder">Shoulder</string>
+    <string name="back">Back</string>
 
 
     <!-- BOTTOM MENU -->
     <string name="home">Home</string>
+    <string name="exercise">Exercise</string>
+    <string name="profile">Profile</string>
     <!-- TOP APP MENU -->
     <string name="favorite">Favorite</string>
     <string name="search">Search</string>

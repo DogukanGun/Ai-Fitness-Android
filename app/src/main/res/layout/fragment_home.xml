@@ -1,14 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.homepage.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="45px"
+            android:layout_marginTop="100px"
+            android:text="Hey,"
+            android:textColor="@color/text3"
+            android:textSize="@dimen/header"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="175px"
+            android:layout_marginTop="100px"
+            android:text="Alper"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/header"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="45px"
+            android:layout_marginTop="220px"
+            android:text="@string/welcome"
+            android:textColor="@color/text3"
+            android:textSize="@dimen/header"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="45px"
+            android:layout_marginTop="280px"
+            android:text="@string/app_name_2"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/header"/>
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/background_main"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:alpha=".75"
+            android:elevation="5dp"
+            android:outlineSpotShadowColor="@color/black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_main" />
+
+        <LinearLayout
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:id="@+id/LINEAR_1"
+            android:layout_below="@id/background_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dip">
+            <Button
+                android:id="@+id/chest"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/rounded_button"
+                android:text="@string/chest"
+                android:singleLine="true"
+                android:layout_margin="5px"
+                android:textSize="@dimen/item_text"
+                android:textColor="@color/text2" />
+            <Button
+                android:id="@+id/biceps"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/rounded_button"
+                android:text="@string/biceps"
+                android:singleLine="true"
+                android:layout_margin="5px"
+                android:textSize="@dimen/item_text"
+                android:textColor="@color/text2" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LINEAR_2"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:layout_below="@id/LINEAR_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/leg"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.33"
+                android:background="@drawable/rounded_button"
+                android:singleLine="true"
+                android:layout_margin="5px"
+                android:text="@string/leg"
+                android:textSize="@dimen/item_text"
+                android:textColor="@color/text2" />
+            <Button
+                android:id="@+id/shoulder"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.33"
+                android:singleLine="true"
+                android:layout_margin="5px"
+                android:background="@drawable/rounded_button"
+                android:text="@string/shoulder"
+                android:textSize="@dimen/item_text"
+                android:textColor="@color/text2" />
+            <Button
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.33"
+                android:singleLine="true"
+                android:layout_margin="5px"
+                android:background="@drawable/rounded_button"
+                android:text="@string/back"
+                android:textSize="@dimen/item_text"
+                android:textColor="@color/text2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_popular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LINEAR_2"
+            android:paddingLeft="9dp"
+            android:text="@string/popularWorkouts"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/header"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exercise_item_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_popular"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

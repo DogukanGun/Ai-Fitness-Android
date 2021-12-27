@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">AiFitness</string>
+    <string name="app_name_2">AI Fitness Assistant</string>
     <string name="hello_blank_fragment">Hllo</string>
 
     <!-- USER OPERATION -->
@@ -17,10 +18,17 @@
     <string name="forgotpassword">Şifremi unuttum</string>
 
     <!--  HOME  -->
-
-
+    <string name="popularWorkouts">Popüler İdmanlar</string>
+    <string name="welcome">Hoşgeldin</string>
+    <string name="chest">Göğüs</string>
+    <string name="biceps">Kol</string>
+    <string name="leg">Bacak</string>
+    <string name="shoulder">Omuz</string>
+    <string name="back">Sırt</string>
     <!-- BOTTOM MENU -->
     <string name="home">Ana Sayfa</string>
+    <string name="exercise">İdman</string>
+    <string name="profile">Profil</string>
     <!-- TOP APP MENU -->
     <string name="favorite">Favori</string>
     <string name="search">Arama</string>
