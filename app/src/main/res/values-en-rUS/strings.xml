@@ -16,6 +16,7 @@
     <string name="phone">Phone</string>
     <string name="rememberme">Remember me</string>
     <string name="forgotpassword">Forgot password</string>
+    <string name="required">Required Field</string>
 
     <!--  HOME  -->
     <string name="popularWorkouts">Popular Workouts</string>

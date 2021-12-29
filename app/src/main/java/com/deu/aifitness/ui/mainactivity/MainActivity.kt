@@ -17,7 +17,7 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         
-        startActivity(Intent(this,HomeActivity::class.java))
+        //startActivity(Intent(this,HomeActivity::class.java))
         binding.loginButton.setOnClickListener {
             activityStart(UserOperationActivity(),AppConstants.UserOperation.Login)
         }

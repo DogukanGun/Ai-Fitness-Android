@@ -16,6 +16,7 @@
     <string name="phone">Telefon</string>
     <string name="rememberme">Beni hatırla</string>
     <string name="forgotpassword">Şifremi unuttum</string>
+    <string name="required">Doldurması zorunlu</string>
 
     <!--  HOME  -->
     <string name="popularWorkouts">Popüler İdmanlar</string>
