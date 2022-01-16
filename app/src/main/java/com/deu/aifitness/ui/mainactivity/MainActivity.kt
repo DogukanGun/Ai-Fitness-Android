@@ -16,7 +16,10 @@ class MainActivity: AIFitnessActivity<MainActivityVM,ActivityMainBinding>() {
 
     override fun getLayoutId(): Int = R.layout.activity_main
 
-    override fun getLayoutVM(): MainActivityVM = MainActivityVM()
+    override fun getLayoutVM(): MainActivityVM = mainActivityVM
+
+    @Inject
+    lateinit var mainActivityVM: MainActivityVM
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
