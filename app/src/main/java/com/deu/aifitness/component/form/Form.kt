@@ -1,28 +1,30 @@
 package com.deu.aifitness.component.form
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.InputFilter
 import android.text.Spanned
-import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.text.isDigitsOnly
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.deu.aifitness.R
+import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AppConstants
+import com.deu.aifitness.data.form.FormAttribute
 import com.deu.aifitness.data.form.FormFields
 import com.deu.aifitness.databinding.ComponentFormBinding
 
-class Form(var userOperation: AppConstants.UserOperation=AppConstants.UserOperation.Register) : Fragment() {
+class Form(var userOperation: AppConstants.UserOperation=AppConstants.UserOperation.Register) :
+    AIFitnessFragment<FormVM,ComponentFormBinding>() {
 
-    lateinit var binding:ComponentFormBinding
+    override fun getLayoutId(): Int = R.layout.component_form
 
+    override fun getLayoutVM(): FormVM = FormVM()
+
+    lateinit var adapter:FormAdapter
 
     var listener:FormListener? = null
 
@@ -30,41 +32,42 @@ class Form(var userOperation: AppConstants.UserOperation=AppConstants.UserOperat
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,R.layout.component_form,container,false)
-        binding.apply {
+        binding.let {
+            it!!.apply {
                 if(userOperation.value==AppConstants.UserOperation.Login.value ){
-                    var itemList = listOf(
-                        Register("Email", "abcde@mail.com"),
-                        Register("Password", "")
+                    val itemList = listOf(
+                        FormItem(FormAttribute.EMAIL,""),
+                        FormItem(FormAttribute.PASSWORD,"")
                     )
                     recycler(itemList)
-                    submitButton.text=getText(R.string.login_button)
+                    this!!.submitButton.text=getText(R.string.login_button)
                 }else{
-                    var itemList = listOf(
-                        Register("Email", "abcde@mail.com"),
-                        Register("Name", ""),
-                        Register("Surname", ""),
-                        Register("Password", ""),
-                        Register("Password Again", "")
+                    val itemList = listOf(
+                        FormItem(FormAttribute.EMAIL,""),
+                        FormItem(FormAttribute.NAME,""),
+                        FormItem(FormAttribute.SURNAME,""),
+                        FormItem(FormAttribute.PASSWORD,""),
+                        FormItem(FormAttribute.PASSWORDCONFIRM,"")
                     )
                     recycler(itemList)
                     submitButton.text=getText(R.string.register_button)
                 }
 
-            /*submitButton.setOnClickListener { view->
-                val formFields = FormFields(username.text.toString(),name.text.toString(),
-                    surname.text.toString(),password.text.toString(),birthday.text.toString(),
-                    email.text.toString(),phone.text.toString())
-                listener?.onFormSubmit(formFields)
-            }*/
+                submitButton.setOnClickListener { view->
+                    val array = adapter.itemList
+                    val formFields = FormFields.convertFromFormItem(array)
+                    listener?.onFormSubmit(formFields)
+                }
+            }
         }
-        return binding.root
+        return binding?.root
     }
-    private fun recycler(itemList: List<Register>){
-        val adapter = RegisterAdapter(itemList)
-        binding.rvRegister.adapter = adapter
-        binding.rvRegister.layoutManager = LinearLayoutManager(requireContext(),
+    private fun recycler(itemList: List<FormItem>){
+        adapter = FormAdapter(itemList)
+        binding?.rvRegister?.adapter = adapter
+        binding?.rvRegister?.layoutManager = LinearLayoutManager(requireContext(),
             LinearLayoutManager.VERTICAL ,false)
     }
 
@@ -88,5 +91,7 @@ class Form(var userOperation: AppConstants.UserOperation=AppConstants.UserOperat
         }
 
     }
+
+
 
 }

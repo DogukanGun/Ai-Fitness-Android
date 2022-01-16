@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.deu.aifitness.R
+import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AppConstants
 import com.deu.aifitness.component.form.Form
 import com.deu.aifitness.component.form.FormListener
@@ -21,49 +22,42 @@ import com.deu.aifitness.ui.user.operation.UserOperationVM
 import javax.inject.Inject
 
 class UserOperationFragment
-    : Fragment() {
-    lateinit var binding: FragmentUserOperationBinding
+    : AIFitnessFragment<UserOperationVM,FragmentUserOperationBinding>(){
 
+    override fun getLayoutId(): Int = R.layout.fragment_user_operation
 
-    val viewModel:UserOperationVM by viewModels()
+    override fun getLayoutVM(): UserOperationVM = userOperationVM
+
+    val userOperationVM:UserOperationVM by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_user_operation, container,
-                false)
+        super.onCreateView(inflater, container, savedInstanceState)
         createForm()
-        return binding.root
+        return binding?.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
 
     val formListener=object :FormListener{
         override fun onFormSubmit(list: FormFields) {
             if(UserOperationState.currentStatus==AppConstants.UserOperation.Register){
                 val registerUser = RegisterUser(list.name,list.surname,list.username,list.email,
                     list.phone,list.password,list.birthday)
-                viewModel.registerUser(registerUser)
+                viewModel?.registerUser(registerUser)
             }else{
                 val loginUser=LoginUser(list.username,list.password)
-                viewModel.loginUser(loginUser)
+                viewModel?.loginUser(loginUser)
             }
 
         }
 
     }
     private fun createForm() {
-        val fragmentTransaction = parentFragmentManager.beginTransaction()
         val form = Form(UserOperationState.currentStatus)
         form.listener=formListener
-        fragmentTransaction.add(binding.fragmentContainerView2.id, form)
-        fragmentTransaction.commit()
+        addFragment(form)
     }
-
-
 }

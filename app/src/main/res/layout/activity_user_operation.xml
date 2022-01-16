@@ -22,7 +22,7 @@
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/container"
         android:name="com.deu.aifitness.ui.user.operation.fragment.UserOperationFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"

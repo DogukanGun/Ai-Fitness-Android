@@ -10,10 +10,10 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-    @POST("users/register")
+    @POST("user/register")
     fun registerUser(@Body user:RegisterUser): Observable<RegisterUserResponse>
 
 
-    @POST("users/login")
+    @POST("auth/login")
     fun loginUser(@Body user: LoginUser): Observable<LoginUserResponse>
 }

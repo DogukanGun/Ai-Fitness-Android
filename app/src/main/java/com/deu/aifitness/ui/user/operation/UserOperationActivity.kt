@@ -7,21 +7,23 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.MutableLiveData
 import com.deu.aifitness.R
+import com.deu.aifitness.application.AIFitnessActivity
 import com.deu.aifitness.application.AppConstants
 import com.deu.aifitness.component.form.Form
 import com.deu.aifitness.databinding.ActivityUserOperationBinding
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragment
 import javax.inject.Inject
 
-class UserOperationActivity : AppCompatActivity() {
+class UserOperationActivity : AIFitnessActivity<UserOperationVM,ActivityUserOperationBinding>() {
 
-    lateinit var binding:ActivityUserOperationBinding
+    override fun getLayoutId(): Int = R.layout.activity_user_operation
+
+    override fun getLayoutVM(): UserOperationVM = UserOperationVM()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_user_operation)
         getValueOfOperation()
-        setContentView(binding.root)
-    }
+     }
 
 
     private fun getValueOfOperation(){
@@ -40,13 +42,6 @@ class UserOperationActivity : AppCompatActivity() {
             return AppConstants.UserOperation.Login
         return AppConstants.UserOperation.Register
     }
-
-
-
-
-
-
-
 
 
 

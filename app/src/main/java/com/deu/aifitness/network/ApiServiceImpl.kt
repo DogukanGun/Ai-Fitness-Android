@@ -1,5 +1,7 @@
 package com.deu.aifitness.network
 
+import com.deu.aifitness.data.constant.ConnectionType
+import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.loginuser.LoginUserResponse
 import com.deu.aifitness.data.registeruser.RegisterUser
@@ -35,11 +37,17 @@ private fun provideRetrofit():Retrofit{
     val logger = HttpLoggingInterceptor(ApiLogger())
     logger.level = HttpLoggingInterceptor.Level.BODY
 
-    var httpClient = OkHttpClient.Builder()
+    val httpClient = OkHttpClient.Builder()
         .addInterceptor(logger)
         .build()
+    var url = ""
+    if (Constant.connectionType == ConnectionType.HOST){
+        url = Constant.hostApiUrl
+    }else if(Constant.connectionType == ConnectionType.LOCAL){
+        url = Constant.localApiUrl
+    }
     return Retrofit.Builder()
-        .baseUrl("https://aifitnessdeu.herokuapp.com/")
+        .baseUrl(url)
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
         .client(httpClient)

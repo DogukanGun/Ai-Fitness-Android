@@ -1,6 +1,7 @@
 package com.deu.aifitness.ui.user.operation
 
 import androidx.lifecycle.ViewModel
+import com.deu.aifitness.application.AIFitnessVM
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.loginuser.LoginUserResponse
 import com.deu.aifitness.data.registeruser.RegisterUser
@@ -15,9 +16,9 @@ import javax.inject.Inject
 
 // TODO: 28.11.2021 Buraya context eklenmeli
 
-class UserOperationVM: ViewModel() {
+class UserOperationVM: AIFitnessVM() {
 
-    lateinit var apiSource:ApiSource
+    var apiSource:ApiSource
 
     init {
         apiSource = ApiServiceImpl.getInstance()

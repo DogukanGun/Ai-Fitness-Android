@@ -1,29 +1,25 @@
 package com.deu.aifitness.component.form
 
+import android.annotation.SuppressLint
 import android.text.Editable
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 //import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import android.text.InputType
 import android.text.TextWatcher
 import android.util.Patterns
-import android.widget.Toast
-import androidx.databinding.DataBindingUtil
-import com.deu.aifitness.R
+import com.deu.aifitness.data.form.FormAttribute
 import com.deu.aifitness.databinding.ItemRegisterBinding
-import org.w3c.dom.Text
-import java.util.regex.Pattern
 
 
-class RegisterAdapter(
-    var itemList: List<Register>
-) : RecyclerView.Adapter<RegisterAdapter.RegisterViewHolder>() {
+class FormAdapter(
+    var itemList: List<FormItem>
+) : RecyclerView.Adapter<FormAdapter.RegisterViewHolder>() {
 
     inner class RegisterViewHolder(val binding: ItemRegisterBinding ) : RecyclerView.ViewHolder(
         binding.root
-    ) //inner class
+    )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RegisterViewHolder {
         val binding = ItemRegisterBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -35,18 +31,17 @@ class RegisterAdapter(
         return itemList.size
     }
 
-    override fun onBindViewHolder(holder: RegisterViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RegisterViewHolder, @SuppressLint("RecyclerView") position: Int) {
         var temp: String;
         holder.binding.apply {
-            ETinput.setText(itemList[position].inputText)
-            TVtitle.text = itemList[position].title
+            ETinput.setText(itemList[position].formType.placeholder)
+            TVtitle.hint = itemList[position].formType.title
 
-            if (TVtitle.text.equals("Password") or TVtitle.text.equals("Password Again")) {
+            if (itemList[position].formType == FormAttribute.PASSWORD || itemList[position].formType == FormAttribute.PASSWORDCONFIRM) {
                 ETinput.inputType =
                     InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             }
-            if (TVtitle.text.equals("Name") or TVtitle.text.equals("Surname")) { // DOESNT WORK
-                //inputText.inputType =   InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_NORMAL
+            if (itemList[position].formType == FormAttribute.NAME || itemList[position].formType == FormAttribute.SURNAME) { // DOESNT WORK
                 ETinput.inputType =
                     InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PERSON_NAME
             }
@@ -54,27 +49,28 @@ class RegisterAdapter(
             val listener = object : TextWatcher {
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 }
-
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                     temp = ETinput.text.toString()
-                    if (TVtitle.text.equals("Password")) {
-                    } else if (TVtitle.text.equals("Email")) {
+                    if (itemList[position].formType == FormAttribute.PASSWORD) {
+                        //comment to prevent code smell
+                    } else if (itemList[position].formType == FormAttribute.EMAIL) {
                         if (!validateEmail(temp).isEmpty()) {
                             ETinput.setError("")
                         }
                         TVerror.text = validateEmail(temp)
-                    } else if (TVtitle.text.equals("Name")) {
-                    } else if (TVtitle.text.equals("Surname")) {
+                    } else if (itemList[position].formType == FormAttribute.NAME) {
+                        //comment to prevent code smell
+                    } else if (itemList[position].formType == FormAttribute.SURNAME) {
+                        //comment to prevent code smell
                     }
                 }
-
                 override fun afterTextChanged(p0: Editable?) {
+                    itemList[position].formItemValue = p0.toString()
                 }
             }
             ETinput.addTextChangedListener(listener)
         }
     }
-
     private fun validateEmail(label: String): String {
         return if (!Patterns.EMAIL_ADDRESS.matcher(label).matches()) {
             "Invalid email"
@@ -83,6 +79,4 @@ class RegisterAdapter(
 
         }
     }
-
-
 }
