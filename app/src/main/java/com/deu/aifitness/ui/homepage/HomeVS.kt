@@ -1,4 +1,6 @@
 package com.deu.aifitness.ui.homepage
 
-class HomeVS {
+import com.deu.aifitness.application.AIFitnessState
+
+class HomeVS:AIFitnessState {
 }

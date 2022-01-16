@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/exerciseFragment"
-        android:name="com.deu.aifitness.ui.homepage.ExerciseFragment"
+        android:name="com.deu.aifitness.ui.workoutpage.ExerciseFragment"
         tools:layout="@layout/fragment_exercise" />
     <!--        android:label="fragment_exercise"-->
 

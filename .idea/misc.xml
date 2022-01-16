@@ -20,11 +20,13 @@
         <entry key="app/src/main/res/drawable/empty_tall_divider.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/drawable/ic_baseline_cancel.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/activity_developer_start_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.2911458333333333" />
         <entry key="app/src/main/res/layout/activity_user_operation.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/component_form.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/empty_tall_divider.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.140625" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/fragment_user_operation.xml" value="0.290625" />

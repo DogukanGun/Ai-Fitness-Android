@@ -1,4 +1,4 @@
-package com.deu.aifitness.ui.homepage
+package com.deu.aifitness.ui.workoutpage
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -18,58 +18,5 @@ import javax.inject.Inject
 
 class UserOperationVM: AIFitnessVM() {
 
-    var apiSource:ApiSource
 
-    init {
-        apiSource = ApiServiceImpl.getInstance()
-    }
-
-    fun registerUser(user:RegisterUser) {
-        apiSource.registerUser(user)
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribeOn(Schedulers.io())
-            .subscribe(object:Observer<RegisterUserResponse>{
-                override fun onSubscribe(d: Disposable) {
-                    print("bitti")
-                }
-
-                override fun onNext(t: RegisterUserResponse) {
-                    print("devam")
-                }
-
-                override fun onError(e: Throwable) {
-                    print("hata var")
-                }
-
-                override fun onComplete() {
-                    print("tamamlandı")
-                }
-
-            })
-
-    }
-    fun loginUser(login:LoginUser) {
-        apiSource.loginUser(login)
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribeOn(Schedulers.io())
-            .subscribe(object:Observer<LoginUserResponse>{
-                override fun onSubscribe(d: Disposable) {
-                    print("bitti")
-                }
-
-                override fun onNext(t: LoginUserResponse) {
-                    print("devam")
-                }
-
-                override fun onError(e: Throwable) {
-                    print("hata var")
-                }
-
-                override fun onComplete() {
-                    print("bitti")
-                }
-
-            })
-
-    }
 }

@@ -16,13 +16,17 @@ import com.deu.aifitness.application.AppConstants
 import com.deu.aifitness.data.form.FormAttribute
 import com.deu.aifitness.data.form.FormFields
 import com.deu.aifitness.databinding.ComponentFormBinding
+import javax.inject.Inject
 
 class Form(var userOperation: AppConstants.UserOperation=AppConstants.UserOperation.Register) :
     AIFitnessFragment<FormVM,ComponentFormBinding>() {
 
     override fun getLayoutId(): Int = R.layout.component_form
 
-    override fun getLayoutVM(): FormVM = FormVM()
+    override fun getLayoutVM(): FormVM = formVM
+
+    @Inject
+    lateinit var formVM:FormVM
 
     lateinit var adapter:FormAdapter
 

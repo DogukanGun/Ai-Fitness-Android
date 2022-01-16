@@ -17,27 +17,30 @@ import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.registeruser.RegisterUser
 import com.deu.aifitness.databinding.FragmentUserOperationBinding
 import com.deu.aifitness.network.ApiSource
+import com.deu.aifitness.ui.homepage.HomeFragment
 import com.deu.aifitness.ui.user.operation.UserOperationState
 import com.deu.aifitness.ui.user.operation.UserOperationVM
 import javax.inject.Inject
 
 class UserOperationFragment
-    : AIFitnessFragment<UserOperationVM,FragmentUserOperationBinding>(){
+    : AIFitnessFragment<UserOperationFragmentVM,FragmentUserOperationBinding>(){
+
+    @Inject
+    lateinit var userOperationFragmentVM:UserOperationFragmentVM
 
     override fun getLayoutId(): Int = R.layout.fragment_user_operation
 
-    override fun getLayoutVM(): UserOperationVM = userOperationVM
-
-    val userOperationVM:UserOperationVM by viewModels()
+    override fun getLayoutVM(): UserOperationFragmentVM = userOperationFragmentVM
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
+        val view = super.onCreateView(inflater, container, savedInstanceState)
         createForm()
-        return binding?.root
+        addFragment(HomeFragment())
+        return view
     }
 
 

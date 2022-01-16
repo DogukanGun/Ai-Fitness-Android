@@ -24,16 +24,13 @@ class MainActivity: AIFitnessActivity<MainActivityVM,ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //startActivity(Intent(this,HomeActivity::class.java))
         binding?.loginButton?.setOnClickListener {
-            val intent = Intent(this,UserOperationActivity::class.java)
-            intent.putExtra("type",AppConstants.UserOperation.Login)
-            startActivity(intent)
-            //activityStart(UserOperationActivity(),AppConstants.UserOperation.Login)
+            startActivityWithString(UserOperationActivity::class.java,AppConstants.UserOperation.Login.value)
         }
 
         binding?.registerButton?.setOnClickListener {
-            activityStart(UserOperationActivity(),AppConstants.UserOperation.Register)
+            startActivityWithString(UserOperationActivity::class.java,AppConstants.UserOperation.Register.value)
+
         }
 
         setContentView(binding?.root)

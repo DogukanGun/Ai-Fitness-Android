@@ -1,5 +1,6 @@
 package com.deu.aifitness.application
 
+import android.content.Context
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.LayoutInflater
@@ -9,6 +10,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.deu.aifitness.BR
+import com.deu.aifitness.R
+import dagger.android.support.AndroidSupportInjection
 
 abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment() {
 
@@ -25,11 +29,7 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,getLayoutId(),container,false)
-        return binding!!.root
-    }
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = getLayoutVM()
+        binding!!.setVariable(BR.viewModel,viewModel)
         viewModel.let{ vm->
             if (vm != null) {
                 if(!vm.state.hasActiveObservers()){
@@ -40,7 +40,19 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment() {
 
             }
         }
+        return binding!!.root
     }
+
+    override fun onAttach(context: Context) {
+        AndroidSupportInjection.inject(this)
+        super.onAttach(context)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel = getLayoutVM()
+    }
+
 
     fun getAIFitnessActivity():AIFitnessActivity<*,*>?{
         getActivity().let { activity->

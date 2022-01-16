@@ -9,22 +9,30 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.deu.aifitness.R
+import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.databinding.FragmentHomeBinding
+import javax.inject.Inject
 
-class HomeFragment : Fragment() {
+class HomeFragment : AIFitnessFragment<HomeFragmentVM,FragmentHomeBinding>() {
 
-    lateinit var binding:FragmentHomeBinding
+    override fun getLayoutId(): Int = R.layout.fragment_home
+
+    override fun getLayoutVM(): HomeFragmentVM = homeFragmentVM
+
+    @Inject
+    lateinit var homeFragmentVM: HomeFragmentVM
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,true)
-
-        binding.exerciseItemRecyclerview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        binding.exerciseItemRecyclerview.adapter = RecyclerAdapter()
-
-
+        val view = super.onCreateView(inflater, container, savedInstanceState)
+        binding!!.exerciseItemRecyclerview.layoutManager = LinearLayoutManager(context,
+            LinearLayoutManager.HORIZONTAL, false)
+        binding!!.exerciseItemRecyclerview.adapter = RecyclerAdapter()
         return view
     }
+
+
 
 }
