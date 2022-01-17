@@ -60,16 +60,19 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
         }
     }
 
-    fun back():Int{
+    private fun back():Int{
         val currentFragment = getCurrentFragment()
-        if (currentFragment != null){
+         if (currentFragment != null){
             val fragmentTransaction = supportFragmentManager.beginTransaction()
             fragmentTransaction.remove(currentFragment)
             fragmentTransaction.commitAllowingStateLoss()
             supportFragmentManager.popBackStackImmediate()
-            return 0
+            if (supportFragmentManager.backStackEntryCount == 0) {
+                return -1
+            }
+             return 0
         }else{
-            return -1
+             return -1
         }
 
     }

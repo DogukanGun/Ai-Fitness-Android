@@ -15,26 +15,41 @@ import com.deu.aifitness.databinding.ItemRegisterBinding
 
 class FormAdapter(
     var itemList: List<FormItem>
-) : RecyclerView.Adapter<FormAdapter.RegisterViewHolder>() {
+) : RecyclerView.Adapter<FormAdapter.FormViewHolder>() {
 
-    inner class RegisterViewHolder(val binding: ItemRegisterBinding ) : RecyclerView.ViewHolder(
+    inner class FormViewHolder(val binding: ItemRegisterBinding ) : RecyclerView.ViewHolder(
         binding.root
     )
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RegisterViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FormViewHolder {
         val binding = ItemRegisterBinding.inflate(LayoutInflater.from(parent.context),parent,false)
 
-        return RegisterViewHolder(binding)
+        return FormViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
         return itemList.size
     }
 
-    override fun onBindViewHolder(holder: RegisterViewHolder, @SuppressLint("RecyclerView") position: Int) {
-        var temp: String;
+    override fun onBindViewHolder(holder: FormViewHolder, @SuppressLint("RecyclerView") position: Int) {
+        val item = itemList[position]
         holder.binding.apply {
-            ETinput.setText(itemList[position].formType.placeholder)
+            this.AIregisterInput.inputType.value = item.formType
+        }
+    }
+    private fun validateEmail(label: String): String {
+        return if (!Patterns.EMAIL_ADDRESS.matcher(label).matches()) {
+            "Invalid email"
+        } else {
+            ""
+
+        }
+    }
+}
+
+/*
+
+ETinput.setText(itemList[position].formType.placeholder)
             TVtitle.hint = itemList[position].formType.title
 
             if (itemList[position].formType == FormAttribute.PASSWORD || itemList[position].formType == FormAttribute.PASSWORDCONFIRM) {
@@ -69,14 +84,4 @@ class FormAdapter(
                 }
             }
             ETinput.addTextChangedListener(listener)
-        }
-    }
-    private fun validateEmail(label: String): String {
-        return if (!Patterns.EMAIL_ADDRESS.matcher(label).matches()) {
-            "Invalid email"
-        } else {
-            ""
-
-        }
-    }
-}
+ */

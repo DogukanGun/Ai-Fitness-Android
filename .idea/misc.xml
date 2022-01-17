@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/Ezgi/AndroidStudioProjects/Ai-Fitness-Android/app/src/main/res/drawable/ic_baseline_directions_run_24.xml" value="0.15572916666666667" />
         <entry key="..\:/Users/Ezgi/AndroidStudioProjects/Ai-Fitness-Android/app/src/main/res/drawable/logo.xml" value="0.15572916666666667" />
         <entry key="..\:/Users/Ezgi/AndroidStudioProjects/Ai-Fitness-Android/app/src/main/res/drawable/rounded.xml" value="0.15572916666666667" />
@@ -24,13 +25,18 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.2911458333333333" />
         <entry key="app/src/main/res/layout/activity_user_operation.xml" value="0.290625" />
+        <entry key="app/src/main/res/layout/component_ai_text_input.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/component_form.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/empty_tall_divider.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/layout/exercise_item.xml" value="0.1546875" />
         <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.140625" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/fragment_user_operation.xml" value="0.290625" />
-        <entry key="app/src/main/res/layout/item_register.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/layout/item_register.xml" value="0.4125433260830581" />
+        <entry key="app/src/main/res/layout/item_workout.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/layout/sample_a_i_text_input.xml" value="0.23777173913043478" />
+        <entry key="app/src/main/res/layout/sample_form_component.xml" value="0.36427732079905994" />
       </map>
     </option>
   </component>

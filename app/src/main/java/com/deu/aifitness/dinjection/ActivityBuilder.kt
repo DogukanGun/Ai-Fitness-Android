@@ -1,7 +1,5 @@
 package com.deu.aifitness.dinjection
 
-import android.view.View
-import com.deu.aifitness.component.form.Form
 import com.deu.aifitness.ui.developerstartpage.DeveloperStartPageActivity
 import com.deu.aifitness.ui.homepage.HomeActivity
 import com.deu.aifitness.ui.homepage.HomeFragment
@@ -25,9 +23,6 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = [ViewModelModule::class])
     abstract fun provideUserOperationFragment(): UserOperationFragment
-
-    @ContributesAndroidInjector(modules = [ViewModelModule::class])
-    abstract fun provideForm(): Form
 
     @ContributesAndroidInjector(modules = [ViewModelModule::class])
     abstract fun provideHomeActivity(): HomeActivity

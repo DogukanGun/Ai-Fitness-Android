@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessActivity
 import com.deu.aifitness.application.AppConstants
+import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.databinding.ActivityMainBinding
 import com.deu.aifitness.ui.homepage.HomeActivity
 import com.deu.aifitness.ui.user.operation.UserOperationActivity
@@ -25,10 +26,12 @@ class MainActivity: AIFitnessActivity<MainActivityVM,ActivityMainBinding>() {
         super.onCreate(savedInstanceState)
 
         binding?.loginButton?.setOnClickListener {
+            Constant.userOperation = AppConstants.UserOperation.Login
             startActivityWithString(UserOperationActivity::class.java,AppConstants.UserOperation.Login.value)
         }
 
         binding?.registerButton?.setOnClickListener {
+            Constant.userOperation = AppConstants.UserOperation.Register
             startActivityWithString(UserOperationActivity::class.java,AppConstants.UserOperation.Register.value)
 
         }

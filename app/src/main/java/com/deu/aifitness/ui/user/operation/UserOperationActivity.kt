@@ -1,17 +1,13 @@
 package com.deu.aifitness.ui.user.operation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.FragmentTransaction
-import androidx.lifecycle.MutableLiveData
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessActivity
 import com.deu.aifitness.application.AppConstants
-import com.deu.aifitness.component.form.Form
 import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.databinding.ActivityUserOperationBinding
+import com.deu.aifitness.generated.callback.OnClickListener
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragment
 import javax.inject.Inject
 
@@ -26,10 +22,19 @@ class UserOperationActivity : AIFitnessActivity<UserOperationVM,ActivityUserOper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        addFragment(UserOperationFragment())
         getValueOfOperation()
+        addFragment(UserOperationFragment())
+
+        binding?.imageButton?.setOnClickListener(buttonListener)
+
      }
 
+    private val buttonListener = object : View.OnClickListener{
+        override fun onClick(v: View?) {
+            this@UserOperationActivity.onBackPressed()
+        }
+
+    }
 
     private fun getValueOfOperation(){
         val intentData = intent.getStringExtra(Constant.paramName)

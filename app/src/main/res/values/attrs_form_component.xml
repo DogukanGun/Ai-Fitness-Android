@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="FormComponent">
+        <attr name="registerButton" format="string" />
+        <attr name="loginButton" format="string" />
+    </declare-styleable>
+</resources>
