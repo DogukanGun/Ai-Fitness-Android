@@ -24,4 +24,10 @@
         <item name="android:gravity">center</item>
         <item name="android:padding">@dimen/padding_small</item>
     </style>
+    <style name="Theme.AiFitness.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.AiFitness.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.AiFitness.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

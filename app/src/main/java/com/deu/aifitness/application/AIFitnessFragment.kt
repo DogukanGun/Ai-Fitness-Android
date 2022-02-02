@@ -53,7 +53,6 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment() {
         }
         return binding!!.root
     }
-
     override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)
         super.onAttach(context)

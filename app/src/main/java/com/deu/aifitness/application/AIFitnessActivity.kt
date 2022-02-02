@@ -12,12 +12,15 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentContainerView
 import androidx.lifecycle.Observer
 import com.deu.aifitness.BR
 import com.deu.aifitness.R
 import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.constant.SelectButtons
 import com.deu.aifitness.databinding.ActionBarBinding
+import com.deu.aifitness.ui.tabbar.TabbarFragment
 import dagger.android.AndroidInjection
 
 abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatActivity() {
@@ -58,14 +61,13 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
                 }
         }
     }
-
     fun startActivity(classAI:Class<*>){
         val intent = Intent(this,classAI)
         startActivity(intent)
     }
 
     fun getCurrentFragment():AIFitnessFragment<*,*>?{
-        val currentFragment = supportFragmentManager.findFragmentById(R.id.container)
+        val currentFragment = supportFragmentManager.findFragmentById(getContainerId())
         if (currentFragment != null){
             return  currentFragment as AIFitnessFragment<*, *>
         }

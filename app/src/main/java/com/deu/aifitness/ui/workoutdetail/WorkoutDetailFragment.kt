@@ -1,7 +1,6 @@
-package com.deu.aifitness.ui.workoutpage.detail
+package com.deu.aifitness.ui.workoutdetail
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,7 +23,6 @@ class WorkoutDetailFragment : AIFitnessFragment<WorkoutDetailVM,FragmentWorkoutB
         savedInstanceState: Bundle?
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
-
         return view
     }
 

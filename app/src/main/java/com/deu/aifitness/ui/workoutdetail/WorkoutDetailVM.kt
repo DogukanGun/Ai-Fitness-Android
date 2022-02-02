@@ -1,4 +1,4 @@
-package com.deu.aifitness.ui.workoutpage.detail
+package com.deu.aifitness.ui.workoutdetail
 
 import com.deu.aifitness.application.AIFitnessVM
 

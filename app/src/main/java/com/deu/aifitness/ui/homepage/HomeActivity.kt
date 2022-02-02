@@ -18,7 +18,7 @@ class HomeActivity : AIFitnessActivity<HomeVM, ActivityHomeBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setAppBar()
         addTabbarFragment(TabbarFragment())
         addFragment(HomeFragment())
     }

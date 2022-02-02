@@ -36,4 +36,10 @@
     <string name="favorite">Favorite</string>
     <string name="search">Search</string>
 
+    <!-- Exercise -->
+    <string name="startExercise">Start Exercise</string>
+    <string name="level">Level</string>
+    <string name="intensity">Intensity</string>
+    <string name="averageTime">Average Time</string>
+
 </resources>

@@ -6,14 +6,15 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/actionBarT"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bottom_bar"
         app:contentInsetStart="0dp">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
             android:layout_width="match_parent"
-            android:layout_height="120dp">
+            android:layout_height="wrap_content">
 
             <ImageButton
                 android:id="@+id/backButtonIB"
@@ -29,12 +30,14 @@
                 android:id="@+id/radioGroup"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_medium"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTV">
 
                 <RadioButton
                     android:id="@+id/selectButtonRB"
@@ -44,7 +47,8 @@
                     android:background="@drawable/bg_selected_button"
                     android:button="@null"
                     android:gravity="center"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="@color/white" />
 
                 <RadioButton
                     android:id="@+id/selectButton2RB"
@@ -53,6 +57,7 @@
                     android:layout_weight="0.5"
                     android:button="@null"
                     android:gravity="center"
+                    android:textColor="@color/white"
                     android:text="RadioButton" />
             </RadioGroup>
 
@@ -61,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_large"
                 app:layout_constraintBottom_toBottomOf="@+id/backButtonIB"
                 app:layout_constraintEnd_toStartOf="@+id/settingButtonIB"

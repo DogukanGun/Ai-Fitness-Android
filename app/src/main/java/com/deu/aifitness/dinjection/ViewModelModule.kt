@@ -10,7 +10,9 @@ import com.deu.aifitness.ui.tabbar.TabbarVM
 import com.deu.aifitness.ui.user.operation.UserOperationVM
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragmentVM
 import com.deu.aifitness.ui.user.operation.fragment.viewpager.ViewPagerVM
+import com.deu.aifitness.ui.workoutdetail.WorkoutActivityVM
 import com.deu.aifitness.ui.workoutpage.WorkoutVM
+import com.deu.aifitness.ui.workoutdetail.WorkoutDetailVM
 import dagger.Module
 import dagger.Provides
 
@@ -45,5 +47,11 @@ class ViewModelModule {
     fun provideTabbarVM() = TabbarVM()
 
     @Provides
-    fun provideExerciseVM() = WorkoutVM()
+    fun provideWorkoutVM() = WorkoutVM()
+
+    @Provides
+    fun provideWorkoutDetailVM() = WorkoutDetailVM()
+
+    @Provides
+    fun provideWorkoutActivityVM() = WorkoutActivityVM()
 }
