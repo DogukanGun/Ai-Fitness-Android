@@ -3,7 +3,6 @@ package com.deu.aifitness.ui.workoutpage
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.deu.aifitness.R
 import com.deu.aifitness.data.workout.Workout
 import com.deu.aifitness.databinding.ItemWorkoutBinding
 
@@ -23,17 +22,12 @@ class WorkoutAdapter(
         }
 
         override fun getItemCount(): Int {
-            return itemList.size
+            return 5
         }
 
         override fun onBindViewHolder(holder: MyPageViewHolder, position: Int) {
             holder.binding.apply {
-                TVworkout.text = itemList[position].workoutName
-                TVdescription.text = itemList[position].description
-                IVworkout.setImageResource(R.drawable.squat)
-                BTNbtn.text = itemList[position].btn
-                RBratingBar.rating = itemList[position].starImage.toFloat()
-                RBratingBar.numStars = 5;
+
             }
         }
     }

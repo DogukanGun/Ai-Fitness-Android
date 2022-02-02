@@ -1,7 +1,6 @@
 package com.deu.aifitness.ui.tabbar
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +8,8 @@ import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AIFitnessState
 import com.deu.aifitness.databinding.FragmentTabbarBinding
-import com.deu.aifitness.generated.callback.OnClickListener
 import com.deu.aifitness.ui.homepage.HomeFragment
-import com.deu.aifitness.ui.workoutpage.ExerciseFragment
+import com.deu.aifitness.ui.workoutpage.WorkoutFragment
 import javax.inject.Inject
 
 class TabbarFragment : AIFitnessFragment<TabbarVM,FragmentTabbarBinding>() {
@@ -51,7 +49,7 @@ class TabbarFragment : AIFitnessFragment<TabbarVM,FragmentTabbarBinding>() {
                     exerciseTB.clicked()
                     profileTB.notClicked()
                 }
-                replaceFragment(ExerciseFragment())
+                replaceFragment(WorkoutFragment())
             }
             TabbarVS.Profile ->{
                 binding?.apply {

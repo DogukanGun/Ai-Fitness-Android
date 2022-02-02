@@ -8,7 +8,7 @@ import com.deu.aifitness.ui.tabbar.TabbarFragment
 import com.deu.aifitness.ui.user.operation.UserOperationActivity
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragment
 import com.deu.aifitness.ui.user.operation.fragment.viewpager.ViewPagerFragment
-import com.deu.aifitness.ui.workoutpage.ExerciseFragment
+import com.deu.aifitness.ui.workoutpage.WorkoutFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -40,5 +40,5 @@ abstract class ActivityBuilder {
     abstract fun provideTabbarFragment(): TabbarFragment
 
     @ContributesAndroidInjector(modules = [ViewModelModule::class])
-    abstract fun provideExerciseFragment(): ExerciseFragment
+    abstract fun provideExerciseFragment(): WorkoutFragment
 }

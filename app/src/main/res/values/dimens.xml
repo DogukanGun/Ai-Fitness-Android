@@ -16,4 +16,6 @@
     <dimen name="text_large">16sp</dimen>
 
     <dimen name="button_corner_radius">100dp</dimen>
+    <dimen name="cardview_corner_radius">20dp</dimen>
+
 </resources>
