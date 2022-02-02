@@ -1,16 +1,21 @@
 package com.deu.aifitness.ui.mainactivity
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
-import androidx.lifecycle.MutableLiveData
+import android.util.AttributeSet
+import android.view.View
+import androidx.lifecycle.lifecycleScope
+import com.deu.aifitness.BuildConfig
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessActivity
-import com.deu.aifitness.application.AppConstants
-import com.deu.aifitness.data.constant.Constant
+import com.deu.aifitness.application.AIFitnessState
 import com.deu.aifitness.databinding.ActivityMainBinding
-import com.deu.aifitness.ui.homepage.HomeActivity
+import com.deu.aifitness.ui.developerstartpage.DeveloperStartPageActivity
 import com.deu.aifitness.ui.user.operation.UserOperationActivity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 class MainActivity: AIFitnessActivity<MainActivityVM,ActivityMainBinding>() {
@@ -24,26 +29,28 @@ class MainActivity: AIFitnessActivity<MainActivityVM,ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding?.loginButton?.setOnClickListener {
-            Constant.userOperation = AppConstants.UserOperation.Login
-            startActivityWithString(UserOperationActivity::class.java,AppConstants.UserOperation.Login.value)
-        }
-
-        binding?.registerButton?.setOnClickListener {
-            Constant.userOperation = AppConstants.UserOperation.Register
-            startActivityWithString(UserOperationActivity::class.java,AppConstants.UserOperation.Register.value)
-
-        }
-
-        setContentView(binding?.root)
+        viewModel?.startTimer()
     }
 
-    private fun activityStart(activity:AppCompatActivity,type:AppConstants.UserOperation){
-        val intent = Intent(this,activity::class.java)
-        intent.putExtra("type",type.value)
-        startActivity(intent)
+    private fun startApplication(){
+        lifecycleScope.launch(Dispatchers.IO) {
+            delay(5000L)
+            if (BuildConfig.DEVELOPMENT ){
+                startActivity(DeveloperStartPageActivity::class.java)
+            }else{
+                startActivity(UserOperationActivity::class.java)
+            }
+        }
     }
+
+    override fun stateChange(state: AIFitnessState?) {
+        when(state){
+            MainActivityVS.StartActivity ->{
+                startApplication()
+            }
+        }
+    }
+
 
 
 }

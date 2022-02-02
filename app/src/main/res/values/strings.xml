@@ -20,7 +20,7 @@
 
     <!--  HOME  -->
     <string name="popularWorkouts">Popüler İdmanlar</string>
-    <string name="welcome">Hoşgeldin</string>
+    <string name="welcome">AI Fitness Assistant, Hoşgeldin</string>
     <string name="chest">Göğüs</string>
     <string name="biceps">Kol</string>
     <string name="leg">Bacak</string>

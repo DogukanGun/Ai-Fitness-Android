@@ -18,25 +18,40 @@
         <entry key="..\:/Users/alper/Desktop/Ai-Fitness/app/src/main/res/layout/activity_main.xml" value="0.26268115942028986" />
         <entry key="..\:/Users/alper/Desktop/Ai-Fitness/app/src/main/res/layout/activity_user_operation.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/alper/Desktop/Ai-Fitness/app/src/main/res/layout/component_form.xml" value="0.17831813576494426" />
+        <entry key="app/src/main/res/drawable/bg_button.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/bg_not_selected_button.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/bg_selected_button.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/bg_tabbar.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/bg_tabbar_not_selected.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/bg_tabbar_selected.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/empty_tall_divider.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/drawable/ic_baseline_cancel.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/layout/action_bar.xml" value="0.21105072463768115" />
         <entry key="app/src/main/res/layout/activity_developer_start_page.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.23777173913043478" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15572916666666667" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.2911458333333333" />
         <entry key="app/src/main/res/layout/activity_user_operation.xml" value="0.290625" />
-        <entry key="app/src/main/res/layout/component_ai_text_input.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/layout/component_ai_text_input.xml" value="0.25" />
         <entry key="app/src/main/res/layout/component_form.xml" value="0.290625" />
+        <entry key="app/src/main/res/layout/component_tabbar_button.xml" value="0.375" />
         <entry key="app/src/main/res/layout/empty_tall_divider.xml" value="0.16145833333333334" />
         <entry key="app/src/main/res/layout/exercise_item.xml" value="0.1546875" />
         <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.23777173913043478" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.20259343248553244" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.16302083333333334" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.27708333333333335" />
+        <entry key="app/src/main/res/layout/fragment_tabbar.xml" value="0.3977706758161099" />
         <entry key="app/src/main/res/layout/fragment_user_operation.xml" value="0.290625" />
+        <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.16302083333333334" />
         <entry key="app/src/main/res/layout/item_register.xml" value="0.4125433260830581" />
         <entry key="app/src/main/res/layout/item_workout.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/sample_a_i_text_input.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/sample_form_component.xml" value="0.36427732079905994" />
+        <entry key="app/src/main/res/layout/sample_tabbar_button.xml" value="0.1852355072463768" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.28958333333333336" />
       </map>
     </option>
   </component>

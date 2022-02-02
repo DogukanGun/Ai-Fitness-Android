@@ -17,7 +17,25 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    flavorDimensions "aifitness"
+    productFlavors {
+        dev {
+            dimension "aifitness"
+            applicationIdSuffix ".dev"
+            buildConfigField 'boolean', 'DEVELOPMENT', 'true'
+            buildConfigField 'boolean', 'STORE', 'false'
+        }
+        store {
+            dimension "aifitness"
+            applicationIdSuffix ".store"
+            buildConfigField 'boolean', 'DEVELOPMENT', 'true'
+            buildConfigField 'boolean', 'STORE', 'false'
+        }
+        vanilla {
+            dimension "aifitness"
+            applicationIdSuffix ".vanilla"
+        }
+    }
     buildFeatures{
         dataBinding true
     }
@@ -78,4 +96,6 @@ dependencies {
     //Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
     implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
+
+
 }

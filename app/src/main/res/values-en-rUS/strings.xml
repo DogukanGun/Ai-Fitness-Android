@@ -20,7 +20,7 @@
 
     <!--  HOME  -->
     <string name="popularWorkouts">Popular Workouts</string>
-    <string name="welcome">Welcome</string>
+    <string name="welcome">AI Fitness Assistant, Welcome</string>
     <string name="chest">Chest</string>
     <string name="biceps">Biceps</string>
     <string name="leg">Leg</string>

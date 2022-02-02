@@ -11,10 +11,9 @@ import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class UserOperationFragmentVM:AIFitnessVM() {
-
-    var apiSource: ApiSource = ApiServiceImpl.getInstance()
+class UserOperationFragmentVM @Inject constructor(val apiSource: ApiSource):AIFitnessVM() {
 
     fun registerUser(user: RegisterUser) {
         apiSource.registerUser(user)
@@ -41,6 +40,7 @@ class UserOperationFragmentVM:AIFitnessVM() {
 
     }
     fun loginUser(login: LoginUser) {
+        state.postValue(UserOperationFragmentVS.UserOperationDone)
         apiSource.loginUser(login)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())

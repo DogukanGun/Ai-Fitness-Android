@@ -14,9 +14,4 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-// TODO: 28.11.2021 Buraya context eklenmeli
-
-class UserOperationVM: AIFitnessVM() {
-
-
-}
+class UserOperationVM: AIFitnessVM() {}

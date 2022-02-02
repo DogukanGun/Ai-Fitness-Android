@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.deu.aifitness.R
+import com.deu.aifitness.data.workout.Workout
 import com.deu.aifitness.databinding.ItemWorkoutBinding
 
 

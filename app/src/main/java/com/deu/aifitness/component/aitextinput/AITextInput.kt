@@ -82,7 +82,7 @@ class AITextInput : LinearLayout {
         }
 
         override fun afterTextChanged(p0: Editable?) {
-            listener?.textChange(p0.toString())
+            listener?.textChange(p0.toString(),inputType.value!!)
         }
     }
 

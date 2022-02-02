@@ -25,15 +25,17 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/BTlocal"
+                style="@style/StandartButton"
                 android:onClick="@{()->viewModel.localButtonPressed()}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Local" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/BThost"
+                style="@style/StandartButton"
                 android:onClick="@{()->viewModel.hostButtonPressed()}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="TabbarButton">
+        <attr name="menuType" format="enum">
+            <enum name="home" value="1"/>
+            <enum name="exercise" value="2"/>
+            <enum name="profile" value="3"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,161 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.homepage.HomeFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="45px"
-            android:layout_marginTop="100px"
-            android:text="Hey,"
-            android:textColor="@color/text3"
-            android:textSize="@dimen/header"
-            android:textStyle="bold"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="175px"
-            android:layout_marginTop="100px"
-            android:text="Alper"
-            android:textColor="@color/text2"
-            android:textSize="@dimen/header"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="45px"
-            android:layout_marginTop="220px"
-            android:text="@string/welcome"
-            android:textColor="@color/text3"
-            android:textSize="@dimen/header"
-            android:textStyle="bold"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="45px"
-            android:layout_marginTop="280px"
-            android:text="@string/app_name_2"
-            android:textColor="@color/text2"
-            android:textSize="@dimen/header"/>
+        android:fillViewport="true"
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/background_main"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:alpha=".75"
-            android:elevation="5dp"
-            android:outlineSpotShadowColor="@color/black"
-            android:scaleType="centerCrop"
-            android:src="@drawable/background_main" />
-
-        <LinearLayout
-            android:paddingLeft="9dp"
-            android:paddingRight="9dp"
-            android:id="@+id/LINEAR_1"
-            android:layout_below="@id/background_main"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="5dip">
-            <Button
-                android:id="@+id/chest"
-                android:layout_width="25dp"
-                android:layout_height="35dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/rounded_button"
-                android:text="@string/chest"
-                android:singleLine="true"
-                android:layout_margin="5px"
-                android:textSize="@dimen/item_text"
-                android:textColor="@color/text2" />
-            <Button
-                android:id="@+id/biceps"
-                android:layout_width="25dp"
-                android:layout_height="35dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/rounded_button"
-                android:text="@string/biceps"
-                android:singleLine="true"
-                android:layout_margin="5px"
-                android:textSize="@dimen/item_text"
-                android:textColor="@color/text2" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/LINEAR_2"
-            android:paddingLeft="9dp"
-            android:paddingRight="9dp"
-            android:layout_below="@id/LINEAR_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-            <Button
-                android:id="@+id/leg"
-                android:layout_width="25dp"
-                android:layout_height="35dp"
-                android:layout_weight="0.33"
-                android:background="@drawable/rounded_button"
-                android:singleLine="true"
-                android:layout_margin="5px"
-                android:text="@string/leg"
-                android:textSize="@dimen/item_text"
-                android:textColor="@color/text2" />
-            <Button
-                android:id="@+id/shoulder"
-                android:layout_width="25dp"
-                android:layout_height="35dp"
-                android:layout_weight="0.33"
-                android:singleLine="true"
-                android:layout_margin="5px"
-                android:background="@drawable/rounded_button"
-                android:text="@string/shoulder"
-                android:textSize="@dimen/item_text"
-                android:textColor="@color/text2" />
-            <Button
-                android:id="@+id/back"
-                android:layout_width="25dp"
-                android:layout_height="35dp"
-                android:layout_weight="0.33"
-                android:singleLine="true"
-                android:layout_margin="5px"
-                android:background="@drawable/rounded_button"
-                android:text="@string/back"
-                android:textSize="@dimen/item_text"
-                android:textColor="@color/text2" />
-        </LinearLayout>
+            tools:context=".ui.homepage.HomeFragment">
 
-        <TextView
-            android:id="@+id/text_popular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/LINEAR_2"
-            android:paddingLeft="9dp"
-            android:text="@string/popularWorkouts"
-            android:textColor="@color/text2"
-            android:textSize="@dimen/header"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/userNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="Hey,Alper"
+                android:textColor="@color/text3"
+                android:textSize="@dimen/header"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/exercise_item_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text_popular"
-            android:orientation="horizontal"
-            android:scrollbars="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <TextView
+                android:id="@+id/welcomeMessageTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@string/welcome"
+                android:textColor="@color/text3"
+                android:textSize="@dimen/header"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userNameTV" />
 
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/backgroundMainIV"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:alpha=".75"
+                android:elevation="5dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background_main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_groupCG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/popularWorkoutTitleTV">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chest" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/biceps" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/leg" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shoulder" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/popularWorkoutTitleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:paddingStart="@dimen/padding_small"
+                android:text="@string/popularWorkouts"
+                android:textColor="@color/text2"
+                android:textSize="@dimen/header"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/backgroundMainIV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/exercise_item_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/popularWorkoutTitleTV"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chip_groupCG" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
 </layout>

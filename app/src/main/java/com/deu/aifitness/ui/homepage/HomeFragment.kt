@@ -27,9 +27,12 @@ class HomeFragment : AIFitnessFragment<HomeFragmentVM,FragmentHomeBinding>() {
         savedInstanceState: Bundle?
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
-        binding!!.exerciseItemRecyclerview.layoutManager = LinearLayoutManager(context,
-            LinearLayoutManager.HORIZONTAL, false)
-        binding!!.exerciseItemRecyclerview.adapter = RecyclerAdapter()
+        //setAppBar()
+        binding?.apply {
+            exerciseItemRecyclerview.layoutManager = LinearLayoutManager(context,
+                LinearLayoutManager.HORIZONTAL, false)
+            exerciseItemRecyclerview.adapter = RecyclerAdapter()
+        }
         return view
     }
 

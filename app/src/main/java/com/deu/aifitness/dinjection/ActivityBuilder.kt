@@ -4,8 +4,11 @@ import com.deu.aifitness.ui.developerstartpage.DeveloperStartPageActivity
 import com.deu.aifitness.ui.homepage.HomeActivity
 import com.deu.aifitness.ui.homepage.HomeFragment
 import com.deu.aifitness.ui.mainactivity.MainActivity
+import com.deu.aifitness.ui.tabbar.TabbarFragment
 import com.deu.aifitness.ui.user.operation.UserOperationActivity
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragment
+import com.deu.aifitness.ui.user.operation.fragment.viewpager.ViewPagerFragment
+import com.deu.aifitness.ui.workoutpage.ExerciseFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -29,4 +32,13 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = [ViewModelModule::class])
     abstract fun provideHomeFragment(): HomeFragment
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideViewPagerFragment(): ViewPagerFragment
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideTabbarFragment(): TabbarFragment
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideExerciseFragment(): ExerciseFragment
 }

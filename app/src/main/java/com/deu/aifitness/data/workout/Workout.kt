@@ -1,4 +1,4 @@
-package com.deu.aifitness.ui.workoutpage
+package com.deu.aifitness.data.workout
 
 import android.media.Image
 import android.widget.Button

@@ -1,0 +1,35 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/wrapper"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:background="@drawable/bg_tabbar_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button"
+            android:background="@color/white"
+            android:backgroundTint="@color/primary_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_home"
+            app:tint="@color/white" />
+
+        <TextView
+            android:paddingStart="@dimen/padding_small"
+            android:id="@+id/buttonText"
+            android:gravity="center"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+</layout>

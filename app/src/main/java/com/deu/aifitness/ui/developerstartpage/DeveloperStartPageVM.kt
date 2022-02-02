@@ -11,6 +11,6 @@ class DeveloperStartPageVM:AIFitnessVM() {
     }
 
     fun localButtonPressed(){
-        state.value = DeveloperStartPageVS.EnvironmentChangeToHost
+        state.value = DeveloperStartPageVS.EnvironmentChangeToLocal
     }
 }

@@ -6,13 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.deu.aifitness.R
+import com.deu.aifitness.application.AIFitnessFragment
+import com.deu.aifitness.databinding.FragmentExerciseBinding
+import javax.inject.Inject
 
-class ExerciseFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_exercise, container, false)
-    }
+class ExerciseFragment : AIFitnessFragment<ExerciseVM,FragmentExerciseBinding>() {
+
+    override fun getLayoutId(): Int = R.layout.fragment_exercise
+
+    override fun getLayoutVM(): ExerciseVM = exerciseVM
+
+    @Inject
+    lateinit var exerciseVM: ExerciseVM
+
+
+
 }
