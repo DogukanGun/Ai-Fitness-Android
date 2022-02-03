@@ -9,6 +9,7 @@ import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AIFitnessState
 import com.deu.aifitness.databinding.FragmentTabbarBinding
 import com.deu.aifitness.ui.homepage.HomeFragment
+import com.deu.aifitness.ui.profile.ProfileFragment
 import com.deu.aifitness.ui.workoutpage.WorkoutFragment
 import javax.inject.Inject
 
@@ -57,6 +58,7 @@ class TabbarFragment : AIFitnessFragment<TabbarVM,FragmentTabbarBinding>() {
                     homeButtonTB.notClicked()
                     profileTB.clicked()
                 }
+                replaceFragment(ProfileFragment())
             }
         }
     }

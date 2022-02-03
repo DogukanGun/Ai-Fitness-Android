@@ -14,6 +14,8 @@ class WorkoutDetailFragment : AIFitnessFragment<WorkoutDetailVM,FragmentWorkoutB
 
     override fun getLayoutVM(): WorkoutDetailVM = workoutDetailVM
 
+    override fun hasBackButton(): Boolean = true
+
     @Inject
     lateinit var workoutDetailVM: WorkoutDetailVM
 
@@ -23,6 +25,7 @@ class WorkoutDetailFragment : AIFitnessFragment<WorkoutDetailVM,FragmentWorkoutB
         savedInstanceState: Bundle?
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
+        setAppBar()
         return view
     }
 

@@ -93,7 +93,7 @@ class TabbarButton : LinearLayout {
         }else{
             binding.apply {
                 wrapper.background = ContextCompat.getDrawable(context,R.drawable.bg_tabbar_not_selected)
-                buttonText.visibility = View.INVISIBLE
+                buttonText.visibility = View.GONE
                 binding.buttonText.text = ""
                 button.backgroundTintList = ContextCompat.getColorStateList(context,R.color.bottom_bar)
             }

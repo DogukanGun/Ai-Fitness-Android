@@ -13,6 +13,8 @@ class HomeActivity : AIFitnessActivity<HomeVM, ActivityHomeBinding>() {
 
     override fun getLayoutVM(): HomeVM = homeVM
 
+    override fun hasSettingButton(): Boolean = true
+
     @Inject
     lateinit var homeVM: HomeVM
 

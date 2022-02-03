@@ -4,6 +4,10 @@ import com.deu.aifitness.ui.developerstartpage.DeveloperStartPageActivity
 import com.deu.aifitness.ui.homepage.HomeActivity
 import com.deu.aifitness.ui.homepage.HomeFragment
 import com.deu.aifitness.ui.mainactivity.MainActivity
+import com.deu.aifitness.ui.profile.ProfileFragment
+import com.deu.aifitness.ui.settings.SettingsActivity
+import com.deu.aifitness.ui.settings.SettingsFragment
+import com.deu.aifitness.ui.settings.SettingsFragmentVM
 import com.deu.aifitness.ui.tabbar.TabbarFragment
 import com.deu.aifitness.ui.user.operation.UserOperationActivity
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragment
@@ -49,4 +53,13 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = [ViewModelModule::class])
     abstract fun provideWorkoutActivity(): WorkoutActivity
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideSettingsActivity(): SettingsActivity
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideSettingsFragment(): SettingsFragment
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideProfileFragment(): ProfileFragment
 }

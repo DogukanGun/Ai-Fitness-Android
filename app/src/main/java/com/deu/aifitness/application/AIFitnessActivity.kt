@@ -20,6 +20,7 @@ import com.deu.aifitness.R
 import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.constant.SelectButtons
 import com.deu.aifitness.databinding.ActionBarBinding
+import com.deu.aifitness.ui.settings.SettingsActivity
 import com.deu.aifitness.ui.tabbar.TabbarFragment
 import dagger.android.AndroidInjection
 
@@ -97,21 +98,29 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
     }
 
     fun setAppBar(){
-        findViewById<RadioGroup>(R.id.radioGroup).visibility = if(hasSelectButton()) View.VISIBLE else View.INVISIBLE
+        findViewById<RadioGroup>(R.id.radioGroup).visibility = if(hasSelectButton()) View.VISIBLE else View.GONE
         findViewById<RadioButton>(R.id.selectButtonRB).text = getString(selectButton1Text())
         findViewById<RadioButton>(R.id.selectButton2RB).text = getString(selectButton2Text())
-        findViewById<ImageButton>(R.id.backButtonIB).visibility = if (hasBackButton()) View.VISIBLE else View.INVISIBLE
-        findViewById<ImageButton>(R.id.settingButtonIB).visibility = if (hasSettingButton()) View.VISIBLE else View.INVISIBLE
+        val backButton = findViewById<ImageButton>(R.id.backButtonIB)
+        backButton.setOnClickListener(backButtonListener)
+        backButton.visibility = if (hasBackButton()) View.VISIBLE else View.GONE
+        val settingsButton = findViewById<ImageButton>(R.id.settingButtonIB)
+        settingsButton.setOnClickListener(settingsButtonListener)
+        settingsButton.visibility = if (hasSettingButton()) View.VISIBLE else View.GONE
 
     }
 
     fun setAppBarFromFragment(selectButtonFlag:Boolean,selectButton1Text:String,selectButton2Text:String,
                               backButtonFlag:Boolean,settingButton:Boolean){
-        findViewById<RadioGroup>(R.id.radioGroup).visibility = if(selectButtonFlag) View.VISIBLE else View.INVISIBLE
+        findViewById<RadioGroup>(R.id.radioGroup).visibility = if(selectButtonFlag) View.VISIBLE else View.GONE
         findViewById<RadioButton>(R.id.selectButtonRB).text = selectButton1Text
         findViewById<RadioButton>(R.id.selectButton2RB).text = selectButton2Text
-        findViewById<ImageButton>(R.id.backButtonIB).visibility = if (backButtonFlag) View.VISIBLE else View.INVISIBLE
-        findViewById<ImageButton>(R.id.settingButtonIB).visibility = if (settingButton) View.VISIBLE else View.INVISIBLE
+        val backButton = findViewById<ImageButton>(R.id.backButtonIB)
+        backButton.setOnClickListener(backButtonListener)
+        backButton.visibility = if (backButtonFlag) View.VISIBLE else View.GONE
+        val settingsButton = findViewById<ImageButton>(R.id.settingButtonIB)
+        settingsButton.setOnClickListener(settingsButtonListener)
+        settingsButton.visibility = if (settingButton) View.VISIBLE else View.GONE
 
     }
 
@@ -168,6 +177,14 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
 
     open fun stateChange(state:AIFitnessState?){
 
+    }
+
+    private val backButtonListener = View.OnClickListener{
+        finish()
+    }
+
+    private val settingsButtonListener = View.OnClickListener {
+        startActivity(SettingsActivity::class.java)
     }
 
 

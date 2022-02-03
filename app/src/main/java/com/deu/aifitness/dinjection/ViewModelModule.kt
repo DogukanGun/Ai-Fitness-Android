@@ -6,6 +6,10 @@ import com.deu.aifitness.ui.developerstartpage.DeveloperStartPageVM
 import com.deu.aifitness.ui.homepage.HomeFragmentVM
 import com.deu.aifitness.ui.homepage.HomeVM
 import com.deu.aifitness.ui.mainactivity.MainActivityVM
+import com.deu.aifitness.ui.profile.ProfileFragment
+import com.deu.aifitness.ui.profile.ProfileVM
+import com.deu.aifitness.ui.settings.SettingsFragmentVM
+import com.deu.aifitness.ui.settings.SettingsVM
 import com.deu.aifitness.ui.tabbar.TabbarVM
 import com.deu.aifitness.ui.user.operation.UserOperationVM
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragmentVM
@@ -54,4 +58,13 @@ class ViewModelModule {
 
     @Provides
     fun provideWorkoutActivityVM() = WorkoutActivityVM()
+
+    @Provides
+    fun provideSettingsVM() = SettingsVM()
+
+    @Provides
+    fun provideSettingsFragmentVM() = SettingsFragmentVM()
+
+    @Provides
+    fun provideProfileVM() = ProfileVM()
 }
