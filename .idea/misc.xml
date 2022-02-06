@@ -26,6 +26,9 @@
         <entry key="app/src/main/res/drawable/bg_tabbar_selected.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/empty_tall_divider.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/drawable/ic_baseline_cancel.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/drawable/ic_facebook.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/ic_gmail.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/ic_instagram.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/layout/action_bar.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_developer_start_page.xml" value="0.25" />
@@ -35,8 +38,9 @@
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.1852355072463768" />
         <entry key="app/src/main/res/layout/activity_user_operation.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/activity_workout.xml" value="0.2897342365815529" />
+        <entry key="app/src/main/res/layout/activity_workout_camera.xml" value="0.17346014492753623" />
         <entry key="app/src/main/res/layout/component_ai_text_input.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/component_form.xml" value="0.290625" />
+        <entry key="app/src/main/res/layout/component_form.xml" value="0.375" />
         <entry key="app/src/main/res/layout/component_tabbar_button.xml" value="0.375" />
         <entry key="app/src/main/res/layout/empty_tall_divider.xml" value="0.16145833333333334" />
         <entry key="app/src/main/res/layout/exercise_item.xml" value="0.1546875" />
@@ -50,6 +54,7 @@
         <entry key="app/src/main/res/layout/fragment_user_operation.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.16302083333333334" />
         <entry key="app/src/main/res/layout/fragment_workout.xml" value="0.1852355072463768" />
+        <entry key="app/src/main/res/layout/fragment_workout_camera.xml" value="0.17346014492753623" />
         <entry key="app/src/main/res/layout/fragment_workout_detail.xml" value="0.19149132183769943" />
         <entry key="app/src/main/res/layout/item_register.xml" value="0.4125433260830581" />
         <entry key="app/src/main/res/layout/item_workout.xml" value="0.375" />

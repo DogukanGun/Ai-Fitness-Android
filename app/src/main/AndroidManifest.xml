@@ -3,6 +3,11 @@
     package="com.deu.aifitness">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <application
         android:name=".application.MainApplication"
@@ -13,6 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AiFitness"
         android:usesCleartextTraffic="true">
+
+        <meta-data android:name="google_client_id" android:value="842440732855-1alju27cm2vmego87trgv7gutnqvk7gt.apps.googleusercontent.com"/>
+        <activity
+            android:name=".ui.cameraxactivity.WorkoutCameraActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:exported="false" />
@@ -22,7 +32,7 @@
             android:theme="@style/Theme.AiFitness.NoActionBar" />
         <activity
             android:name=".ui.developerstartpage.DeveloperStartPageActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ui.homepage.HomeActivity"
             android:exported="false" />

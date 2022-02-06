@@ -41,4 +41,8 @@
     <string name="averageTime">Ortalama Zaman</string>
 
 
+    <string name="start_capture">Başla</string>
+    <string name="stop_capture">Bitir</string>
+
+
 </resources>

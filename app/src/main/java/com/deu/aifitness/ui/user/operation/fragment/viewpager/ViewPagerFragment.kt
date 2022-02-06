@@ -8,6 +8,7 @@ import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AppConstants
 import com.deu.aifitness.component.form.FormListener
+import com.deu.aifitness.data.form.AlternativeOperation
 import com.deu.aifitness.data.form.FormFields
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.registeruser.RegisterUser
@@ -46,6 +47,14 @@ class ViewPagerFragment : AIFitnessFragment<ViewPagerVM,FragmentViewPagerBinding
             }else{
                 val loginUser= LoginUser(list.email,list.password)
                 listener?.loginUser(loginUser)
+            }
+        }
+
+        override fun alternativeOperationPressed(alternativeOperation: AlternativeOperation) {
+            if(userOperationStatus== AppConstants.UserOperation.Register){
+                listener?.alternativeRegisterPressed(alternativeOperation)
+            }else{
+                listener?.alternativeLoginPressed(alternativeOperation)
             }
         }
     }

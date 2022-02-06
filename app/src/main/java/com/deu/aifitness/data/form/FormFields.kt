@@ -26,7 +26,7 @@ data class FormFields(
                     FormAttribute.PASSWORD->{
                         formField.password = item.formItemValue
                     }
-                    FormAttribute.PASSWORDCONFIRM->{
+                    FormAttribute.PASSWORD_CONFIRM->{
                         //prevent code smell
                     }
                     FormAttribute.USERNAME->{

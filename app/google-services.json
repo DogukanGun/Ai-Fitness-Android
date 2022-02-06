@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "842440732855",
+    "project_id": "aifitness-3f201",
+    "storage_bucket": "aifitness-3f201.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842440732855:android:f01e1e4e8b765d76359d32",
+        "android_client_info": {
+          "package_name": "com.deu.aifitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842440732855-1alju27cm2vmego87trgv7gutnqvk7gt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.deu.aifitness",
+            "certificate_hash": "1d7638edc9fe88838d0903fe0c05fd1c2dd8a8a0"
+          }
+        },
+        {
+          "client_id": "842440732855-6k86cldul6qa1kdqdncuek1dbqu2b7vf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuJKaftJRb1JOjhz9DSgp-pcfdD5XCsAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842440732855-6k86cldul6qa1kdqdncuek1dbqu2b7vf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

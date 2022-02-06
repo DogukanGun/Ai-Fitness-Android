@@ -1,5 +1,8 @@
 package com.deu.aifitness.dinjection
 
+import android.view.View
+import com.deu.aifitness.ui.cameraxactivity.WorkoutCameraActivity
+import com.deu.aifitness.ui.cameraxactivity.WorkoutCameraFragment
 import com.deu.aifitness.ui.developerstartpage.DeveloperStartPageActivity
 import com.deu.aifitness.ui.homepage.HomeActivity
 import com.deu.aifitness.ui.homepage.HomeFragment
@@ -62,4 +65,10 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = [ViewModelModule::class])
     abstract fun provideProfileFragment(): ProfileFragment
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideWorkoutCameraActivity(): WorkoutCameraActivity
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideWorkoutCameraFragment(): WorkoutCameraFragment
 }

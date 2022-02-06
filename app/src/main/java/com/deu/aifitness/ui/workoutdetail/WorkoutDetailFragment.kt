@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessFragment
+import com.deu.aifitness.application.AIFitnessState
+import com.deu.aifitness.data.workout.Workout
 import com.deu.aifitness.databinding.FragmentWorkoutBinding
+import com.deu.aifitness.ui.cameraxactivity.WorkoutCameraActivity
 import javax.inject.Inject
 
 class WorkoutDetailFragment : AIFitnessFragment<WorkoutDetailVM,FragmentWorkoutBinding>() {
@@ -29,4 +32,11 @@ class WorkoutDetailFragment : AIFitnessFragment<WorkoutDetailVM,FragmentWorkoutB
         return view
     }
 
+    override fun stateChange(state: AIFitnessState) {
+        when(state){
+            WorkoutDetailVS.StartWorkout->{
+                startActivity(WorkoutCameraActivity::class.java)
+            }
+        }
+    }
 }

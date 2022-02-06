@@ -3,9 +3,12 @@ package com.deu.aifitness.application
 import android.content.Context
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.camera.camera2.Camera2Config
+import androidx.camera.core.CameraXConfig
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
@@ -13,9 +16,10 @@ import androidx.lifecycle.Observer
 import com.deu.aifitness.BR
 import com.deu.aifitness.R
 import com.deu.aifitness.data.constant.SelectButtons
+import com.deu.aifitness.data.form.AlternativeOperation
 import dagger.android.support.AndroidSupportInjection
 
-abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment() {
+abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), CameraXConfig.Provider {
 
     abstract fun getLayoutId():Int
 
@@ -63,6 +67,24 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment() {
         viewModel = getLayoutVM()
     }
 
+    fun getComponentName() = activity?.componentName
+
+    fun getPackageManager() = activity?.packageManager
+
+    fun startLauncher(alternativeOperation: AlternativeOperation){
+        when(alternativeOperation){
+            AlternativeOperation.GOOGLE->{
+                getAIFitnessActivity()?.signInGoogleLauncher()
+
+            }
+            AlternativeOperation.TWEETER->{
+
+            }
+            AlternativeOperation.FACEBOOK->{
+
+            }
+        }
+    }
 
     private fun getAIFitnessActivity():AIFitnessActivity<*,*>?{
         getActivity().let { activity->
@@ -102,5 +124,10 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment() {
 
     open fun stateChange(state:AIFitnessState){
 
+    }
+
+    override fun getCameraXConfig(): CameraXConfig {
+        return CameraXConfig.Builder.fromConfig(Camera2Config.defaultConfig())
+            .setMinimumLoggingLevel(Log.ERROR).build()
     }
 }

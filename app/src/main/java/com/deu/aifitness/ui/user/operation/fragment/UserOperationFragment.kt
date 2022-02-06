@@ -1,5 +1,6 @@
 package com.deu.aifitness.ui.user.operation.fragment
 
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.deu.aifitness.application.AIFitnessActivity
 import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AIFitnessState
 import com.deu.aifitness.data.constant.SelectButtons
+import com.deu.aifitness.data.form.AlternativeOperation
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.registeruser.RegisterUser
 import com.deu.aifitness.databinding.FragmentUserOperationBinding
@@ -58,6 +60,9 @@ class UserOperationFragment
             is UserOperationFragmentVS.UserOperationDone ->{
                 startActivity(HomeActivity::class.java)
             }
+            is UserOperationFragmentVS.StartLauncher ->{
+                startLauncher(state.alternativeOperation)
+            }
         }
     }
 
@@ -103,5 +108,12 @@ class UserOperationFragment
             viewModel?.loginUser(loginUser)
         }
 
+        override fun alternativeRegisterPressed(alternativeOperation: AlternativeOperation) {
+            viewModel?.alternativeRegisterPressed(alternativeOperation)
+        }
+
+        override fun alternativeLoginPressed(alternativeOperation: AlternativeOperation) {
+            viewModel?.alternativeLoginPressed(alternativeOperation)
+        }
     }
 }

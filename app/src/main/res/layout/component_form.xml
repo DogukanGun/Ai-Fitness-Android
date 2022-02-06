@@ -9,18 +9,63 @@
         android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvRegister"
+            android:id="@+id/registerRV"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
             android:layout_weight="0.8"
-            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintBottom_toTopOf="@+id/instagramProcessIB"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageButton
+            android:id="@+id/gmailProcessIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:background="@color/white"
+            android:padding="@dimen/padding_small"
+            android:src="@drawable/ic_gmail"
+            app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
+            app:layout_constraintEnd_toStartOf="@+id/instagramProcessIB"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/instagramProcessIB" />
+
+        <ImageButton
+            android:id="@+id/instagramProcessIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:background="@color/white"
+            android:padding="@dimen/padding_small"
+            android:src="@drawable/ic_instagram"
+            app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
+            app:layout_constraintEnd_toStartOf="@+id/facebookProcessIB"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/gmailProcessIB" />
+
+        <ImageButton
+            android:id="@+id/facebookProcessIB"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:background="@color/white"
+            android:padding="@dimen/padding_small"
+            android:src="@drawable/ic_facebook"
+            app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/instagramProcessIB"
+            app:layout_constraintTop_toTopOf="@+id/instagramProcessIB" />
+
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/submitButton"
+            android:id="@+id/submitButtonBTN"
             style="@style/StandartButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

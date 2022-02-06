@@ -42,4 +42,7 @@
     <string name="intensity">Intensity</string>
     <string name="averageTime">Average Time</string>
 
+    <string name="start_capture">Start</string>
+    <string name="stop_capture">Stop</string>
+
 </resources>

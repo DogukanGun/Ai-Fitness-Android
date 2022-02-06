@@ -8,5 +8,5 @@ enum class FormAttribute(val placeholder:String,val title:String) {
     BIRTHDAY("birthday","Birthday"),
     EMAIL("email","Email"),
     PHONE("phone","Phone"),
-    PASSWORDCONFIRM("password again","Password")
+    PASSWORD_CONFIRM("password again","Password"),
 }

@@ -5,17 +5,21 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AppConstants
 import com.deu.aifitness.data.constant.Constant
+import com.deu.aifitness.data.form.AlternativeOperation
 import com.deu.aifitness.data.form.FormAttribute
 import com.deu.aifitness.data.form.FormFields
 
 open class FormComponent : ConstraintLayout {
 
     lateinit var binding: com.deu.aifitness.databinding.ComponentFormBinding
+    var otherOptions = MutableLiveData<Boolean>(false)
     lateinit var adapter: FormAdapter
     var listener: FormListener? = null
 
@@ -44,16 +48,21 @@ open class FormComponent : ConstraintLayout {
         )
         binding.apply {
             setComponent(attrs, Constant.userOperation.value)
-
-            submitButton.setOnClickListener { view->
+            submitButtonBTN.setOnClickListener { view->
                     val array = adapter.itemList
                     val formFields = FormFields.convertFromFormItem(array)
                     listener?.onFormSubmit(formFields)
             }
+            gmailProcessIB.setOnClickListener {
+                listener?.alternativeOperationPressed(AlternativeOperation.GOOGLE)
+            }
+            facebookProcessIB.setOnClickListener {
+                listener?.alternativeOperationPressed(AlternativeOperation.FACEBOOK)
+            }
+            instagramProcessIB.setOnClickListener {
+                listener?.alternativeOperationPressed(AlternativeOperation.TWEETER)
+            }
         }
-
-
-
     }
 
     private fun setComponent(attrs: AttributeSet?,userOperationValue:String) {
@@ -65,29 +74,30 @@ open class FormComponent : ConstraintLayout {
             recycler(itemList)
             context.theme.obtainStyledAttributes(attrs, R.styleable.FormComponent, 0, 0)
                 .apply {
-                    binding.submitButton.text = getString(R.styleable.FormComponent_loginButton)
+                    binding.submitButtonBTN.text = getString(R.styleable.FormComponent_loginButton)
+                    otherOptions.postValue(getBoolean(R.styleable.FormComponent_otherOptions,false))
                 }
 
         } else {
             val itemList = listOf(
                 FormItem(FormAttribute.EMAIL, ""),
                 FormItem(FormAttribute.NAME, ""),
-                FormItem(FormAttribute.SURNAME, ""),
                 FormItem(FormAttribute.PASSWORD, ""),
-                FormItem(FormAttribute.PASSWORDCONFIRM, "")
+                FormItem(FormAttribute.PASSWORD_CONFIRM, "")
             )
             recycler(itemList)
             context.theme.obtainStyledAttributes(attrs, R.styleable.FormComponent, 0, 0)
                 .apply {
-                    binding.submitButton.text = getString(R.styleable.FormComponent_registerButton)
+                    binding.submitButtonBTN.text = getString(R.styleable.FormComponent_registerButton)
+                    otherOptions.postValue(getBoolean(R.styleable.FormComponent_otherOptions,false))
                 }
         }
     }
 
     private fun recycler(itemList: List<FormItem>){
         adapter = FormAdapter(itemList)
-        binding.rvRegister.adapter = adapter
-        binding.rvRegister.layoutManager = LinearLayoutManager(context,
+        binding.registerRV.adapter = adapter
+        binding.registerRV.layoutManager = LinearLayoutManager(context,
             LinearLayoutManager.VERTICAL ,false)
     }
 
