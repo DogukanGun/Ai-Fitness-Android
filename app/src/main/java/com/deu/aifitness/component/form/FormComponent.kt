@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import com.deu.aifitness.databinding.ComponentFormBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AppConstants
@@ -15,10 +16,11 @@ import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.form.AlternativeOperation
 import com.deu.aifitness.data.form.FormAttribute
 import com.deu.aifitness.data.form.FormFields
+import com.facebook.login.widget.LoginButton
 
 open class FormComponent : ConstraintLayout {
 
-    lateinit var binding: com.deu.aifitness.databinding.ComponentFormBinding
+    lateinit var binding: ComponentFormBinding
     var otherOptions = MutableLiveData<Boolean>(false)
     lateinit var adapter: FormAdapter
     var listener: FormListener? = null
@@ -46,6 +48,7 @@ open class FormComponent : ConstraintLayout {
             this,
             true
         )
+        setFacebookButton()
         binding.apply {
             setComponent(attrs, Constant.userOperation.value)
             submitButtonBTN.setOnClickListener { view->
@@ -59,10 +62,20 @@ open class FormComponent : ConstraintLayout {
             facebookProcessIB.setOnClickListener {
                 listener?.alternativeOperationPressed(AlternativeOperation.FACEBOOK)
             }
-            instagramProcessIB.setOnClickListener {
-                listener?.alternativeOperationPressed(AlternativeOperation.TWEETER)
+            googlePlayProcessIB.setOnClickListener {
+                listener?.alternativeOperationPressed(AlternativeOperation.GOOGLE_PLAY)
             }
         }
+    }
+
+
+    private fun setFacebookButton(){
+        binding.facebookProcessIB.apply {
+            toolTipMode = LoginButton.ToolTipMode.DISPLAY_ALWAYS
+            setBackgroundResource(R.drawable.ic_facebook)
+            setLoginText("")
+        }
+
     }
 
     private fun setComponent(attrs: AttributeSet?,userOperationValue:String) {
@@ -81,7 +94,6 @@ open class FormComponent : ConstraintLayout {
         } else {
             val itemList = listOf(
                 FormItem(FormAttribute.EMAIL, ""),
-                FormItem(FormAttribute.NAME, ""),
                 FormItem(FormAttribute.PASSWORD, ""),
                 FormItem(FormAttribute.PASSWORD_CONFIRM, "")
             )

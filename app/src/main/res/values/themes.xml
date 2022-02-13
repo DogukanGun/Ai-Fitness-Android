@@ -24,6 +24,13 @@
         <item name="android:gravity">center</item>
         <item name="android:padding">@dimen/padding_small</item>
     </style>
+    <style name="NumberButton">
+        <item name="android:textColor">@color/bottom_bar</item>
+        <item name="android:background">@drawable/bg_numpad_button_border</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
     <style name="Theme.AiFitness.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

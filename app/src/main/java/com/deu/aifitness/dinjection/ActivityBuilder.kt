@@ -11,6 +11,8 @@ import com.deu.aifitness.ui.profile.ProfileFragment
 import com.deu.aifitness.ui.settings.SettingsActivity
 import com.deu.aifitness.ui.settings.SettingsFragment
 import com.deu.aifitness.ui.settings.SettingsFragmentVM
+import com.deu.aifitness.ui.smsotp.SmsOtpActivity
+import com.deu.aifitness.ui.smsotp.SmsOtpFragment
 import com.deu.aifitness.ui.tabbar.TabbarFragment
 import com.deu.aifitness.ui.user.operation.UserOperationActivity
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragment
@@ -71,4 +73,10 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = [ViewModelModule::class])
     abstract fun provideWorkoutCameraFragment(): WorkoutCameraFragment
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideSmsOtpActivity(): SmsOtpActivity
+
+    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    abstract fun provideSmsOtpFragment(): SmsOtpFragment
 }

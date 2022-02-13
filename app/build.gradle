@@ -110,12 +110,17 @@ dependencies {
 
     //firebase
     implementation platform('com.google.firebase:firebase-bom:29.0.4')
-    implementation platform('com.google.firebase:firebase-bom:29.0.4')
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
-    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.core:core-ktx"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.facebook.android:facebook-login:latest.release'
+
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+
 
 
 }

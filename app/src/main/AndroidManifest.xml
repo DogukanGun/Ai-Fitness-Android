@@ -3,10 +3,13 @@
     package="com.deu.aifitness">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.camera.any" />
+
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
 
     <application
@@ -18,8 +21,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AiFitness"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.smsotp.SmsOtpActivity"
+            android:exported="false" />
 
-        <meta-data android:name="google_client_id" android:value="842440732855-1alju27cm2vmego87trgv7gutnqvk7gt.apps.googleusercontent.com"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="google_client_id"
+            android:value="842440732855-1alju27cm2vmego87trgv7gutnqvk7gt.apps.googleusercontent.com" />
+
         <activity
             android:name=".ui.cameraxactivity.WorkoutCameraActivity"
             android:exported="false" />

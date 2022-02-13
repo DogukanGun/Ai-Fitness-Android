@@ -14,6 +14,8 @@ import com.deu.aifitness.ui.profile.ProfileFragment
 import com.deu.aifitness.ui.profile.ProfileVM
 import com.deu.aifitness.ui.settings.SettingsFragmentVM
 import com.deu.aifitness.ui.settings.SettingsVM
+import com.deu.aifitness.ui.smsotp.SmsOtpFragmentVM
+import com.deu.aifitness.ui.smsotp.SmsOtpVM
 import com.deu.aifitness.ui.tabbar.TabbarVM
 import com.deu.aifitness.ui.user.operation.UserOperationVM
 import com.deu.aifitness.ui.user.operation.fragment.UserOperationFragmentVM
@@ -79,4 +81,10 @@ class ViewModelModule {
 
     @Provides
     fun provideWorkoutCameraFragmentVM() = WorkoutCameraFragmentVM()
+
+    @Provides
+    fun provideSmsOtpVM() = SmsOtpVM()
+
+    @Provides
+    fun provideSmsOtpFragmentVM() = SmsOtpFragmentVM()
 }

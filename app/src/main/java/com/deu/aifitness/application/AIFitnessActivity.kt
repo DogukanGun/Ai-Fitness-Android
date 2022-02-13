@@ -3,33 +3,33 @@ package com.deu.aifitness.application
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
-import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.camera.camera2.Camera2Config
 import androidx.camera.core.CameraXConfig
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentContainerView
 import androidx.lifecycle.Observer
 import com.deu.aifitness.BR
 import com.deu.aifitness.R
 import com.deu.aifitness.data.constant.Constant
+import com.deu.aifitness.data.constant.Constant.TAG
 import com.deu.aifitness.data.constant.SelectButtons
-import com.deu.aifitness.databinding.ActionBarBinding
 import com.deu.aifitness.ui.settings.SettingsActivity
-import com.deu.aifitness.ui.tabbar.TabbarFragment
+import com.deu.aifitness.ui.smsotp.SmsOtpActivity
+import com.deu.aifitness.ui.smsotp.SmsOtpFragment
+import com.facebook.*
+import com.facebook.login.LoginResult
+import com.facebook.login.widget.LoginButton
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -39,6 +39,20 @@ import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
 import dagger.android.AndroidInjection
 import java.lang.Exception
+import com.google.firebase.auth.FirebaseUser
+
+import com.google.firebase.auth.AuthResult
+
+import com.google.firebase.auth.FacebookAuthProvider
+
+import com.google.firebase.auth.AuthCredential
+
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.FirebaseAuth
+
+
+
+
 
 abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatActivity(),
     CameraXConfig.Provider {
@@ -62,15 +76,20 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
     open fun selectButton2Text() = R.string.register_button
 
     lateinit var googleSignInClient: GoogleSignInClient
-    lateinit var activityResultLauncher:ActivityResultLauncher<Intent>
+    lateinit var activityResultLauncherGoogle:ActivityResultLauncher<Intent>
+    lateinit var phoneSmsOtpLauncher:ActivityResultLauncher<Intent>
 
     protected var viewModel:VM? = null
     protected var binding:DB? = null
+    private val mAuth: FirebaseAuth? = null
+
+    val session = AIFitnessSession.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         registerActivityResult()
+        registerPhoneSmsOtp()
         viewModel = getLayoutVM()
         binding = DataBindingUtil.setContentView(this,getLayoutId())
         binding!!.setVariable(BR.viewModel,viewModel)
@@ -209,13 +228,73 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
 
     fun signInGoogleLauncher() {
         getFirebaseAuth()
-
         val intent = googleSignInClient.signInIntent
-        activityResultLauncher.launch(intent)
+        activityResultLauncherGoogle.launch(intent)
     }
 
-    fun registerActivityResult(){
-        activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()
+    private fun registerPhoneSmsOtp(){
+        phoneSmsOtpLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult(),
+        ){
+            //reduce code smell
+        }
+    }
+
+    fun finishActivityWithResult(intent: Intent){
+        setResult(RESULT_OK,intent)
+        finish()
+    }
+
+    fun signInTelephoneLauncher(){
+        val intent = Intent(applicationContext,SmsOtpActivity::class.java)
+        phoneSmsOtpLauncher.launch(intent)
+    }
+
+    fun signInFacebookLauncher(){
+        val callbackManager = CallbackManager.Factory.create()
+        val buttonFacebookLogin = findViewById<LoginButton>(R.id.facebookProcessIB)
+        buttonFacebookLogin.setPermissions("email", "public_profile")
+        buttonFacebookLogin.registerCallback(callbackManager, object :
+            FacebookCallback<LoginResult> {
+            override fun onSuccess(loginResult: LoginResult) {
+                Log.d(TAG, "facebook:onSuccess:$loginResult")
+                handleFacebookAccessToken(loginResult.accessToken)
+            }
+
+            override fun onCancel() {
+                Log.d(TAG, "facebook:onCancel")
+            }
+
+            override fun onError(error: FacebookException) {
+                Log.d(TAG, "facebook:onError", error)
+            }
+        })
+    }
+
+    private  fun handleFacebookAccessToken(token: AccessToken) {
+        Log.d(TAG, "handleFacebookAccessToken:$token")
+        val credential = FacebookAuthProvider.getCredential(token.token)
+        mAuth?.let { mAuth->
+            mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this
+                ) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        Log.d(TAG, "signInWithCredential:success")
+                        mAuth.currentUser?.let {
+                            val user: FirebaseUser = it
+                        }
+                    } else {
+                        Log.w(TAG, "signInWithCredential:failure", task.exception)
+                        Toast.makeText(
+                            this@AIFitnessActivity, "Authentication failed.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+        }
+    }
+    private fun registerActivityResult(){
+        activityResultLauncherGoogle = registerForActivityResult(ActivityResultContracts.StartActivityForResult()
         ) {
             if (it.resultCode == RESULT_OK) {
                 val data = it.data

@@ -55,6 +55,7 @@ class UserOperationFragment
         return view
     }
 
+
     override fun stateChange(state: AIFitnessState) {
         when(state){
             is UserOperationFragmentVS.UserOperationDone ->{

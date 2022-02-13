@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" >
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/root_layout"
         android:layout_width="match_parent"
@@ -12,9 +15,7 @@
             android:id="@+id/registerRV"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_medium"
             android:layout_weight="0.8"
-            app:layout_constraintBottom_toTopOf="@+id/instagramProcessIB"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -22,47 +23,72 @@
 
         <ImageButton
             android:id="@+id/gmailProcessIB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="@dimen/margin_medium"
             android:background="@color/white"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:padding="@dimen/padding_small"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_gmail"
             app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
-            app:layout_constraintEnd_toStartOf="@+id/instagramProcessIB"
+            app:layout_constraintEnd_toStartOf="@+id/facebookProcessWrapperCV"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/instagramProcessIB" />
+            app:layout_constraintTop_toBottomOf="@+id/registerRV"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/instagramProcessIB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/googlePlayProcessIB"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
             android:background="@color/white"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:padding="@dimen/padding_small"
-            android:src="@drawable/ic_instagram"
-            app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
-            app:layout_constraintEnd_toStartOf="@+id/facebookProcessIB"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/gmailProcessIB" />
-
-        <ImageButton
-            android:id="@+id/facebookProcessIB"
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="@dimen/margin_medium"
-            android:background="@color/white"
-            android:padding="@dimen/padding_small"
-            android:src="@drawable/ic_facebook"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_google_play_games"
             app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/instagramProcessIB"
-            app:layout_constraintTop_toTopOf="@+id/instagramProcessIB" />
+            app:layout_constraintStart_toEndOf="@+id/facebookProcessWrapperCV"
+            app:layout_constraintTop_toBottomOf="@+id/registerRV"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/facebookProcessWrapperCV"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
+            app:layout_constraintEnd_toStartOf="@+id/googlePlayProcessIB"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/gmailProcessIB"
+            app:layout_constraintTop_toBottomOf="@+id/registerRV">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebookProcessIB"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:paddingStart="50dp"
+                android:paddingBottom="25dp" />
+
+        </androidx.cardview.widget.CardView>
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submitButtonBTN"
@@ -76,5 +102,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </layout>

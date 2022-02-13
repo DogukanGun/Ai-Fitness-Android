@@ -45,4 +45,7 @@
     <string name="stop_capture">Bitir</string>
 
 
+    <!-- FACEBOOK LOGIN DO NOT CHANGE OR MOVE -->
+    <string name="facebook_app_id">463084808629821</string>
+
 </resources>

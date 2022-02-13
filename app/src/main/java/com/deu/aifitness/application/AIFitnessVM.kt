@@ -6,5 +6,5 @@ import com.deu.aifitness.ui.developerstartpage.DeveloperStartPageVS
 
 open class AIFitnessVM:ViewModel(){
     val state = MutableLiveData<AIFitnessState>()
-
+    val session = AIFitnessSession.getInstance()
 }

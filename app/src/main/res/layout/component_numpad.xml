@@ -1,0 +1,182 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/deleteIB"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/twoBTN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sevenBTN"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/okayIB"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:background="@drawable/bg_numpad_button_border"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:src="@drawable/ic_okay"
+            android:textColor="@color/bottom_bar"
+            android:textSize="@dimen/text_xlarge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/twoBTN"
+            app:layout_constraintTop_toBottomOf="@+id/nineBTN"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zeroBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:tag="0"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/threeBTN"
+            app:layout_constraintStart_toEndOf="@+id/oneBTN"
+            app:layout_constraintTop_toBottomOf="@+id/eightBTN" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fourBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:tag="4"
+            android:text="4"
+            app:layout_constraintBottom_toTopOf="@+id/sevenBTN"
+            app:layout_constraintEnd_toStartOf="@+id/twoBTN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/oneBTN" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sevenBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:tag="7"
+            android:text="7"
+            app:layout_constraintEnd_toStartOf="@+id/twoBTN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fourBTN" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/eightBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:tag="8"
+            android:text="8"
+            app:layout_constraintEnd_toStartOf="@+id/threeBTN"
+            app:layout_constraintStart_toEndOf="@+id/oneBTN"
+            app:layout_constraintTop_toBottomOf="@+id/fiveBTN" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nineBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:tag="9"
+            android:text="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/twoBTN"
+            app:layout_constraintTop_toBottomOf="@+id/sixBTN" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sixBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:tag="6"
+            android:text="6"
+            app:layout_constraintBottom_toTopOf="@+id/nineBTN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/twoBTN"
+            app:layout_constraintTop_toBottomOf="@+id/threeBTN" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fiveBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:tag="5"
+            android:text="5"
+            app:layout_constraintBottom_toTopOf="@+id/eightBTN"
+            app:layout_constraintEnd_toStartOf="@+id/threeBTN"
+            app:layout_constraintStart_toEndOf="@+id/oneBTN"
+            app:layout_constraintTop_toBottomOf="@+id/twoBTN" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/oneBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:tag="1"
+            android:text="1"
+            app:layout_constraintBottom_toTopOf="@+id/fourBTN"
+            app:layout_constraintEnd_toStartOf="@+id/twoBTN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/twoBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:tag="2"
+            android:text="2"
+            app:layout_constraintBottom_toTopOf="@+id/fiveBTN"
+            app:layout_constraintEnd_toStartOf="@+id/threeBTN"
+            app:layout_constraintStart_toEndOf="@+id/oneBTN"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/threeBTN"
+            style="@style/NumberButton"
+            android:layout_width="@dimen/numpad_button_width"
+            android:layout_height="@dimen/numpad_button_height"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_xsmall"
+            android:tag="3"
+            android:text="3"
+            app:layout_constraintBottom_toTopOf="@+id/sixBTN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/twoBTN"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

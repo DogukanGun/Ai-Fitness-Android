@@ -1,6 +1,7 @@
 package com.deu.aifitness.application
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
@@ -38,6 +39,8 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
 
     open fun selectButton1Text() = R.string.register_button
 
+    val session = AIFitnessSession.getInstance()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -67,6 +70,9 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
         viewModel = getLayoutVM()
     }
 
+    fun finishActivityWithResult(intent: Intent){
+        getAIFitnessActivity()?.finishActivityWithResult(intent)
+    }
     fun getComponentName() = activity?.componentName
 
     fun getPackageManager() = activity?.packageManager
@@ -75,13 +81,12 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
         when(alternativeOperation){
             AlternativeOperation.GOOGLE->{
                 getAIFitnessActivity()?.signInGoogleLauncher()
-
             }
-            AlternativeOperation.TWEETER->{
-
+            AlternativeOperation.GOOGLE_PLAY->{
+                getAIFitnessActivity()?.signInTelephoneLauncher()
             }
             AlternativeOperation.FACEBOOK->{
-
+                getAIFitnessActivity()?.signInFacebookLauncher()
             }
         }
     }

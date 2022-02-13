@@ -45,4 +45,8 @@
     <string name="start_capture">Start</string>
     <string name="stop_capture">Stop</string>
 
+
+    <!-- FACEBOOK LOGIN DO NOT CHANGE OR MOVE -->
+    <string name="facebook_app_id">463084808629821</string>
+
 </resources>
