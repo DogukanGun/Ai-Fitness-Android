@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="AiEditText">
+        <attr name="keyName" format="string" />
+        <attr name="valueName" format="string" />
+    </declare-styleable>
+</resources>

@@ -23,7 +23,6 @@ class SmsOtpFragment : AIFitnessFragment<SmsOtpFragmentVM,FragmentSmsOtpBinding>
     @Inject
     lateinit var smsOtpFragmentVM: SmsOtpFragmentVM
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

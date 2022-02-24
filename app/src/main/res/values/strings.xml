@@ -40,6 +40,12 @@
     <string name="intensity">Yoğunluk</string>
     <string name="averageTime">Ortalama Zaman</string>
 
+    <!-- Profile -->
+    <string name="nameKey">İsim</string>
+    <string name="phoneKey">Telefon</string>
+    <string name="emailKey">Mail</string>
+    <string name="saveProfile">Profili Kaydet</string>
+
 
     <string name="start_capture">Başla</string>
     <string name="stop_capture">Bitir</string>

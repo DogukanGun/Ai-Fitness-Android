@@ -19,6 +19,7 @@
         <entry key="..\:/Users/alper/Desktop/Ai-Fitness/app/src/main/res/layout/activity_user_operation.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/alper/Desktop/Ai-Fitness/app/src/main/res/layout/component_form.xml" value="0.17831813576494426" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/bg_component_ai_edit_text.xml" value="0.2175" />
         <entry key="app/src/main/res/drawable/bg_not_selected_button.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/bg_numpad_button_border.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/bg_pin_number_not_selected.xml" value="0.30572916666666666" />
@@ -38,6 +39,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/ic_okay.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/ic_twitter.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.2175" />
         <entry key="app/src/main/res/layout/action_bar.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_developer_start_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
@@ -48,6 +50,7 @@
         <entry key="app/src/main/res/layout/activity_user_operation.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/activity_workout.xml" value="0.2897342365815529" />
         <entry key="app/src/main/res/layout/activity_workout_camera.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/component_ai_edit_text.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/component_ai_text_input.xml" value="0.25" />
         <entry key="app/src/main/res/layout/component_form.xml" value="0.32273266640251824" />
         <entry key="app/src/main/res/layout/component_numpad.xml" value="0.335" />
@@ -58,7 +61,7 @@
         <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.20259343248553244" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.140625" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.16302083333333334" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.19699300130208336" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.27708333333333335" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1852355072463768" />
         <entry key="app/src/main/res/layout/fragment_sms_otp.xml" value="0.335" />
@@ -72,6 +75,7 @@
         <entry key="app/src/main/res/layout/item_workout.xml" value="0.375" />
         <entry key="app/src/main/res/layout/item_workout_.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/sample_a_i_text_input.xml" value="0.23777173913043478" />
+        <entry key="app/src/main/res/layout/sample_ai_edit_text.xml" value="0.2755208333333333" />
         <entry key="app/src/main/res/layout/sample_form_component.xml" value="0.36427732079905994" />
         <entry key="app/src/main/res/layout/sample_numpad.xml" value="0.27664306338458045" />
         <entry key="app/src/main/res/layout/sample_pin_number.xml" value="0.1408308004052685" />
