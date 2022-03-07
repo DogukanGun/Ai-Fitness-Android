@@ -36,7 +36,7 @@ class MainActivity: AIFitnessActivity<MainActivityVM,ActivityMainBinding>() {
         lifecycleScope.launch(Dispatchers.IO) {
             delay(5000L)
             if (BuildConfig.DEVELOPMENT ){
-                startActivity(DeveloperStartPageActivity::class.java)
+                startActivity(UserOperationActivity::class.java)
             }else{
                 startActivity(UserOperationActivity::class.java)
             }

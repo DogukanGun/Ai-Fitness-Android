@@ -7,8 +7,8 @@ import com.deu.aifitness.data.tabbar.TabbarMenu
 
 object Constant {
     var localPort = "8080"
-    val localApiUrl = "http://localhost:$localPort/"
-    val hostApiUrl = "https://aifitnessdeu.herokuapp.com"
+    val localApiUrl = "https://aifitness-api.azurewebsites.net/"
+    val hostApiUrl = "https://aifitness-api.azurewebsites.net/"
     var connectionType = ConnectionType.LOCAL
     val paramName = "p1"
     var userOperation = AppConstants.UserOperation.Login

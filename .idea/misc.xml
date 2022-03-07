@@ -24,6 +24,7 @@
         <entry key="app/src/main/res/drawable/bg_numpad_button_border.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/bg_pin_number_not_selected.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/bg_pin_selected.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/drawable/bg_secondary_button.xml" value="0.158" />
         <entry key="app/src/main/res/drawable/bg_selected_button.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/bg_tabbar.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/bg_tabbar_not_selected.xml" value="0.30572916666666666" />
@@ -52,6 +53,7 @@
         <entry key="app/src/main/res/layout/activity_workout_camera.xml" value="0.17346014492753623" />
         <entry key="app/src/main/res/layout/component_ai_edit_text.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/component_ai_text_input.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/component_aifitnessdialog.xml" value="0.29010416666666666" />
         <entry key="app/src/main/res/layout/component_form.xml" value="0.32273266640251824" />
         <entry key="app/src/main/res/layout/component_numpad.xml" value="0.335" />
         <entry key="app/src/main/res/layout/component_pin_number.xml" value="0.375" />

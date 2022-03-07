@@ -4,13 +4,16 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
 import com.deu.aifitness.application.AIFitnessVM
+import com.deu.aifitness.application.AISessionManager
 import com.deu.aifitness.data.form.AlternativeOperation
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.loginuser.LoginUserResponse
 import com.deu.aifitness.data.registeruser.RegisterUser
 import com.deu.aifitness.data.registeruser.RegisterUserResponse
+import com.deu.aifitness.data.session.SessionKey
 import com.deu.aifitness.network.ApiServiceImpl
 import com.deu.aifitness.network.ApiSource
+import com.facebook.login.Login
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import io.reactivex.Observer
@@ -20,7 +23,7 @@ import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class UserOperationFragmentVM @Inject constructor(val apiSource: ApiSource,
-                                                  val context: Context):AIFitnessVM() {
+                                                  val aiSession: AISessionManager):AIFitnessVM() {
 
     fun alternativeRegisterPressed(alternativeOperation: AlternativeOperation){
         state.postValue(UserOperationFragmentVS.StartLauncher(alternativeOperation))
@@ -36,15 +39,16 @@ class UserOperationFragmentVM @Inject constructor(val apiSource: ApiSource,
             .subscribeOn(Schedulers.io())
             .subscribe(object: Observer<RegisterUserResponse> {
                 override fun onSubscribe(d: Disposable) {
-                    print("bitti")
                 }
 
                 override fun onNext(t: RegisterUserResponse) {
                     print("devam")
+                    val loginUser = LoginUser(user.username,user.password)
+                    state.postValue(UserOperationFragmentVS.LoginUserComingFromRegister(loginUser = loginUser))
                 }
 
                 override fun onError(e: Throwable) {
-                    print("hata var")
+                    state.postValue(UserOperationFragmentVS.UserOperationError)
                 }
 
                 override fun onComplete() {
@@ -55,26 +59,22 @@ class UserOperationFragmentVM @Inject constructor(val apiSource: ApiSource,
 
     }
     fun loginUser(login: LoginUser) {
-        state.postValue(UserOperationFragmentVS.UserOperationDone)
         apiSource.loginUser(login)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe(object: Observer<LoginUserResponse> {
-                override fun onSubscribe(d: Disposable) {
-                    print("bitti")
-                }
+                override fun onSubscribe(d: Disposable) {}
 
                 override fun onNext(t: LoginUserResponse) {
-                    print("devam")
+                    aiSession.putData(SessionKey.USER_TOKEN.name,t.token)
+                    state.postValue(UserOperationFragmentVS.UserOperationDone)
                 }
 
                 override fun onError(e: Throwable) {
-                    print("hata var")
+                    state.postValue(UserOperationFragmentVS.UserOperationError)
                 }
 
-                override fun onComplete() {
-                    print("bitti")
-                }
+                override fun onComplete() {}
 
             })
 

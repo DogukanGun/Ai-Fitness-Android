@@ -16,6 +16,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.deu.aifitness.BR
 import com.deu.aifitness.R
+import com.deu.aifitness.component.dialog.AIFitnessDialogListener
+import com.deu.aifitness.component.dialog.DialogContent
 import com.deu.aifitness.data.constant.SelectButtons
 import com.deu.aifitness.data.form.AlternativeOperation
 import dagger.android.support.AndroidSupportInjection
@@ -125,6 +127,10 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
 
     fun changeButtonState(selectedButton:SelectButtons){
         getAIFitnessActivity()?.changeButtonState(selectedButton)
+    }
+
+    fun showDialog(dialogContent: DialogContent, dialogListener: AIFitnessDialogListener){
+        getAIFitnessActivity()?.showDialog(dialogContent,dialogListener)
     }
 
     open fun stateChange(state:AIFitnessState){

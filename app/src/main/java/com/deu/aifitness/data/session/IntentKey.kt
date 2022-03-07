@@ -1,6 +1,5 @@
 package com.deu.aifitness.data.session
 
-enum class SessionKey {
-
-    USER_TOKEN
+enum class IntentKey {
+    AI_DIALOG
 }

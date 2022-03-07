@@ -1,5 +1,8 @@
 package com.deu.aifitness.dinjection
 
+import android.content.Context
+import com.chuckerteam.chucker.api.ChuckerCollector
+import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.deu.aifitness.data.constant.ConnectionType
 import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.network.ApiServiceImpl
@@ -20,11 +23,19 @@ class NetworkModule {
     fun provideApiSource(retrofit: Retrofit):ApiSource = ApiServiceImpl(retrofit)
 
     @Provides
-    fun provideRetrofit(): Retrofit {
+    fun provideRetrofit(context: Context): Retrofit {
         val logger = HttpLoggingInterceptor(ApiLogger())
         logger.level = HttpLoggingInterceptor.Level.BODY
 
         val httpClient = OkHttpClient.Builder()
+            .addInterceptor(
+                ChuckerInterceptor.Builder(context)
+                    .collector(ChuckerCollector(context))
+                    .maxContentLength(250000L)
+                    .redactHeaders(emptySet())
+                    .alwaysReadResponseBody(false)
+                    .build()
+            )
             .addInterceptor(logger)
             .build()
         var url = ""

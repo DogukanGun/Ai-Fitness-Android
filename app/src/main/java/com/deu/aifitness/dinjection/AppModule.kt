@@ -1,15 +1,20 @@
 package com.deu.aifitness.dinjection
 
 import android.app.Application
-import android.content.pm.PackageManager
-import com.deu.aifitness.application.AIFitnessSession
+import com.deu.aifitness.application.AISessionManager
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 class AppModule {
 
     @Provides
+    @Singleton
     fun provideContext(application: Application) = application.applicationContext
+
+    @Provides
+    @Singleton
+    fun provideSession() = AISessionManager()
 
 }

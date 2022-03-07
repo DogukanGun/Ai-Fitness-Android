@@ -81,7 +81,7 @@ open class FormComponent : ConstraintLayout {
     private fun setComponent(attrs: AttributeSet?,userOperationValue:String) {
         if (userOperationValue == AppConstants.UserOperation.Login.value) {
             val itemList = listOf(
-                FormItem(FormAttribute.EMAIL, ""),
+                FormItem(FormAttribute.USERNAME, ""),
                 FormItem(FormAttribute.PASSWORD, "")
             )
             recycler(itemList)
@@ -93,9 +93,10 @@ open class FormComponent : ConstraintLayout {
 
         } else {
             val itemList = listOf(
+                FormItem(FormAttribute.NAME, ""),
+                FormItem(FormAttribute.USERNAME, ""),
                 FormItem(FormAttribute.EMAIL, ""),
                 FormItem(FormAttribute.PASSWORD, ""),
-                FormItem(FormAttribute.PASSWORD_CONFIRM, "")
             )
             recycler(itemList)
             context.theme.obtainStyledAttributes(attrs, R.styleable.FormComponent, 0, 0)

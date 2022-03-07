@@ -21,6 +21,9 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.Observer
 import com.deu.aifitness.BR
 import com.deu.aifitness.R
+import com.deu.aifitness.component.dialog.AIFitnessDialog
+import com.deu.aifitness.component.dialog.AIFitnessDialogListener
+import com.deu.aifitness.component.dialog.DialogContent
 import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.constant.Constant.TAG
 import com.deu.aifitness.data.constant.SelectButtons
@@ -49,10 +52,6 @@ import com.google.firebase.auth.AuthCredential
 
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
-
-
-
-
 
 abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatActivity(),
     CameraXConfig.Provider {
@@ -318,6 +317,11 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
         })
     }
 
+    fun showDialog(dialogContent:DialogContent,dialogListener: AIFitnessDialogListener){
+        val dialog = AIFitnessDialog.getInstance(dialogContent)
+        dialog.listener = dialogListener
+        dialog.show(supportFragmentManager)
+    }
 
     private fun getFirebaseAuth(){
         val ai = applicationContext.packageManager.getApplicationInfo(applicationContext.packageName,PackageManager.GET_META_DATA)

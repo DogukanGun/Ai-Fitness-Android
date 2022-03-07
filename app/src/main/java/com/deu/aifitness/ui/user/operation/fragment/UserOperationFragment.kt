@@ -10,6 +10,8 @@ import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessActivity
 import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AIFitnessState
+import com.deu.aifitness.component.dialog.AIFitnessDialogListener
+import com.deu.aifitness.component.dialog.DialogContent
 import com.deu.aifitness.data.constant.SelectButtons
 import com.deu.aifitness.data.form.AlternativeOperation
 import com.deu.aifitness.data.loginuser.LoginUser
@@ -35,8 +37,6 @@ class UserOperationFragment
 
     var pagerStatus = SelectButtons.SELECT_BUTTON1
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -58,11 +58,17 @@ class UserOperationFragment
 
     override fun stateChange(state: AIFitnessState) {
         when(state){
-            is UserOperationFragmentVS.UserOperationDone ->{
+            UserOperationFragmentVS.UserOperationDone ->{
                 startActivity(HomeActivity::class.java)
+            }
+            is UserOperationFragmentVS.LoginUserComingFromRegister ->{
+                viewModel?.loginUser(state.loginUser)
             }
             is UserOperationFragmentVS.StartLauncher ->{
                 startLauncher(state.alternativeOperation)
+            }
+            UserOperationFragmentVS.UserOperationError ->{
+                showErrorMessage()
             }
         }
     }
@@ -80,6 +86,21 @@ class UserOperationFragment
         }
     }
 
+    private fun showErrorMessage(){
+        val dialogContent = DialogContent(title = "Test Error",
+            message = "Test Error Message", buttonNegativeContext = null)
+        showDialog(dialogContent,dialogListener)
+
+    }
+
+    private val dialogListener = object :AIFitnessDialogListener{
+        override fun positiveResponse() {
+        }
+
+        override fun negativeResponse() {
+        }
+
+    }
     private fun changeStatus1(){
         changeButtonState(SelectButtons.SELECT_BUTTON1)
         binding?.form?.setCurrentItem(SelectButtons.SELECT_BUTTON1.id,true)

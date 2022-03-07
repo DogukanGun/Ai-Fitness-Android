@@ -2,6 +2,7 @@ package com.deu.aifitness.dinjection
 
 import android.content.Context
 import android.content.pm.PackageManager
+import com.deu.aifitness.application.AISessionManager
 import com.deu.aifitness.component.form.FormVM
 import com.deu.aifitness.network.ApiSource
 import com.deu.aifitness.ui.cameraxactivity.WorkoutCameraFragmentVM
@@ -33,15 +34,15 @@ class ViewModelModule {
     fun provideDeveloperStartPageVM() = DeveloperStartPageVM()
 
     @Provides
-    fun provideMainActivityVM() = MainActivityVM()
+    fun provideMainActivityVM(apiSource: ApiSource) = MainActivityVM(apiSource)
 
     @Provides
     fun provideUserOperationVM() = UserOperationVM()
 
     @Provides
     fun provideUserOperationFragmentVM(apiSource: ApiSource,
-                                       context: Context) =
-        UserOperationFragmentVM(apiSource,context)
+                                       session: AISessionManager) =
+        UserOperationFragmentVM(apiSource,session)
 
     @Provides
     fun provideFormVM() = FormVM()
