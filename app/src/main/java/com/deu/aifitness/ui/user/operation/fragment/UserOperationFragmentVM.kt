@@ -1,8 +1,5 @@
 package com.deu.aifitness.ui.user.operation.fragment
 
-import android.content.ComponentName
-import android.content.Context
-import android.content.pm.PackageManager
 import com.deu.aifitness.application.AIFitnessVM
 import com.deu.aifitness.application.AISessionManager
 import com.deu.aifitness.data.form.AlternativeOperation
@@ -11,11 +8,7 @@ import com.deu.aifitness.data.loginuser.LoginUserResponse
 import com.deu.aifitness.data.registeruser.RegisterUser
 import com.deu.aifitness.data.registeruser.RegisterUserResponse
 import com.deu.aifitness.data.session.SessionKey
-import com.deu.aifitness.network.ApiServiceImpl
 import com.deu.aifitness.network.ApiSource
-import com.facebook.login.Login
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable

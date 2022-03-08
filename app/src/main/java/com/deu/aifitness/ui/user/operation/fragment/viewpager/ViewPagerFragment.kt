@@ -45,7 +45,7 @@ class ViewPagerFragment : AIFitnessFragment<ViewPagerVM,FragmentViewPagerBinding
                     list.phone,list.password,list.birthday)
                 listener?.registerUser(registerUser)
             }else{
-                val loginUser= LoginUser(list.email,list.password)
+                val loginUser= LoginUser(list.username,list.password)
                 listener?.loginUser(loginUser)
             }
         }

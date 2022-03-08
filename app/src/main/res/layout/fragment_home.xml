@@ -72,30 +72,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/popularWorkoutTitleTV">
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip1C"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/chest" />
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip2C"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/biceps" />
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip3C"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/leg" />
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip4C"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/shoulder" />
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip5C"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

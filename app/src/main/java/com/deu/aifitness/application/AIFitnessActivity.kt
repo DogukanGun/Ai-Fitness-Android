@@ -317,10 +317,16 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
         })
     }
 
-    fun showDialog(dialogContent:DialogContent,dialogListener: AIFitnessDialogListener){
+    fun showDialog(dialogContent:DialogContent,dialogListener: AIFitnessDialogListener?){
         val dialog = AIFitnessDialog.getInstance(dialogContent)
         dialog.listener = dialogListener
         dialog.show(supportFragmentManager)
+    }
+
+    fun showNetworkError(){
+        val dialogContent = DialogContent(title = "Test Error",
+            message = "Test Error Message", buttonNegativeContext = null)
+        showDialog(dialogContent,null)
     }
 
     private fun getFirebaseAuth(){

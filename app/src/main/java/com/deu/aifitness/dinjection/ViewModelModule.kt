@@ -51,7 +51,7 @@ class ViewModelModule {
     fun provideHomeVM() = HomeVM()
 
     @Provides
-    fun provideHomeFragmentVM() = HomeFragmentVM()
+    fun provideHomeFragmentVM(apiSource: ApiSource) = HomeFragmentVM(apiSource)
 
     @Provides
     fun provideViewPagerVM() = ViewPagerVM()
@@ -60,7 +60,7 @@ class ViewModelModule {
     fun provideTabbarVM() = TabbarVM()
 
     @Provides
-    fun provideWorkoutVM() = WorkoutVM()
+    fun provideWorkoutVM(apiSource: ApiSource) = WorkoutVM(apiSource)
 
     @Provides
     fun provideWorkoutDetailVM() = WorkoutDetailVM()
@@ -75,7 +75,7 @@ class ViewModelModule {
     fun provideSettingsFragmentVM() = SettingsFragmentVM()
 
     @Provides
-    fun provideProfileVM() = ProfileVM()
+    fun provideProfileVM(apiSource: ApiSource) = ProfileVM(apiSource)
 
     @Provides
     fun provideWorkoutCameraVM() = WorkoutCameraVM()

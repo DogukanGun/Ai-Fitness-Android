@@ -29,6 +29,7 @@ class WorkoutAdapter(
 
         override fun onBindViewHolder(holder: MyPageViewHolder, position: Int) {
             holder.binding.apply {
+                exerciseTV.text = itemList[position].workoutName
                 exerciseBTN.setOnClickListener {
                     listener?.workoutClicked(itemList[position])
                 }

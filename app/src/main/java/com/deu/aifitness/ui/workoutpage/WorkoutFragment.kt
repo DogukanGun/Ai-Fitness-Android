@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessFragment
+import com.deu.aifitness.application.AIFitnessState
 import com.deu.aifitness.data.workout.Workout
 import com.deu.aifitness.databinding.FragmentWorkoutBinding
 import com.deu.aifitness.ui.workoutdetail.WorkoutActivity
@@ -29,18 +30,32 @@ class WorkoutFragment : AIFitnessFragment<WorkoutVM,FragmentWorkoutBinding>() {
         savedInstanceState: Bundle?
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
-        binding?.workoutRV?.apply {
-            val workoutAdapter = WorkoutAdapter(listOf(Workout("","dsd",4,"sadasd","adadasd")))
-            workoutAdapter.listener = workoutAdapterListener
-            adapter = workoutAdapter
-            layoutManager = GridLayoutManager(requireContext(),2)
-        }
-
+        viewModel?.getWorkouts()
         return view
     }
 
     private fun startExerciseDetail(){
         startActivity(WorkoutActivity::class.java)
+    }
+
+    private fun setAdapter(workoutList:List<Workout>){
+        binding?.workoutRV?.apply {
+            val workoutAdapter = WorkoutAdapter(workoutList)
+            workoutAdapter.listener = workoutAdapterListener
+            adapter = workoutAdapter
+            layoutManager = GridLayoutManager(requireContext(),2)
+        }
+    }
+
+    override fun stateChange(state: AIFitnessState) {
+        when(state){
+            is WorkoutVS.SetWorkouts ->{
+                setAdapter(state.workoutList)
+            }
+            WorkoutVS.NetworkError ->{
+                showNetworkError()
+            }
+        }
     }
 
     private val workoutAdapterListener = object: WorkoutListener{

@@ -4,9 +4,12 @@ import com.deu.aifitness.data.constant.ConnectionType
 import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.loginuser.LoginUserResponse
+import com.deu.aifitness.data.profile.Profile
+import com.deu.aifitness.data.profile.ProfileResponse
 import com.deu.aifitness.data.registeruser.RegisterUser
 import io.reactivex.Observable
 import com.deu.aifitness.data.registeruser.RegisterUserResponse
+import com.deu.aifitness.data.workout.Workout
 import com.deu.aifitness.retrofit.ApiLogger
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -26,5 +29,13 @@ class ApiServiceImpl @Inject constructor(retrofit: Retrofit): ApiSource {
 
     override fun loginUser(user: LoginUser): Observable<LoginUserResponse> {
         return  apiService.loginUser(user)
+    }
+
+    override fun getAllWorkouts(): Observable<List<Workout>> {
+        return apiService.getAllWorkouts()
+    }
+
+    override fun updateProfile(user: Profile): Observable<ProfileResponse> {
+        return apiService.updateProfile(user)
     }
 }

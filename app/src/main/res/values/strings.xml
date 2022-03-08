@@ -39,9 +39,10 @@
     <string name="level">Zorluk Seviyesi</string>
     <string name="intensity">Yoğunluk</string>
     <string name="averageTime">Ortalama Zaman</string>
+    <string name="seeDetails">Detay</string>
 
     <!-- Profile -->
-    <string name="nameKey">İsim</string>
+    <string name="nameKey">Kullanıcı Adı</string>
     <string name="phoneKey">Telefon</string>
     <string name="emailKey">Mail</string>
     <string name="saveProfile">Profili Kaydet</string>

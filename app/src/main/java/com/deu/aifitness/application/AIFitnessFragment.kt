@@ -133,6 +133,10 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
         getAIFitnessActivity()?.showDialog(dialogContent,dialogListener)
     }
 
+    fun showNetworkError(){
+        getAIFitnessActivity()?.showNetworkError()
+    }
+
     open fun stateChange(state:AIFitnessState){
 
     }

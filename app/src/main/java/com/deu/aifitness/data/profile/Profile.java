@@ -1,22 +1,22 @@
 package com.deu.aifitness.data.profile;
 
 public class Profile {
-    private String name;
+    private String username;
     private String email;
-    private String phone;
+    private String phoneNumber;
 
-    public Profile(String name, String email, String phone) {
-        this.name = name;
+    public Profile(String username, String email, String phoneNumber) {
+        this.username = username;
         this.email = email;
-        this.phone = phone;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
-        return name;
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -28,10 +28,10 @@ public class Profile {
     }
 
     public String getPhone() {
-        return phone;
+        return phoneNumber;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhone(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

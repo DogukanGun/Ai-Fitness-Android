@@ -53,4 +53,8 @@ class AiEditText : ConstraintLayout {
                 }
         }
     }
+
+    fun getText():String = binding.valueET.text.toString()
+
 }
+
