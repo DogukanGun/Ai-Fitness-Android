@@ -1,5 +1,6 @@
 package com.deu.aifitness.ui.workoutpage
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AIFitnessState
+import com.deu.aifitness.data.session.IntentKey
 import com.deu.aifitness.data.workout.Workout
 import com.deu.aifitness.databinding.FragmentWorkoutBinding
 import com.deu.aifitness.ui.workoutdetail.WorkoutActivity
@@ -34,8 +36,10 @@ class WorkoutFragment : AIFitnessFragment<WorkoutVM,FragmentWorkoutBinding>() {
         return view
     }
 
-    private fun startExerciseDetail(){
-        startActivity(WorkoutActivity::class.java)
+    private fun startExerciseDetail(workoutName:String){
+        val intent = Intent(requireContext(),WorkoutActivity::class.java)
+        intent.putExtra(IntentKey.WORKOUT_NAME.name,workoutName)
+        startActivity(intent)
     }
 
     private fun setAdapter(workoutList:List<Workout>){
@@ -60,7 +64,7 @@ class WorkoutFragment : AIFitnessFragment<WorkoutVM,FragmentWorkoutBinding>() {
 
     private val workoutAdapterListener = object: WorkoutListener{
         override fun workoutClicked(workout: Workout) {
-            startExerciseDetail()
+            startExerciseDetail(workout.workoutName)
         }
     }
 }

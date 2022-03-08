@@ -2,6 +2,8 @@ package com.deu.aifitness.ui.homepage
 
 import io.reactivex.Observer
 import com.deu.aifitness.application.AIFitnessVM
+import com.deu.aifitness.application.AISessionManager
+import com.deu.aifitness.data.session.SessionKey
 import com.deu.aifitness.data.workout.Workout
 import com.deu.aifitness.network.ApiSource
 import com.google.android.material.chip.Chip
@@ -12,10 +14,19 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class HomeFragmentVM @Inject constructor(val apiSource: ApiSource):AIFitnessVM() {
+class HomeFragmentVM @Inject constructor(
+    val session: AISessionManager,
+    val apiSource: ApiSource):AIFitnessVM() {
 
     private val filterList = mutableListOf<String>()
     private var workoutList = listOf<Workout>()
+
+    fun getName(){
+        val username = session.getData<String>(SessionKey.USERNAME.name)
+        username?.let {
+            state.postValue(HomeVS.SetUsername(it))
+        }
+    }
 
     fun getWorkouts(){
            apiSource.getAllWorkouts()

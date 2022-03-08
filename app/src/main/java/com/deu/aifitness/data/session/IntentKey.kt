@@ -1,5 +1,6 @@
 package com.deu.aifitness.data.session
 
 enum class IntentKey {
-    AI_DIALOG
+    AI_DIALOG,
+    WORKOUT_NAME
 }

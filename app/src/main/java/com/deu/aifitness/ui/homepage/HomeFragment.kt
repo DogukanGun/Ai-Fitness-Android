@@ -1,5 +1,6 @@
 package com.deu.aifitness.ui.homepage
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,12 +29,13 @@ class HomeFragment : AIFitnessFragment<HomeFragmentVM,FragmentHomeBinding>() {
         savedInstanceState: Bundle?
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
-        viewModel?.getWorkouts()
         binding?.chip1C?.setOnClickListener(chipListener)
         binding?.chip2C?.setOnClickListener(chipListener)
         binding?.chip3C?.setOnClickListener(chipListener)
         binding?.chip4C?.setOnClickListener(chipListener)
         binding?.chip5C?.setOnClickListener(chipListener)
+        viewModel?.getWorkouts()
+        viewModel?.getName()
         return view
     }
 
@@ -67,7 +69,15 @@ class HomeFragment : AIFitnessFragment<HomeFragmentVM,FragmentHomeBinding>() {
             HomeVS.NetworkError -> {
                 showNetworkError()
             }
+            is HomeVS.SetUsername ->{
+                setUsername(state.username)
+            }
         }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun setUsername(username:String){
+        binding?.userNameTV?.text = "Hey $username"
     }
 
     private val chipListener = object : View.OnClickListener{

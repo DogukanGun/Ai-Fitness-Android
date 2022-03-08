@@ -11,6 +11,8 @@ import com.deu.aifitness.data.workout.Workout
 import io.reactivex.Observable
 import retrofit2.http.Body
 import retrofit2.http.POST
+import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ApiService {
 
@@ -28,4 +30,7 @@ interface ApiService {
 
     @POST("auth/getProfile")
     fun getProfile(@Body user:ProfileEntity): Observable<ProfileResponse>
+
+    @POST("workout/workout/name/{name}")
+    fun getWorkout(@Path("name") workoutName:String): Observable<List<Workout>>
 }

@@ -43,4 +43,8 @@ class ApiServiceImpl @Inject constructor(retrofit: Retrofit): ApiSource {
     override fun getProfile(user: ProfileEntity): Observable<ProfileResponse> {
         return apiService.getProfile(user)
     }
+
+    override fun getWorkout(workoutName: String): Observable<List<Workout>> {
+        return apiService.getWorkout(workoutName)
+    }
 }

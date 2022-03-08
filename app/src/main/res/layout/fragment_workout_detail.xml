@@ -48,25 +48,25 @@
                     android:background="#000000">
 
                     <TextView
-                        android:id="@+id/titleFromCardView1TV"
+                        android:id="@+id/valueFromCardView1TV"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_small"
                         android:gravity="center_horizontal"
-                        android:text="@string/level"
+                        tools:text="value"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/valueFromCardView1TV"
+                        android:id="@+id/keyFromCardView1TV"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Title"
+                        android:text="@string/level"
                         android:textColor="@color/white"
-                        app:layout_constraintBottom_toTopOf="@+id/titleFromCardView1TV"
+                        app:layout_constraintBottom_toTopOf="@+id/valueFromCardView1TV"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -89,25 +89,25 @@
                     android:background="#000000">
 
                     <TextView
-                        android:id="@+id/titleFromCardView2TV"
+                        android:id="@+id/valueFromCardView2TV"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_small"
                         android:gravity="center_horizontal"
-                        android:text="@string/intensity"
+                        tools:text="value"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/valueFromCardView2TV"
+                        android:id="@+id/keyFromCardView2TV"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Title"
+                        android:text="@string/intensity"
                         android:textColor="@color/white"
-                        app:layout_constraintBottom_toTopOf="@+id/titleFromCardView2TV"
+                        app:layout_constraintBottom_toTopOf="@+id/valueFromCardView2TV"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -130,25 +130,25 @@
                     android:background="#000000">
 
                     <TextView
-                        android:id="@+id/titleFromCardView3TV"
+                        android:id="@+id/valueFromCardView3TV"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_small"
                         android:gravity="center_horizontal"
-                        android:text="@string/averageTime"
+                        tools:text="value"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/valueFromCardView3TV"
+                        android:id="@+id/keyFromCardView3TV"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Title"
+                        android:text="@string/averageTime"
                         android:textColor="@color/white"
-                        app:layout_constraintBottom_toTopOf="@+id/titleFromCardView3TV"
+                        app:layout_constraintBottom_toTopOf="@+id/valueFromCardView3TV"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

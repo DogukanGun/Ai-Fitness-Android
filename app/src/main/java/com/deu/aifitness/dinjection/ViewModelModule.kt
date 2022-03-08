@@ -51,7 +51,8 @@ class ViewModelModule {
     fun provideHomeVM() = HomeVM()
 
     @Provides
-    fun provideHomeFragmentVM(apiSource: ApiSource) = HomeFragmentVM(apiSource)
+    fun provideHomeFragmentVM(session: AISessionManager,
+                              apiSource: ApiSource) = HomeFragmentVM(session,apiSource)
 
     @Provides
     fun provideViewPagerVM() = ViewPagerVM()
@@ -63,7 +64,7 @@ class ViewModelModule {
     fun provideWorkoutVM(apiSource: ApiSource) = WorkoutVM(apiSource)
 
     @Provides
-    fun provideWorkoutDetailVM() = WorkoutDetailVM()
+    fun provideWorkoutDetailVM(apiSource: ApiSource) = WorkoutDetailVM(apiSource)
 
     @Provides
     fun provideWorkoutActivityVM() = WorkoutActivityVM()

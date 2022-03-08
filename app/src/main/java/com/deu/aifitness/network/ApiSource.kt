@@ -10,13 +10,15 @@ import io.reactivex.Observable
 import com.deu.aifitness.data.registeruser.RegisterUserResponse
 import com.deu.aifitness.data.workout.Workout
 import retrofit2.http.Body
+import retrofit2.http.Query
 
 interface ApiSource {
 
     fun registerUser(user:RegisterUser): Observable<RegisterUserResponse>
     fun loginUser(user:LoginUser): Observable<LoginUserResponse>
     fun getAllWorkouts(): Observable<List<Workout>>
-    fun updateProfile(@Body user: ProfileEntity): Observable<ProfileResponse>
-    fun getProfile(@Body user:ProfileEntity): Observable<ProfileResponse>
+    fun updateProfile(user: ProfileEntity): Observable<ProfileResponse>
+    fun getProfile(user:ProfileEntity): Observable<ProfileResponse>
+    fun getWorkout(workoutName:String): Observable<List<Workout>>
 
 }
