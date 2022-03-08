@@ -75,7 +75,7 @@ class ViewModelModule {
     fun provideSettingsFragmentVM() = SettingsFragmentVM()
 
     @Provides
-    fun provideProfileVM(apiSource: ApiSource) = ProfileVM(apiSource)
+    fun provideProfileVM(session: AISessionManager,apiSource: ApiSource) = ProfileVM(session,apiSource)
 
     @Provides
     fun provideWorkoutCameraVM() = WorkoutCameraVM()

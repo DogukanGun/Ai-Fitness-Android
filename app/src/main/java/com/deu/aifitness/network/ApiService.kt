@@ -3,6 +3,7 @@ package com.deu.aifitness.network
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.loginuser.LoginUserResponse
 import com.deu.aifitness.data.profile.Profile
+import com.deu.aifitness.data.profile.ProfileEntity
 import com.deu.aifitness.data.profile.ProfileResponse
 import com.deu.aifitness.data.registeruser.RegisterUser
 import com.deu.aifitness.data.registeruser.RegisterUserResponse
@@ -23,5 +24,8 @@ interface ApiService {
     fun getAllWorkouts(): Observable<List<Workout>>
 
     @POST("auth/updateUser")
-    fun updateProfile(@Body user:Profile): Observable<ProfileResponse>
+    fun updateProfile(@Body user: ProfileEntity): Observable<ProfileResponse>
+
+    @POST("auth/getProfile")
+    fun getProfile(@Body user:ProfileEntity): Observable<ProfileResponse>
 }

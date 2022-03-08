@@ -26,18 +26,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.deu.aifitness.component.aiedittext.AiEditText
-            android:id="@+id/nameAET"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_medium"
-            app:keyName="@string/nameKey"
-            app:layout_constraintBottom_toTopOf="@+id/phoneAET"
-            app:layout_constraintEnd_toEndOf="@+id/profileImageIV"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/profileImageIV"
-            app:layout_constraintTop_toBottomOf="@+id/profileImageIV" />
-
-        <com.deu.aifitness.component.aiedittext.AiEditText
             android:id="@+id/phoneAET"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -46,7 +34,7 @@
             app:layout_constraintEnd_toEndOf="@+id/profileImageIV"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/profileImageIV"
-            app:layout_constraintTop_toBottomOf="@+id/nameAET" />
+            app:layout_constraintTop_toBottomOf="@+id/profileImageIV" />
 
         <com.deu.aifitness.component.aiedittext.AiEditText
             android:id="@+id/emailAET"

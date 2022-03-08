@@ -5,6 +5,7 @@ import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.loginuser.LoginUserResponse
 import com.deu.aifitness.data.profile.Profile
+import com.deu.aifitness.data.profile.ProfileEntity
 import com.deu.aifitness.data.profile.ProfileResponse
 import com.deu.aifitness.data.registeruser.RegisterUser
 import io.reactivex.Observable
@@ -35,7 +36,11 @@ class ApiServiceImpl @Inject constructor(retrofit: Retrofit): ApiSource {
         return apiService.getAllWorkouts()
     }
 
-    override fun updateProfile(user: Profile): Observable<ProfileResponse> {
+    override fun updateProfile(user: ProfileEntity): Observable<ProfileResponse> {
         return apiService.updateProfile(user)
+    }
+
+    override fun getProfile(user: ProfileEntity): Observable<ProfileResponse> {
+        return apiService.getProfile(user)
     }
 }

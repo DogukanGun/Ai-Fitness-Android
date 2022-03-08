@@ -9,6 +9,7 @@ import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessFragment
 import com.deu.aifitness.application.AIFitnessState
 import com.deu.aifitness.data.profile.Profile
+import com.deu.aifitness.data.profile.ProfileEntity
 import com.deu.aifitness.databinding.FragmentProfileBinding
 import javax.inject.Inject
 
@@ -21,16 +22,24 @@ class ProfileFragment : AIFitnessFragment<ProfileVM,FragmentProfileBinding>() {
     @Inject
     lateinit var profileVM: ProfileVM
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view =  super.onCreateView(inflater, container, savedInstanceState)
         viewModel?.getProfile()
         binding?.editButtonBTN?.setOnClickListener(buttonListener)
+        return view
     }
 
     override fun stateChange(state: AIFitnessState) {
         when(state){
+            is ProfileVS.SetProfile ->{
+                setProfile(state.profile)
+            }
             ProfileVS.PositiveResponse ->{
-
+                viewModel?.getProfile()
             }
             ProfileVS.NegativeResponse ->{
                 showNetworkError()
@@ -38,10 +47,15 @@ class ProfileFragment : AIFitnessFragment<ProfileVM,FragmentProfileBinding>() {
         }
     }
 
+    private fun setProfile(profile: ProfileEntity){
+        binding?.emailAET?.setText(profile.email)
+        binding?.phoneAET?.setText(profile.phoneNumber)
+    }
+
     private val buttonListener = object :View.OnClickListener{
         override fun onClick(v: View?) {
-            val newProfile = Profile(binding?.nameAET?.getText(),binding?.emailAET?.getText()
-            ,binding?.phoneAET?.getText())
+            val newProfile = ProfileEntity( "",binding?.phoneAET?.getText() ?: ""
+            ,binding?.emailAET?.getText() ?: "")
             viewModel?.updateProfile(newProfile)
         }
     }

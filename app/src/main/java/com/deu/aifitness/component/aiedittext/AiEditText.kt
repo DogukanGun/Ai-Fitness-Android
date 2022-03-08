@@ -9,6 +9,7 @@ import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.EditText
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import com.deu.aifitness.R
@@ -55,6 +56,10 @@ class AiEditText : ConstraintLayout {
     }
 
     fun getText():String = binding.valueET.text.toString()
+
+    fun setText(text:String) {
+        binding.valueET.setText(text)
+    }
 
 }
 

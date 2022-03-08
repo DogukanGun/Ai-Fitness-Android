@@ -59,7 +59,8 @@ class UserOperationFragmentVM @Inject constructor(val apiSource: ApiSource,
                 override fun onSubscribe(d: Disposable) {}
 
                 override fun onNext(t: LoginUserResponse) {
-                    aiSession.putData(SessionKey.USER_TOKEN.name,t.token)
+                    aiSession.putData(SessionKey.USER_TOKEN.name,t.loginData.token)
+                    aiSession.putData(SessionKey.USERNAME.name,t.loginData.username)
                     state.postValue(UserOperationFragmentVS.UserOperationDone)
                 }
 
