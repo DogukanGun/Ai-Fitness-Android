@@ -32,6 +32,7 @@ class WorkoutFragment : AIFitnessFragment<WorkoutVM,FragmentWorkoutBinding>() {
         savedInstanceState: Bundle?
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
+        showProgress()
         viewModel?.getWorkouts()
         return view
     }
@@ -54,9 +55,11 @@ class WorkoutFragment : AIFitnessFragment<WorkoutVM,FragmentWorkoutBinding>() {
     override fun stateChange(state: AIFitnessState) {
         when(state){
             is WorkoutVS.SetWorkouts ->{
+                showProgress()
                 setAdapter(state.workoutList)
             }
             WorkoutVS.NetworkError ->{
+                showErrorProgress()
                 showNetworkError()
             }
         }

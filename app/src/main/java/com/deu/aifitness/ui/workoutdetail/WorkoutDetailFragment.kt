@@ -46,6 +46,7 @@ class WorkoutDetailFragment : AIFitnessFragment<WorkoutDetailVM,FragmentWorkoutD
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
         setAppBar()
+        showProgress()
         viewModel?.getWorkout(workoutName)
         return view
     }
@@ -63,9 +64,11 @@ class WorkoutDetailFragment : AIFitnessFragment<WorkoutDetailVM,FragmentWorkoutD
                 startActivity(WorkoutCameraActivity::class.java)
             }
             WorkoutDetailVS.NegativeResponse ->{
+                showErrorProgress()
                 showNetworkError()
             }
             is WorkoutDetailVS.SetWorkout ->{
+                showProgress()
                 setWorkout(state.workout)
             }
         }

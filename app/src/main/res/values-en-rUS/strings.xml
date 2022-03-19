@@ -42,6 +42,8 @@
     <string name="intensity">Intensity</string>
     <string name="averageTime">Average Time</string>
     <string name="seeDetails">More Detail</string>
+    <string name="upload_images">Please click and upload images</string>
+
 
     <!-- Profile -->
     <string name="nameKey">Username</string>
@@ -51,6 +53,7 @@
 
     <string name="start_capture">Start</string>
     <string name="stop_capture">Stop</string>
+    <string name="submit_button">Upload</string>
 
 
     <!-- FACEBOOK LOGIN DO NOT CHANGE OR MOVE -->

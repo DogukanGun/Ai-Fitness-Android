@@ -1,8 +1,6 @@
 package com.deu.aifitness.application
 
 import android.app.Application
-import android.content.Context
-import com.deu.aifitness.dinjection.AppComponent
 import com.deu.aifitness.dinjection.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector

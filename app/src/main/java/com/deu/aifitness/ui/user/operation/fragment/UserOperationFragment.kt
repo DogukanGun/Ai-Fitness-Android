@@ -59,15 +59,18 @@ class UserOperationFragment
     override fun stateChange(state: AIFitnessState) {
         when(state){
             UserOperationFragmentVS.UserOperationDone ->{
+                showProgress()
                 startActivity(HomeActivity::class.java)
             }
             is UserOperationFragmentVS.LoginUserComingFromRegister ->{
+                showProgress()
                 viewModel?.loginUser(state.loginUser)
             }
             is UserOperationFragmentVS.StartLauncher ->{
                 startLauncher(state.alternativeOperation)
             }
             UserOperationFragmentVS.UserOperationError ->{
+                showErrorProgress()
                 showErrorMessage()
             }
         }
@@ -105,7 +108,6 @@ class UserOperationFragment
         changeButtonState(SelectButtons.SELECT_BUTTON1)
         binding?.form?.setCurrentItem(SelectButtons.SELECT_BUTTON1.id,true)
         pagerStatus = SelectButtons.SELECT_BUTTON1
-
     }
 
     private fun changeStatus2(){
@@ -123,10 +125,12 @@ class UserOperationFragment
 
     private val viewPagerListener = object :ViewPagerListener{
         override fun registerUser(registerUser: RegisterUser) {
+            showProgress()
             viewModel?.registerUser(registerUser)
         }
 
         override fun loginUser(loginUser: LoginUser) {
+            showProgress()
             viewModel?.loginUser(loginUser)
         }
 

@@ -34,6 +34,7 @@ class HomeFragment : AIFitnessFragment<HomeFragmentVM,FragmentHomeBinding>() {
         binding?.chip3C?.setOnClickListener(chipListener)
         binding?.chip4C?.setOnClickListener(chipListener)
         binding?.chip5C?.setOnClickListener(chipListener)
+        showProgress()
         viewModel?.getWorkouts()
         viewModel?.getName()
         return view
@@ -64,9 +65,11 @@ class HomeFragment : AIFitnessFragment<HomeFragmentVM,FragmentHomeBinding>() {
     override fun stateChange(state: AIFitnessState) {
         when(state){
             is HomeVS.SetWorkouts ->{
+                showProgress()
                 setAdapter(state.workouts,state.filter)
             }
             HomeVS.NetworkError -> {
+                showErrorProgress()
                 showNetworkError()
             }
             is HomeVS.SetUsername ->{

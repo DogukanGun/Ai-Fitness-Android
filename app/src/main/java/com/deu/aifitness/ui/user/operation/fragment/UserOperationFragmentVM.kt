@@ -2,6 +2,7 @@ package com.deu.aifitness.ui.user.operation.fragment
 
 import com.deu.aifitness.application.AIFitnessVM
 import com.deu.aifitness.application.AISessionManager
+import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.form.AlternativeOperation
 import com.deu.aifitness.data.loginuser.LoginUser
 import com.deu.aifitness.data.loginuser.LoginUserResponse
@@ -59,7 +60,7 @@ class UserOperationFragmentVM @Inject constructor(val apiSource: ApiSource,
                 override fun onSubscribe(d: Disposable) {}
 
                 override fun onNext(t: LoginUserResponse) {
-                    aiSession.putData(SessionKey.USER_TOKEN.name,t.loginData.token)
+                    Constant.token = t.loginData.token
                     aiSession.putData(SessionKey.USERNAME.name,t.loginData.username)
                     state.postValue(UserOperationFragmentVS.UserOperationDone)
                 }

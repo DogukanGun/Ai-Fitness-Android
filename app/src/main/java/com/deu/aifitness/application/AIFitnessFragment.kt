@@ -93,7 +93,7 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
         }
     }
 
-    private fun getAIFitnessActivity():AIFitnessActivity<*,*>?{
+    fun getAIFitnessActivity():AIFitnessActivity<*,*>?{
         getActivity().let { activity->
             return activity as AIFitnessActivity<*,*>
         }
@@ -103,6 +103,18 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
         val text1 = getString(selectButton1Text())
         val text2 = getString(selectButton2Text())
         getAIFitnessActivity()?.setAppBarFromFragment(hasSelectButton(),text1,text2,hasBackButton(),hasSettingButton())
+    }
+
+    fun showUploadProgress(){
+        getAIFitnessActivity()?.showUploadProgress()
+    }
+
+    fun showProgress(){
+        getAIFitnessActivity()?.showProgress()
+    }
+
+    fun showErrorProgress(){
+        getAIFitnessActivity()?.showErrorProgress()
     }
 
     fun startActivity(classAI:Class<*>){
@@ -144,5 +156,9 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
     override fun getCameraXConfig(): CameraXConfig {
         return CameraXConfig.Builder.fromConfig(Camera2Config.defaultConfig())
             .setMinimumLoggingLevel(Log.ERROR).build()
+    }
+
+    inline fun <T1: Any, T2: Any, R: Any> safeLet(p1: T1?, p2: T2?, block: (T1, T2)->R?): R? {
+        return if (p1 != null && p2 != null) block(p1, p2) else null
     }
 }

@@ -11,7 +11,6 @@ import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.camera2.Camera2Config
 import androidx.camera.core.CameraXConfig
@@ -24,12 +23,12 @@ import com.deu.aifitness.R
 import com.deu.aifitness.component.dialog.AIFitnessDialog
 import com.deu.aifitness.component.dialog.AIFitnessDialogListener
 import com.deu.aifitness.component.dialog.DialogContent
+import com.deu.aifitness.data.animation.AnimationType
 import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.data.constant.Constant.TAG
 import com.deu.aifitness.data.constant.SelectButtons
 import com.deu.aifitness.ui.settings.SettingsActivity
 import com.deu.aifitness.ui.smsotp.SmsOtpActivity
-import com.deu.aifitness.ui.smsotp.SmsOtpFragment
 import com.facebook.*
 import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
@@ -43,14 +42,7 @@ import com.google.android.gms.tasks.Task
 import dagger.android.AndroidInjection
 import java.lang.Exception
 import com.google.firebase.auth.FirebaseUser
-
-import com.google.firebase.auth.AuthResult
-
 import com.google.firebase.auth.FacebookAuthProvider
-
-import com.google.firebase.auth.AuthCredential
-
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 
 abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatActivity(),
@@ -81,6 +73,9 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
     protected var viewModel:VM? = null
     protected var binding:DB? = null
     private val mAuth: FirebaseAuth? = null
+
+    private var progressShowing = false
+    private var progressDialog:AIFitnessProcessDialog? = null
 
     val session = AIFitnessSession.getInstance()
 
@@ -317,6 +312,39 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
         })
     }
 
+    fun showErrorProgress(){
+        progressDialog?.dismiss()
+        progressDialog = AIFitnessProcessDialog(this, AnimationType.ERROR)
+        progressDialog?.show()
+        progressDialog?.listener = object :AIFitnessProcessDialog.HocamAnimationListener{
+            override fun finishAnimation() {
+                progressDialog?.dismiss()
+            }
+        }
+    }
+
+    fun showUploadProgress(){
+        progressDialog?.dismiss()
+        progressDialog = AIFitnessProcessDialog(this, AnimationType.UPLOAD)
+        progressDialog?.show()
+        progressDialog?.listener = object :AIFitnessProcessDialog.HocamAnimationListener{
+            override fun finishAnimation() {
+                progressDialog?.dismiss()
+            }
+        }
+    }
+
+    fun showProgress(){
+        if (progressShowing){
+            progressShowing = false
+            progressDialog?.dismiss()
+        }else{
+            progressShowing = true
+            progressDialog = AIFitnessProcessDialog(this)
+            progressDialog?.show()
+        }
+    }
+
     fun showDialog(dialogContent:DialogContent,dialogListener: AIFitnessDialogListener?){
         val dialog = AIFitnessDialog.getInstance(dialogContent)
         dialog.listener = dialogListener
@@ -343,5 +371,9 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
     override fun getCameraXConfig(): CameraXConfig {
         return CameraXConfig.Builder.fromConfig(Camera2Config.defaultConfig())
             .setMinimumLoggingLevel(Log.ERROR).build()
+    }
+
+    inline fun <T1: Any, T2: Any, R: Any> safeLet(p1: T1?, p2: T2?, block: (T1, T2)->R?): R? {
+        return if (p1 != null && p2 != null) block(p1, p2) else null
     }
 }

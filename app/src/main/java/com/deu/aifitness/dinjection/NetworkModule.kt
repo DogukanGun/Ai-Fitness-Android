@@ -8,6 +8,7 @@ import com.deu.aifitness.data.constant.Constant
 import com.deu.aifitness.network.ApiServiceImpl
 import com.deu.aifitness.network.ApiSource
 import com.deu.aifitness.retrofit.ApiLogger
+import com.deu.aifitness.retrofit.HttpRetrofitInterceptor
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -26,6 +27,7 @@ class NetworkModule {
     fun provideRetrofit(context: Context): Retrofit {
         val logger = HttpLoggingInterceptor(ApiLogger())
         logger.level = HttpLoggingInterceptor.Level.BODY
+        val interceptor = HttpRetrofitInterceptor()
 
         val httpClient = OkHttpClient.Builder()
             .addInterceptor(
@@ -37,6 +39,7 @@ class NetworkModule {
                     .build()
             )
             .addInterceptor(logger)
+            .addInterceptor(interceptor)
             .build()
         var url = ""
         if (Constant.connectionType == ConnectionType.HOST){

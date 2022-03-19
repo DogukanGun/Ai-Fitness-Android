@@ -7,35 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.cameraxactivity.WorkoutCameraFragment">
 
-
-    <androidx.camera.view.PreviewView
-        android:id="@+id/cameraViewCV"
+    <com.deu.aifitness.component.carousel.Carousel
+        android:id="@+id/carouselC"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <Button
-        android:id="@+id/startVideoBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:text="Start Video"
-        app:layout_constraintBottom_toBottomOf="@+id/stopVideoBTN"
-        app:layout_constraintEnd_toStartOf="@+id/stopVideoBTN"
-        app:layout_constraintHorizontal_bias="0.2"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/stopVideoBTN"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/stopVideoBTN"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitButtonBTN"
+        style="@style/StandartButton"
+        android:text="@string/submit_button"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="64dp"
-        android:text="Stop Video"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_medium"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

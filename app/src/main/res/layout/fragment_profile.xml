@@ -17,12 +17,15 @@
         <ImageView
             android:id="@+id/profileImageIV"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="0dp"
             android:layout_marginStart="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/phoneAET"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.deu.aifitness.component.aiedittext.AiEditText
@@ -30,11 +33,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:keyName="@string/phoneKey"
+            android:layout_marginBottom="@dimen/margin_large"
             app:layout_constraintBottom_toTopOf="@+id/emailAET"
             app:layout_constraintEnd_toEndOf="@+id/profileImageIV"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/profileImageIV"
-            app:layout_constraintTop_toBottomOf="@+id/profileImageIV" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/profileImageIV" />
 
         <com.deu.aifitness.component.aiedittext.AiEditText
             android:id="@+id/emailAET"
@@ -43,10 +46,9 @@
             app:keyName="@string/emailKey"
             app:layout_constraintBottom_toTopOf="@+id/editButtonBTN"
             app:layout_constraintEnd_toEndOf="@+id/profileImageIV"
-            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_large"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/profileImageIV"
-            app:layout_constraintTop_toBottomOf="@+id/phoneAET" />
+            app:layout_constraintStart_toStartOf="@+id/profileImageIV"  />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/editButtonBTN"
