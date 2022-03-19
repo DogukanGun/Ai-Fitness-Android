@@ -86,6 +86,7 @@ class HomeFragment : AIFitnessFragment<HomeFragmentVM,FragmentHomeBinding>() {
     private val chipListener = object : View.OnClickListener{
         override fun onClick(v: View?) {
             (v as Chip?)?.let { chip->
+                showProgress()
                 viewModel?.addFilter(chip)
             }
         }
