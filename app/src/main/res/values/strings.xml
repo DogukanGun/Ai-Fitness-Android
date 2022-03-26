@@ -54,6 +54,9 @@
 
     <string name="submit_button">Yükle</string>
 
+    <string name="phone_number">Telefon Numaranız</string>
+    <string name="sms_number">Sms Kodu</string>
+
 
 
     <!-- FACEBOOK LOGIN DO NOT CHANGE OR MOVE -->

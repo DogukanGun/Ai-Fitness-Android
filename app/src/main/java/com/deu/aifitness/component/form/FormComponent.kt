@@ -48,7 +48,6 @@ open class FormComponent : ConstraintLayout {
             this,
             true
         )
-        setFacebookButton()
         binding.apply {
             setComponent(attrs, Constant.userOperation.value)
             submitButtonBTN.setOnClickListener { view->
@@ -59,25 +58,11 @@ open class FormComponent : ConstraintLayout {
             gmailProcessIB.setOnClickListener {
                 listener?.alternativeOperationPressed(AlternativeOperation.GOOGLE)
             }
-            facebookProcessIB.setOnClickListener {
-                listener?.alternativeOperationPressed(AlternativeOperation.FACEBOOK)
-            }
             googlePlayProcessIB.setOnClickListener {
-                listener?.alternativeOperationPressed(AlternativeOperation.GOOGLE_PLAY)
+                listener?.alternativeOperationPressed(AlternativeOperation.PHONE)
             }
         }
     }
-
-
-    private fun setFacebookButton(){
-        binding.facebookProcessIB.apply {
-            toolTipMode = LoginButton.ToolTipMode.DISPLAY_ALWAYS
-            setBackgroundResource(R.drawable.ic_facebook)
-            setLoginText("")
-        }
-
-    }
-
     private fun setComponent(attrs: AttributeSet?,userOperationValue:String) {
         if (userOperationValue == AppConstants.UserOperation.Login.value) {
             val itemList = listOf(

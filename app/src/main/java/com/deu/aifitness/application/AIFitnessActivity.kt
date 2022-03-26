@@ -25,13 +25,10 @@ import com.deu.aifitness.component.dialog.AIFitnessDialogListener
 import com.deu.aifitness.component.dialog.DialogContent
 import com.deu.aifitness.data.animation.AnimationType
 import com.deu.aifitness.data.constant.Constant
-import com.deu.aifitness.data.constant.Constant.TAG
 import com.deu.aifitness.data.constant.SelectButtons
+import com.deu.aifitness.ui.homepage.HomeActivity
 import com.deu.aifitness.ui.settings.SettingsActivity
 import com.deu.aifitness.ui.smsotp.SmsOtpActivity
-import com.facebook.*
-import com.facebook.login.LoginResult
-import com.facebook.login.widget.LoginButton
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -39,11 +36,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
-import dagger.android.AndroidInjection
-import java.lang.Exception
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import dagger.android.AndroidInjection
 
 abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatActivity(),
     CameraXConfig.Provider {
@@ -72,7 +67,8 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
 
     protected var viewModel:VM? = null
     protected var binding:DB? = null
-    private val mAuth: FirebaseAuth? = null
+    var mAuth: FirebaseAuth? = null
+    var firebaseUser:FirebaseUser? = null
 
     private var progressShowing = false
     private var progressDialog:AIFitnessProcessDialog? = null
@@ -82,6 +78,7 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
+        mAuth = FirebaseAuth.getInstance()
         registerActivityResult()
         registerPhoneSmsOtp()
         viewModel = getLayoutVM()
@@ -227,9 +224,12 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
     }
 
     private fun registerPhoneSmsOtp(){
-        phoneSmsOtpLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult(),
+        phoneSmsOtpLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult(),
         ){
-            //reduce code smell
+            if (it.resultCode == RESULT_OK) {
+                startActivity(HomeActivity::class.java)
+            }
         }
     }
 
@@ -243,50 +243,6 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
         phoneSmsOtpLauncher.launch(intent)
     }
 
-    fun signInFacebookLauncher(){
-        val callbackManager = CallbackManager.Factory.create()
-        val buttonFacebookLogin = findViewById<LoginButton>(R.id.facebookProcessIB)
-        buttonFacebookLogin.setPermissions("email", "public_profile")
-        buttonFacebookLogin.registerCallback(callbackManager, object :
-            FacebookCallback<LoginResult> {
-            override fun onSuccess(loginResult: LoginResult) {
-                Log.d(TAG, "facebook:onSuccess:$loginResult")
-                handleFacebookAccessToken(loginResult.accessToken)
-            }
-
-            override fun onCancel() {
-                Log.d(TAG, "facebook:onCancel")
-            }
-
-            override fun onError(error: FacebookException) {
-                Log.d(TAG, "facebook:onError", error)
-            }
-        })
-    }
-
-    private  fun handleFacebookAccessToken(token: AccessToken) {
-        Log.d(TAG, "handleFacebookAccessToken:$token")
-        val credential = FacebookAuthProvider.getCredential(token.token)
-        mAuth?.let { mAuth->
-            mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this
-                ) { task ->
-                    if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
-                        Log.d(TAG, "signInWithCredential:success")
-                        mAuth.currentUser?.let {
-                            val user: FirebaseUser = it
-                        }
-                    } else {
-                        Log.w(TAG, "signInWithCredential:failure", task.exception)
-                        Toast.makeText(
-                            this@AIFitnessActivity, "Authentication failed.",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
-        }
-    }
     private fun registerActivityResult(){
         activityResultLauncherGoogle = registerForActivityResult(ActivityResultContracts.StartActivityForResult()
         ) {
@@ -302,6 +258,7 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
         task.addOnSuccessListener(object: OnSuccessListener<GoogleSignInAccount>{
             override fun onSuccess(p0: GoogleSignInAccount?) {
                 val id = p0?.email
+                startActivity(HomeActivity::class.java)
                 Toast.makeText(applicationContext,"Success login with $id",Toast.LENGTH_LONG).show()
             }
         }).addOnFailureListener(object: OnFailureListener{

@@ -37,7 +37,7 @@
             android:scaleType="fitXY"
             android:src="@drawable/ic_gmail"
             app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
-            app:layout_constraintEnd_toStartOf="@+id/facebookProcessWrapperCV"
+            app:layout_constraintEnd_toStartOf="@+id/googlePlayProcessIB"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registerRV"
@@ -55,41 +55,14 @@
             android:minHeight="48dp"
             android:padding="@dimen/padding_small"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_google_play_games"
+            android:src="@drawable/ic_baseline_phone"
             app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/facebookProcessWrapperCV"
+            app:layout_constraintStart_toEndOf="@+id/gmailProcessIB"
             app:layout_constraintTop_toBottomOf="@+id/registerRV"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/facebookProcessWrapperCV"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/margin_small"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginEnd="@dimen/margin_small"
-            android:layout_marginBottom="@dimen/margin_medium"
-            app:cardCornerRadius="18dp"
-            app:layout_constraintBottom_toTopOf="@+id/submitButtonBTN"
-            app:layout_constraintEnd_toStartOf="@+id/googlePlayProcessIB"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/gmailProcessIB"
-            app:layout_constraintTop_toBottomOf="@+id/registerRV">
-
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/facebookProcessIB"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingTop="25dp"
-                android:paddingStart="50dp"
-                android:paddingBottom="25dp" />
-
-        </androidx.cardview.widget.CardView>
 
 
         <androidx.appcompat.widget.AppCompatButton

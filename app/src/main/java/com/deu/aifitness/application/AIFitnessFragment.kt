@@ -20,6 +20,7 @@ import com.deu.aifitness.component.dialog.AIFitnessDialogListener
 import com.deu.aifitness.component.dialog.DialogContent
 import com.deu.aifitness.data.constant.SelectButtons
 import com.deu.aifitness.data.form.AlternativeOperation
+import com.google.firebase.auth.FirebaseAuth
 import dagger.android.support.AndroidSupportInjection
 
 abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), CameraXConfig.Provider {
@@ -84,11 +85,8 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
             AlternativeOperation.GOOGLE->{
                 getAIFitnessActivity()?.signInGoogleLauncher()
             }
-            AlternativeOperation.GOOGLE_PLAY->{
+            AlternativeOperation.PHONE->{
                 getAIFitnessActivity()?.signInTelephoneLauncher()
-            }
-            AlternativeOperation.FACEBOOK->{
-                getAIFitnessActivity()?.signInFacebookLauncher()
             }
         }
     }
@@ -156,6 +154,10 @@ abstract class AIFitnessFragment<VM:AIFitnessVM,DB:ViewDataBinding>:Fragment(), 
     override fun getCameraXConfig(): CameraXConfig {
         return CameraXConfig.Builder.fromConfig(Camera2Config.defaultConfig())
             .setMinimumLoggingLevel(Log.ERROR).build()
+    }
+
+    fun getFirebaseAuth():FirebaseAuth?{
+        return getAIFitnessActivity()?.mAuth
     }
 
     inline fun <T1: Any, T2: Any, R: Any> safeLet(p1: T1?, p2: T2?, block: (T1, T2)->R?): R? {

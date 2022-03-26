@@ -55,6 +55,9 @@
     <string name="stop_capture">Stop</string>
     <string name="submit_button">Upload</string>
 
+    <string name="phone_number">Phone Number</string>
+    <string name="sms_number">Sms Code</string>
+
 
     <!-- FACEBOOK LOGIN DO NOT CHANGE OR MOVE -->
     <string name="facebook_app_id">463084808629821</string>
