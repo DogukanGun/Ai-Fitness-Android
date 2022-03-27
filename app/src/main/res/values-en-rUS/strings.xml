@@ -59,6 +59,10 @@
     <string name="sms_number">Sms Code</string>
 
 
+    <string name="upload_image_text">Please use arrows to continue uploading</string>
+    <string name="finish_upload_image_text">You have upload all images. Now please click the send button to
+    send your images</string>
+
     <!-- FACEBOOK LOGIN DO NOT CHANGE OR MOVE -->
     <string name="facebook_app_id">463084808629821</string>
 

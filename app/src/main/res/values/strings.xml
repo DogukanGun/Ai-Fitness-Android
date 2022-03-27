@@ -58,6 +58,12 @@
     <string name="sms_number">Sms Kodu</string>
 
 
+    <string name="upload_image_text">Yüklemeye devam etmek için okları kullanın.</string>
+    <string name="finish_upload_image_text">Yeterli sayıda resim yüklediniz.Gönder butonu ile
+        resimlerinizi gönderebilirsiniz.</string>
+
+
+
 
     <!-- FACEBOOK LOGIN DO NOT CHANGE OR MOVE -->
     <string name="facebook_app_id">463084808629821</string>

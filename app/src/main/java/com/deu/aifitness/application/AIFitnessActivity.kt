@@ -76,6 +76,9 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
     val session = AIFitnessSession.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (Constant.loggedIn && Constant.token.length < 2){
+            finishAndRemoveTask()
+        }
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         mAuth = FirebaseAuth.getInstance()
@@ -92,6 +95,14 @@ abstract class AIFitnessActivity<VM:AIFitnessVM,DB:ViewDataBinding>:AppCompatAct
                 }
         }
     }
+
+    override fun onRestart() {
+        super.onRestart()
+        if (Constant.loggedIn && Constant.token.length < 2){
+            finishAndRemoveTask()
+        }
+    }
+
     fun startActivity(classAI:Class<*>){
         val intent = Intent(this,classAI)
         startActivity(intent)

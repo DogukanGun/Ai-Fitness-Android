@@ -5,6 +5,7 @@ import com.deu.aifitness.data.loginuser.LoginUserResponse
 import com.deu.aifitness.data.profile.*
 import com.deu.aifitness.data.registeruser.RegisterUser
 import com.deu.aifitness.data.registeruser.RegisterUserResponse
+import com.deu.aifitness.data.workout.UploadWorkoutRequest
 import com.deu.aifitness.data.workout.Workout
 import io.reactivex.Observable
 import retrofit2.http.Body
@@ -34,4 +35,7 @@ interface ApiService {
 
     @POST("workout/workout/name/{name}")
     fun getWorkout(@Path("name") workoutName:String): Observable<List<Workout>>
+
+    @POST("workout/workout/upload")
+    fun uploadWorkout(@Body uploadWorkoutRequest: UploadWorkoutRequest): Observable<UploadWorkoutRequest>
 }

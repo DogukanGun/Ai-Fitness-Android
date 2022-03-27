@@ -10,7 +10,7 @@ import com.github.drjacky.imagepicker.ImagePicker
 import javax.inject.Inject
 
 class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutCameraBinding>(){
-     override fun getLayoutId(): Int = R.layout.activity_workout_camera
+    override fun getLayoutId(): Int = R.layout.activity_workout_camera
 
     override fun getLayoutVM(): WorkoutCameraVM = cameraVM
 
@@ -19,7 +19,6 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setAppBar()
         addFragment(WorkoutCameraFragment())
     }
 

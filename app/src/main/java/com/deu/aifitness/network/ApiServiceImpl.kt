@@ -8,6 +8,7 @@ import com.deu.aifitness.data.profile.*
 import com.deu.aifitness.data.registeruser.RegisterUser
 import io.reactivex.Observable
 import com.deu.aifitness.data.registeruser.RegisterUserResponse
+import com.deu.aifitness.data.workout.UploadWorkoutRequest
 import com.deu.aifitness.data.workout.Workout
 import com.deu.aifitness.retrofit.ApiLogger
 import okhttp3.OkHttpClient
@@ -48,5 +49,9 @@ class ApiServiceImpl @Inject constructor(retrofit: Retrofit): ApiSource {
 
     override fun updateProfileImage(updatePhoto: UpdateProfileImageRequest): Observable<ProfileEntity> {
         return apiService.updateProfileImage(updatePhoto)
+    }
+
+    override fun uploadWorkout(uploadWorkoutRequest: UploadWorkoutRequest): Observable<UploadWorkoutRequest> {
+        return apiService.uploadWorkout(uploadWorkoutRequest)
     }
 }

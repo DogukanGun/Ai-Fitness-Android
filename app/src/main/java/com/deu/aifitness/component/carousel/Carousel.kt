@@ -30,6 +30,7 @@ class Carousel : ConstraintLayout {
     private var imageList = mutableListOf<String>()
     private var currentIndex = MutableLiveData(0)
     private var animationWay = CarouselAnimationWay.NONE
+    var uploadedImages = MutableLiveData(mutableListOf<Boolean>())
 
     constructor(context: Context) : super(context) {
         init(null, 0)
@@ -49,6 +50,7 @@ class Carousel : ConstraintLayout {
 
     private fun init(attrs: AttributeSet?, defStyle: Int) {
         for (index in 0 until 3) { imageList.add(Constant.uploadImage) }
+        for (index in 0 until 3) { uploadedImages.value?.add(false) }
         binding = DataBindingUtil.inflate(
              LayoutInflater.from(context),
              R.layout.component_carousel,
@@ -72,9 +74,12 @@ class Carousel : ConstraintLayout {
     }
 
     private fun uploadImage(){
-        val imageBase64 = imageList[currentIndex.value!!]
-        val imageByteArray: ByteArray = Base64.decode(imageBase64, Base64.DEFAULT)
-        Glide.with(context).asBitmap().load(imageByteArray).into(binding.paginationImage)
+        changeUploadedImagesStatus()
+        if (currentIndex.value!! < imageList.size){
+            val imageBase64 = imageList[currentIndex.value!!]
+            val imageByteArray: ByteArray = Base64.decode(imageBase64, Base64.DEFAULT)
+            Glide.with(context).asBitmap().load(imageByteArray).into(binding.paginationImage)
+        }
     }
 
     private val nextButtonListener = OnClickListener { view->
@@ -105,11 +110,23 @@ class Carousel : ConstraintLayout {
         currentIndex.value?.let { it1 -> carouselImageListener?.imageClicked(it1) }
     }
 
-    fun setImage(imageBase64:String){
-        imageList[currentIndex.value!!] = imageBase64
-        val imageByteArray: ByteArray = Base64.decode(imageBase64, Base64.DEFAULT)
-        (context as LifecycleOwner).lifecycle.coroutineScope.launch {
-            Glide.with(context).asBitmap().load(imageByteArray).into(binding.paginationImage)
+    private fun changeUploadedImagesStatus(){
+        val list = uploadedImages.value
+        list?.let {
+            it[currentIndex.value!!] = true
+        }
+        uploadedImages.value = list
+    }
+
+    fun setImage(imageBase64:String,comingFromInside:Boolean){
+        if (!comingFromInside)
+            changeUploadedImagesStatus()
+        if (currentIndex.value!! < imageList.size){
+            imageList[currentIndex.value!!] = imageBase64
+            val imageByteArray: ByteArray = Base64.decode(imageBase64, Base64.DEFAULT)
+            (context as LifecycleOwner).lifecycle.coroutineScope.launch {
+                Glide.with(context).asBitmap().load(imageByteArray).into(binding.paginationImage)
+            }
         }
     }
 
@@ -136,7 +153,9 @@ class Carousel : ConstraintLayout {
             animation.setAnimationListener(object : Animation.AnimationListener{
                 override fun onAnimationStart(animation: Animation?) {}
                 override fun onAnimationEnd(animation: Animation?) {
-                    setImage(imageList[currentIndex.value!!])
+                    if (currentIndex.value!! < imageList.size){
+                        setImage(imageList[currentIndex.value!!],true)
+                    }
                 }
                 override fun onAnimationRepeat(animation: Animation?) {}
             })
@@ -146,14 +165,14 @@ class Carousel : ConstraintLayout {
             animation.setAnimationListener(object : Animation.AnimationListener{
                 override fun onAnimationStart(animation: Animation?) {}
                 override fun onAnimationEnd(animation: Animation?) {
-                    setImage(imageList[currentIndex.value!!])
+                    if (currentIndex.value!! < imageList.size){
+                        setImage(imageList[currentIndex.value!!],true)
+                    }
                 }
                 override fun onAnimationRepeat(animation: Animation?) {}
             })
             binding.paginationImage.startAnimation(animation)
         }
-
-
     }
 
     private val paginationButtonsListener = OnClickListener { button->
@@ -185,6 +204,13 @@ class Carousel : ConstraintLayout {
 
     private fun notSelectPagination(button:AppCompatButton){
         button.setBackgroundResource(R.drawable.bg_carousel_not_selected)
+    }
+
+    fun getImages():List<String> = this.imageList
+
+    fun setImages(imageList:List<String>){
+        this.imageList = imageList.toMutableList()
+        uploadImage()
     }
 
     interface CarouselImageListener{

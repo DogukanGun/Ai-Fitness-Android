@@ -82,11 +82,9 @@ class ProfileFragment : AIFitnessFragment<ProfileVM,FragmentProfileBinding>() {
             binding?.phoneAET?.setText(profile.phoneNumber)
 
         }
-        if(!profile.userPhoto.isEmpty()){
-            binding?.profileImageIV?.let {
-                val imageByteArray: ByteArray = Base64.decode(profile.userPhoto, Base64.DEFAULT)
-                Glide.with(requireContext()).asBitmap().load(imageByteArray).into(it)
-            }
+        safeLet(profile.userPhoto,binding?.profileImageIV){ userPhoto,profileImage ->
+            val imageByteArray: ByteArray = Base64.decode(userPhoto, Base64.DEFAULT)
+            Glide.with(requireContext()).asBitmap().load(imageByteArray).into(profileImage)
         }
     }
 

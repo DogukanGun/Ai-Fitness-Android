@@ -82,7 +82,7 @@ class ViewModelModule {
     fun provideWorkoutCameraVM() = WorkoutCameraVM()
 
     @Provides
-    fun provideWorkoutCameraFragmentVM() = WorkoutCameraFragmentVM()
+    fun provideWorkoutCameraFragmentVM(apiSource: ApiSource) = WorkoutCameraFragmentVM(apiSource)
 
     @Provides
     fun provideSmsOtpVM() = SmsOtpVM()

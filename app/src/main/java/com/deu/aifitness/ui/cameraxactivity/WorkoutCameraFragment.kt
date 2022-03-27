@@ -7,6 +7,7 @@ import android.util.Base64
 import android.view.*
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -15,7 +16,9 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.deu.aifitness.R
 import com.deu.aifitness.application.AIFitnessFragment
+import com.deu.aifitness.application.AIFitnessState
 import com.deu.aifitness.component.carousel.Carousel
+import com.deu.aifitness.data.workout.UploadWorkoutRequest
 import com.deu.aifitness.databinding.FragmentWorkoutCameraBinding
 import kotlinx.coroutines.launch
 import java.io.ByteArrayOutputStream
@@ -26,6 +29,9 @@ class WorkoutCameraFragment : AIFitnessFragment<WorkoutCameraFragmentVM,Fragment
     override fun getLayoutId(): Int = R.layout.fragment_workout_camera
 
     override fun getLayoutVM(): WorkoutCameraFragmentVM = cameraFragmentVM
+
+    override fun hasBackButton(): Boolean = true
+
 
     @Inject
     lateinit var cameraFragmentVM: WorkoutCameraFragmentVM
@@ -42,11 +48,47 @@ class WorkoutCameraFragment : AIFitnessFragment<WorkoutCameraFragmentVM,Fragment
         val view = super.onCreateView(inflater, container, savedInstanceState)
         setAppBar()
         registerActivityResultLauncher()
+        if(binding?.carouselC?.uploadedImages?.hasActiveObservers() == false){
+            binding?.carouselC?.uploadedImages?.observe(viewLifecycleOwner){
+                uploadedImagesStatus(it.toList())
+            }
+        }
         binding?.apply {
             submitButtonBTN.setOnClickListener(uploadButtonListener)
             carouselC.carouselImageListener = carouselImageListener
         }
         return view
+    }
+
+    private fun uploadedImagesStatus(imagesStatus:List<Boolean>){
+        imagesStatus.forEach {
+            if (!it){
+                return
+            }
+        }
+        binding?.statusMessageTV?.setText(R.string.finish_upload_image_text)
+        binding?.submitButtonBTN?.isEnabled = true
+    }
+
+    override fun stateChange(state: AIFitnessState) {
+        when(state){
+            WorkoutCameraFragmentVS.ImageUploaded ->{
+                viewModel?.startWaiting()
+            }
+            WorkoutCameraFragmentVS.StartWaiting ->{
+            }
+            is WorkoutCameraFragmentVS.ResultCame ->{
+                showProgress()
+                setResult(state.uploadWorkoutRequest)
+            }
+            WorkoutCameraFragmentVS.Error ->{
+                showErrorProgress()
+            }
+        }
+    }
+
+    private fun setResult(uploadWorkoutRequest: UploadWorkoutRequest){
+        binding?.carouselC?.setImages(uploadWorkoutRequest.workoutImages)
     }
 
     private val carouselImageListener = object :Carousel.CarouselImageListener{
@@ -63,7 +105,7 @@ class WorkoutCameraFragment : AIFitnessFragment<WorkoutCameraFragmentVM,Fragment
 
     private fun sendImageToCarousel(){
         lifecycleScope.launch {
-            binding?.carouselC?.setImage(currentImage)
+            binding?.carouselC?.setImage(currentImage,false)
         }
     }
 
@@ -102,7 +144,8 @@ class WorkoutCameraFragment : AIFitnessFragment<WorkoutCameraFragmentVM,Fragment
     }
 
     private val uploadButtonListener = View.OnClickListener {
-        showUploadProgress()
+        showProgress()
+        binding?.carouselC?.getImages()?.let { it1 -> viewModel?.uploadImages(UploadWorkoutRequest(it1)) }
     }
 
 }

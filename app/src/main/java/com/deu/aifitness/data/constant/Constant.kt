@@ -8,9 +8,10 @@ import com.deu.aifitness.data.tabbar.TabbarMenu
 object Constant {
     var localPort = "8080"
     var token = ""
+    var loggedIn = false
     val localApiUrl = "http://192.168.1.102/"
-    val hostApiUrl = "http://192.168.1.102/"
-    var connectionType = ConnectionType.LOCAL
+    val hostApiUrl = "http://aifitness-api.azurewebsites.net/"
+    var connectionType = ConnectionType.HOST
     val paramName = "p1"
     var userOperation = AppConstants.UserOperation.Login
     var mainActivityTabbarStatus = TabbarMenu.HOME
