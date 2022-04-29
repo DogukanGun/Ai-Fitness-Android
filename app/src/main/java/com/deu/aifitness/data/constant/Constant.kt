@@ -10,7 +10,7 @@ object Constant {
     var token = ""
     var loggedIn = false
     val localApiUrl = "http://192.168.1.102/"
-    val hostApiUrl = "http://aifitness-api.azurewebsites.net/"
+    val hostApiUrl = "http://aifitness-api.herokuapp.com/"
     var connectionType = ConnectionType.HOST
     val paramName = "p1"
     var userOperation = AppConstants.UserOperation.Login
