@@ -1,0 +1,96 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.tensorflow.lite.examples.videoclassification"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-feature android:name="android.hardware.camera.any" />
+11-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:5:5-64
+11-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:5:19-61
+12
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:6:5-65
+13-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:6:22-62
+14
+15    <application
+15-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:8:5-24:19
+16        android:allowBackup="true"
+16-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:9:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11a205542cb321824649f6847b9c8757\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:10:9-43
+20        android:label="@string/app_name"
+20-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:11:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:12:9-54
+22        android:supportsRtl="true"
+22-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:13:9-35
+23        android:testOnly="true"
+24        android:theme="@style/Theme.VideoClassification" >
+24-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:14:9-57
+25        <activity
+25-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:15:9-23:20
+26            android:name="org.tensorflow.lite.examples.videoclassification.MainActivity"
+26-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:16:13-41
+27            android:exported="true" >
+27-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:17:13-36
+28            <intent-filter>
+28-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:18:13-22:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:19:17-69
+29-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:19:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:21:17-77
+31-->C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:21:27-74
+32            </intent-filter>
+33        </activity>
+34
+35        <service
+35-->[androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:26:9-35:19
+36            android:name="androidx.camera.core.impl.MetadataHolderService"
+36-->[androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:27:13-75
+37            android:enabled="false"
+37-->[androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:28:13-36
+38            android:exported="false" >
+38-->[androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:29:13-37
+39            <meta-data
+39-->[androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:32:13-34:89
+40                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+40-->[androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:33:17-103
+41                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+41-->[androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:34:17-86
+42        </service>
+43
+44        <provider
+44-->[androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+45            android:name="androidx.startup.InitializationProvider"
+45-->[androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+46            android:authorities="org.tensorflow.lite.examples.videoclassification.androidx-startup"
+46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+47            android:exported="false" >
+47-->[androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+48            <meta-data
+48-->[androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+49                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+49-->[androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+50                android:value="androidx.startup" />
+50-->[androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+51            <meta-data
+51-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+52                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+52-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+53                android:value="androidx.startup" />
+53-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+54        </provider>
+55    </application>
+56
+57</manifest>

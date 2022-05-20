@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../Ai-Fitness-Android/caches/transforms-3/09f4236987f16f377639b673254013aa/transformed/jetified-tensorflow-lite-0.0.0-nightly-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../../Ai-Fitness-Android/caches/transforms-3/09f4236987f16f377639b673254013aa/transformed/jetified-tensorflow-lite-0.0.0-nightly-SNAPSHOT/res" />
+      <root url="file://$PROJECT_DIR$/../../../../../../Ai-Fitness-Android/caches/transforms-3/09f4236987f16f377639b673254013aa/transformed/jetified-tensorflow-lite-0.0.0-nightly-SNAPSHOT/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

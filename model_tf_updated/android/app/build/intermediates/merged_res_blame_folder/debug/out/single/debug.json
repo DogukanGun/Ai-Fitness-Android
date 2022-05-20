@@ -1,0 +1,102 @@
+[
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_icn_chevron_up.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\drawable-xxhdpi\\icn_chevron_up.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_rectangle.xml.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\drawable\\bg_rectangle.xml"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\layout\\layout_bottom_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\drawable\\bg_bottom_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_icn_chevron_down.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\drawable-xxhdpi\\icn_chevron_down.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add.xml.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\drawable\\ic_baseline_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_remove.xml.flat",
+        "source": "C:\\Users\\alper\\Desktop\\b\\examples\\lite\\examples\\video_classification\\android\\app\\src\\main\\res\\drawable\\ic_baseline_remove.xml"
+    }
+]

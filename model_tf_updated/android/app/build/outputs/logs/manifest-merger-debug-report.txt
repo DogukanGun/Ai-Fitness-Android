@@ -1,0 +1,288 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.databinding:viewbinding:7.0.4] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2c746f766771d14926c956c19ac3a5b2\transformed\jetified-viewbinding-7.0.4\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\8959c937ed9e63ec424b26367a80d83d\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fcdab8728f11d2111c7ce2088d6893ef\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\350cc3cfd2a2db8646f593884c044945\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.camera:camera-view:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c2e8b1788d458a7f154e6d0a7034b73c\transformed\jetified-camera-view-1.1.0-beta01\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\9073bfd5875844aed23d4c6e6e3bcfb5\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:17:1-38:12
+MERGED from [androidx.camera:camera-lifecycle:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\17727b123a4ab266776a4054d80771bf\transformed\jetified-camera-lifecycle-1.1.0-beta01\AndroidManifest.xml:17:1-24:12
+MERGED from [org.tensorflow:tensorflow-lite-support:0.0.0-nightly-SNAPSHOT] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\e10a367a7650e2e447910da8571685ff\transformed\jetified-tensorflow-lite-support-0.0.0-nightly-SNAPSHOT\AndroidManifest.xml:2:1-5:12
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\09f4236987f16f377639b673254013aa\transformed\jetified-tensorflow-lite-0.0.0-nightly-SNAPSHOT\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\6e7971def94b8f3bb40103f9e4ff2a75\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\348e1f3ca50745340c832c08b3b41956\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\1447178c5ce10c4d720c6e34f48b989b\transformed\jetified-activity-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\660f27b742e39dc69f6ad57a7525c596\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\ed55f4e6f9435a8e536febd1494b3b89\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\e426f8a8516f56ebde533466b67be80f\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\67160e9ecd6de46074ed5e78ce264538\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\060835f95122f242a616f172c1e88e6e\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fc0899a0981dc4f5bacf79f066df991e\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\f4c1cc4e6583ebc20c228830795ab825\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\dadd3f1dd151d9f1f9ce3517b984a8ba\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2befba4cadb1cc9e54d336481bd81f33\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:17:1-38:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b26587f23d8ff961e0e8dfff011f3c33\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\144e23d69d775396882e9941f5e7c38b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b01b6d3c6c065b8898a02ed7a02f45f\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d769dd345924b649e8c174ac7f8167b3\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\dac6c593f9df5630c00531da89519703\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11a205542cb321824649f6847b9c8757\transformed\core-1.7.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b317097115edffa037d124baf0dd26f9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\56a1082c0562a7c994414030cd95ae8e\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\bf1c057a1a8ef9e3f223396539a1668c\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\77ed85332676ec7b505a65d66ef2cd22\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fc799404e4bbc8403cac72e904cda5b5\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\15a17554429f73f47a33f778bd6ba6f6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c1b66a6ba7a8ff71c86398b4cec7a86f\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\222216859961556b8a621b2f28432c6f\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d39ce9b2259513297e1abed8fc1fe64a\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b4c1044d9e12b3dc9f946cb7a219630e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d34799636db2ff7ea5c97a0e96c966b5\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\00434a159887fabcc4533d7020c6f424\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\735578a220afce48905361a187f14b9b\transformed\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\18ba95136457d5eb737571392eb61932\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\19c2f8e9d2103fc4e666153e3f71f61d\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\429214923c5f74c266e40c941ba32bfb\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\084d27b3c7a6c37753b1b992e5c675c0\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11f72ef8f33b808d9da97ee7d1938cc7\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:3:5-63
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.camera.any
+ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:5:5-64
+	android:name
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:5:19-61
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:6:5-65
+	android:name
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:6:22-62
+application
+ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fcdab8728f11d2111c7ce2088d6893ef\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fcdab8728f11d2111c7ce2088d6893ef\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\350cc3cfd2a2db8646f593884c044945\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\350cc3cfd2a2db8646f593884c044945\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:25:5-36:19
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:25:5-36:19
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\09f4236987f16f377639b673254013aa\transformed\jetified-tensorflow-lite-0.0.0-nightly-SNAPSHOT\AndroidManifest.xml:10:5-20
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\09f4236987f16f377639b673254013aa\transformed\jetified-tensorflow-lite-0.0.0-nightly-SNAPSHOT\AndroidManifest.xml:10:5-20
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2befba4cadb1cc9e54d336481bd81f33\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:25:5-36:19
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2befba4cadb1cc9e54d336481bd81f33\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:25:5-36:19
+MERGED from [androidx.core:core:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11a205542cb321824649f6847b9c8757\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11a205542cb321824649f6847b9c8757\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\15a17554429f73f47a33f778bd6ba6f6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\15a17554429f73f47a33f778bd6ba6f6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c1b66a6ba7a8ff71c86398b4cec7a86f\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c1b66a6ba7a8ff71c86398b4cec7a86f\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11a205542cb321824649f6847b9c8757\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:11:9-41
+	android:roundIcon
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:14:9-57
+activity#org.tensorflow.lite.examples.videoclassification.MainActivity
+ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:15:9-23:20
+	android:exported
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:17:13-36
+	android:name
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:16:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml:21:27-74
+uses-sdk
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:7.0.4] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2c746f766771d14926c956c19ac3a5b2\transformed\jetified-viewbinding-7.0.4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:7.0.4] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2c746f766771d14926c956c19ac3a5b2\transformed\jetified-viewbinding-7.0.4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\8959c937ed9e63ec424b26367a80d83d\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\8959c937ed9e63ec424b26367a80d83d\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fcdab8728f11d2111c7ce2088d6893ef\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.5.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fcdab8728f11d2111c7ce2088d6893ef\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\350cc3cfd2a2db8646f593884c044945\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\350cc3cfd2a2db8646f593884c044945\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.camera:camera-view:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c2e8b1788d458a7f154e6d0a7034b73c\transformed\jetified-camera-view-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-view:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c2e8b1788d458a7f154e6d0a7034b73c\transformed\jetified-camera-view-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\9073bfd5875844aed23d4c6e6e3bcfb5\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\9073bfd5875844aed23d4c6e6e3bcfb5\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.camera:camera-lifecycle:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\17727b123a4ab266776a4054d80771bf\transformed\jetified-camera-lifecycle-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-lifecycle:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\17727b123a4ab266776a4054d80771bf\transformed\jetified-camera-lifecycle-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [org.tensorflow:tensorflow-lite-support:0.0.0-nightly-SNAPSHOT] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\e10a367a7650e2e447910da8571685ff\transformed\jetified-tensorflow-lite-support-0.0.0-nightly-SNAPSHOT\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-support:0.0.0-nightly-SNAPSHOT] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\e10a367a7650e2e447910da8571685ff\transformed\jetified-tensorflow-lite-support-0.0.0-nightly-SNAPSHOT\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\09f4236987f16f377639b673254013aa\transformed\jetified-tensorflow-lite-0.0.0-nightly-SNAPSHOT\AndroidManifest.xml:7:5-8:41
+MERGED from [org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\09f4236987f16f377639b673254013aa\transformed\jetified-tensorflow-lite-0.0.0-nightly-SNAPSHOT\AndroidManifest.xml:7:5-8:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\6e7971def94b8f3bb40103f9e4ff2a75\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\6e7971def94b8f3bb40103f9e4ff2a75\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\348e1f3ca50745340c832c08b3b41956\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\348e1f3ca50745340c832c08b3b41956\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\1447178c5ce10c4d720c6e34f48b989b\transformed\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\1447178c5ce10c4d720c6e34f48b989b\transformed\jetified-activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\660f27b742e39dc69f6ad57a7525c596\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\660f27b742e39dc69f6ad57a7525c596\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\ed55f4e6f9435a8e536febd1494b3b89\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\ed55f4e6f9435a8e536febd1494b3b89\transformed\jetified-emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\e426f8a8516f56ebde533466b67be80f\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\e426f8a8516f56ebde533466b67be80f\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\67160e9ecd6de46074ed5e78ce264538\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\67160e9ecd6de46074ed5e78ce264538\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\060835f95122f242a616f172c1e88e6e\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\060835f95122f242a616f172c1e88e6e\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fc0899a0981dc4f5bacf79f066df991e\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fc0899a0981dc4f5bacf79f066df991e\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\f4c1cc4e6583ebc20c228830795ab825\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\f4c1cc4e6583ebc20c228830795ab825\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\dadd3f1dd151d9f1f9ce3517b984a8ba\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\dadd3f1dd151d9f1f9ce3517b984a8ba\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2befba4cadb1cc9e54d336481bd81f33\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2befba4cadb1cc9e54d336481bd81f33\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b26587f23d8ff961e0e8dfff011f3c33\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b26587f23d8ff961e0e8dfff011f3c33\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\144e23d69d775396882e9941f5e7c38b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\144e23d69d775396882e9941f5e7c38b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b01b6d3c6c065b8898a02ed7a02f45f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b01b6d3c6c065b8898a02ed7a02f45f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d769dd345924b649e8c174ac7f8167b3\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d769dd345924b649e8c174ac7f8167b3\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\dac6c593f9df5630c00531da89519703\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\dac6c593f9df5630c00531da89519703\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11a205542cb321824649f6847b9c8757\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11a205542cb321824649f6847b9c8757\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b317097115edffa037d124baf0dd26f9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b317097115edffa037d124baf0dd26f9\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\56a1082c0562a7c994414030cd95ae8e\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\56a1082c0562a7c994414030cd95ae8e\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\bf1c057a1a8ef9e3f223396539a1668c\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\bf1c057a1a8ef9e3f223396539a1668c\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\77ed85332676ec7b505a65d66ef2cd22\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\77ed85332676ec7b505a65d66ef2cd22\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fc799404e4bbc8403cac72e904cda5b5\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\fc799404e4bbc8403cac72e904cda5b5\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\15a17554429f73f47a33f778bd6ba6f6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\15a17554429f73f47a33f778bd6ba6f6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c1b66a6ba7a8ff71c86398b4cec7a86f\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c1b66a6ba7a8ff71c86398b4cec7a86f\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\222216859961556b8a621b2f28432c6f\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\222216859961556b8a621b2f28432c6f\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d39ce9b2259513297e1abed8fc1fe64a\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d39ce9b2259513297e1abed8fc1fe64a\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b4c1044d9e12b3dc9f946cb7a219630e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b4c1044d9e12b3dc9f946cb7a219630e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d34799636db2ff7ea5c97a0e96c966b5\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\d34799636db2ff7ea5c97a0e96c966b5\transformed\lifecycle-runtime-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\00434a159887fabcc4533d7020c6f424\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\00434a159887fabcc4533d7020c6f424\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\735578a220afce48905361a187f14b9b\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\735578a220afce48905361a187f14b9b\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\18ba95136457d5eb737571392eb61932\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\18ba95136457d5eb737571392eb61932\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\19c2f8e9d2103fc4e666153e3f71f61d\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\19c2f8e9d2103fc4e666153e3f71f61d\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\429214923c5f74c266e40c941ba32bfb\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\429214923c5f74c266e40c941ba32bfb\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\084d27b3c7a6c37753b1b992e5c675c0\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\084d27b3c7a6c37753b1b992e5c675c0\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11f72ef8f33b808d9da97ee7d1938cc7\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\11f72ef8f33b808d9da97ee7d1938cc7\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+		MERGED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\alper\Desktop\b\examples\lite\examples\video_classification\android\app\src\main\AndroidManifest.xml
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:26:9-35:19
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2befba4cadb1cc9e54d336481bd81f33\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:31:9-35:45
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\2befba4cadb1cc9e54d336481bd81f33\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:31:9-35:45
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:31:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:28:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:29:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:30:13-42
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:27:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:32:13-34:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:34:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\3b8d8d11ece7991e59d20741b1baacda\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:33:17-103
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c1b66a6ba7a8ff71c86398b4cec7a86f\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\c1b66a6ba7a8ff71c86398b4cec7a86f\transformed\jetified-startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:30:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\b03d1662a911a626467c9cd19ec05e07\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\alper\Desktop\Ai-Fitness-Android\caches\transforms-3\a880f0062f51687c4ff706ee1c6bbebb\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
