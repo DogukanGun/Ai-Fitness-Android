@@ -18,6 +18,7 @@
         <entry key="..\:/Users/alper/Desktop/Ai-Fitness/app/src/main/res/layout/activity_main.xml" value="0.26268115942028986" />
         <entry key="..\:/Users/alper/Desktop/Ai-Fitness/app/src/main/res/layout/activity_user_operation.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/alper/Desktop/Ai-Fitness/app/src/main/res/layout/component_form.xml" value="0.17831813576494426" />
+        <entry key="app/src/main/res/drawable/bg_bottom_sheet.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_button.xml" value="0.30572916666666666" />
         <entry key="app/src/main/res/drawable/bg_carousel_not_selected.xml" value="0.158" />
         <entry key="app/src/main/res/drawable/bg_carousel_selected.xml" value="0.158" />
@@ -85,6 +86,7 @@
         <entry key="app/src/main/res/layout/item_register.xml" value="0.4125433260830581" />
         <entry key="app/src/main/res/layout/item_workout.xml" value="0.375" />
         <entry key="app/src/main/res/layout/item_workout_.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/layout/layout_bottom_sheet.xml" value="0.2916666666666667" />
         <entry key="app/src/main/res/layout/sample_a_i_text_input.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/sample_ai_edit_text.xml" value="0.2755208333333333" />
         <entry key="app/src/main/res/layout/sample_carousel.xml" value="0.45214161305402145" />

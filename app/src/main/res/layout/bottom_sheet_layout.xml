@@ -1,54 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bottom_sheet"
+    android:id="@+id/bottom_sheet_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:background="@drawable/rounded_edge"
+    android:background="@drawable/bg_bottom_sheet"
     android:orientation="vertical"
-    android:paddingStart="8dp"
-    android:paddingTop="10dp"
-    android:paddingEnd="8dp"
-    android:paddingBottom="16dp"
-    app:behavior_hideable="false"
-    app:behavior_peekHeight="36dp"
-    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-    tools:showIn="@layout/activity_main">
-
-    <ImageView
-        android:id="@+id/bottom_sheet_arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:contentDescription="@null"
-        android:src="@drawable/icn_chevron_up" />
-
-    <TextView
-        android:id="@+id/tvFps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/tvScore"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    android:padding="8dp"
+    app:behavior_hideable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <LinearLayout
+        android:id="@+id/gesture_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:paddingTop="@dimen/tfe_bottom_sheet_margin"
+        android:paddingBottom="@dimen/tfe_bottom_sheet_margin"
+        app:behavior_hideable="false">
 
-        <TextView
+        <ImageView
+            android:id="@+id/bottom_sheet_arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tfe_pe_tv_device" />
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/icn_chevron_up" />
 
-        <Spinner
-            android:id="@+id/spnDevice"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_detected_item0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_detected_item0_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_detected_item1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_detected_item1_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_detected_item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_detected_item2_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:background="@android:color/darker_gray" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,76 +100,145 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/input_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tfe_pe_tv_model" />
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:text="@string/tfe_tv_frame"
+            android:textColor="@android:color/black" />
 
-        <Spinner
-            android:id="@+id/spnModel"
+        <TextView
+            android:id="@+id/input_size_info"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
-    <!--  şimdilik gerek yok-->
     <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/vTrackerOption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:visibility="gone"
+            android:id="@+id/inference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tfe_pe_tv_tracking" />
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:text="@string/tfe_tv_inference_time"
+            android:textColor="@android:color/black" />
 
-        <Spinner
-            android:visibility="gone"
-            android:id="@+id/spnTracker"
+        <TextView
+            android:id="@+id/inference_info"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
-    <!--  şimdilik gerek yok-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/input_fps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:text="@string/tfe_tv_input_fps"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/input_fps_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+        android:background="@android:color/darker_gray" />
+
     <RelativeLayout
-        android:id="@+id/vClassificationOption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone">
+        android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+        android:orientation="horizontal">
 
         <TextView
-            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toStartOf="@id/swPoseClassification"
-            android:text="@string/tfe_pe_tv_pose_classification" />
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:layout_toStartOf="@+id/llChangeThreads"
+            android:text="@string/tfe_tv_threads"
+            android:textColor="@android:color/black" />
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:visibility="gone"
-            android:id="@+id/swPoseClassification"
+        <LinearLayout
+            android:id="@+id/llChangeThreads"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_rectangle"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_remove" />
+
+            <TextView
+                android:id="@+id/threads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tfe_bottom_sheet_margin"
+                android:layout_marginRight="@dimen/tfe_bottom_sheet_margin"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_add" />
+        </LinearLayout>
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tvClassificationValue1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tvClassificationValue2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:text="@string/tfe_tv_model"
+            android:textColor="@android:color/black" />
 
-    <TextView
-        android:id="@+id/tvClassificationValue3"
-        android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/spnSelectModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tfe_bottom_sheet_margin"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClearModelState"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
-</androidx.appcompat.widget.LinearLayoutCompat>
+        android:layout_gravity="end"
+        android:text="@string/tfe_btn_clear_model_state" />
+</LinearLayout>

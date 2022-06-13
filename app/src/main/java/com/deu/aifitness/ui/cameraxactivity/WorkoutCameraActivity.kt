@@ -1,23 +1,19 @@
 package com.deu.aifitness.ui.cameraxactivity
+
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.Matrix
+import com.deu.aifitness.R
+import android.hardware.camera2.CaptureRequest
 import android.os.Bundle
 import android.os.SystemClock
-import android.view.View
-import android.view.WindowManager
-import android.widget.*
-import androidx.core.content.ContextCompat
-import com.deu.aifitness.R
-import com.deu.aifitness.application.AIFitnessActivity
-import com.deu.aifitness.databinding.ActivityWorkoutCameraBinding
-import org.tensorflow.lite.examples.poseestimation.ml.*
-import android.graphics.Matrix
-import android.hardware.camera2.CaptureRequest
 import android.util.Log
 import android.util.Range
+import android.view.View
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
+import android.view.WindowManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.LinearLayout
@@ -27,22 +23,15 @@ import androidx.camera.camera2.interop.Camera2Interop
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import com.deu.aifitness.databinding.ActivityWorkoutCameraBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import org.tensorflow.lite.support.label.Category
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-import javax.inject.Inject
 
-class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutCameraBinding>(){
-    override fun getLayoutId(): Int = R.layout.activity_workout_camera
 
-    override fun getLayoutVM(): WorkoutCameraVM = cameraVM
-
-    override fun hasBackButton(): Boolean = true
-
-    @Inject
-    lateinit var cameraVM: WorkoutCameraVM
-
+class WorkoutCameraActivity : AppCompatActivity() {
     companion object {
         private const val REQUEST_CODE_PERMISSIONS = 10
         private const val TAG = "TFLite-VidClassify"
@@ -58,7 +47,9 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
     }
 
     private val lock = Any()
+    private lateinit var binding: ActivityWorkoutCameraBinding
     private lateinit var executor: ExecutorService
+    private lateinit var sheetBehavior: BottomSheetBehavior<LinearLayout>
 
     private var videoClassifier: VideoClassifier? = null
     private var numThread = 1
@@ -84,6 +75,60 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
         super.onCreate(savedInstanceState)
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
+        // Initialize the view layout.
+        binding = ActivityWorkoutCameraBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Initialize the bottom sheet.
+
+        sheetBehavior = BottomSheetBehavior.from(binding.bottomSheetLayout)
+        binding.bottomSheetLayout.viewTreeObserver.addOnGlobalLayoutListener(object :
+            OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                binding.bottomSheetLayout.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                val height = binding.bottomSheetLayout.measuredHeight
+                sheetBehavior.peekHeight = height
+            }
+        })
+        sheetBehavior.isHideable = false
+        sheetBehavior.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                when (newState) {
+                    BottomSheetBehavior.STATE_EXPANDED -> {
+                        binding.bottomSheetArrow.setImageResource(R.drawable.top_bottom_shadow)
+                    }
+                    BottomSheetBehavior.STATE_COLLAPSED, BottomSheetBehavior.STATE_SETTLING -> {
+                        binding.bottomSheetArrow.setImageResource(R.drawable.icn_chevron_up)
+                    }
+                    else -> {
+                        // do nothing.
+                    }
+                }
+            }
+
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+                // no func
+            }
+
+        })
+        binding.threads.text = numThread.toString()
+        binding.minus.setOnClickListener {
+            if (numThread <= 1) return@setOnClickListener
+            numThread--
+            binding.threads.text = numThread.toString()
+            createClassifier()
+        }
+        binding.plus.setOnClickListener {
+            if (numThread >= 4) return@setOnClickListener
+            numThread++
+            binding.threads.text = numThread.toString()
+            createClassifier()
+        }
+        binding.btnClearModelState.setOnClickListener {
+            videoClassifier?.reset()
+        }
+        initSpinner()
+
         // Start the camera.
         if (allPermissionsGranted()) {
             startCamera()
@@ -92,6 +137,24 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
                 this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
             )
         }
+    }
+
+    /**
+     * Initialize the spinner to let users change the TFLite model.
+     */
+    private fun initSpinner() {
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.tfe_pe_models_array,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            binding.spnSelectModel.adapter = adapter
+            binding.spnSelectModel.setSelection(modelPosition)
+        }
+        binding.spnSelectModel.onItemSelectedListener = changeModelListener
     }
 
     /**
@@ -113,13 +176,12 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
             val preview = Preview.Builder()
                 .build()
                 .also {
-                    it.setSurfaceProvider(binding?.preview?.surfaceProvider)
+                    it.setSurfaceProvider(binding.preview.surfaceProvider)
                 }
 
             try {
                 // Unbind use cases before rebinding.
                 cameraProvider.unbindAll()
-
                 // Create an ImageAnalysis to continuously capture still images using the camera,
                 // and feed them to the TFLite model. We set the capturing frame rate to a multiply
                 // of the TFLite model's desired FPS to keep the preview smooth, then drop
@@ -143,7 +205,7 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
                 val useCaseGroup = UseCaseGroup.Builder()
                     .addUseCase(preview)
                     .addUseCase(imageAnalysis)
-                    .setViewPort(binding?.preview?.viewPort!!)
+                    .setViewPort(binding.preview.viewPort!!)
                     .build()
 
                 // Bind use cases to camera.
@@ -270,6 +332,11 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
                 options
             )
 
+            // show input size of video classification
+            videoClassifier?.getInputSize()?.let {
+                binding.inputSizeInfo.text =
+                    getString(R.string.frame_size, it.width, it.height)
+            }
             Log.d(TAG, "Classifier created.")
         }
     }
@@ -279,14 +346,15 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
      */
     private fun showResults(labels: List<Category>, inferenceTime: Long, inputFps: Float) {
         runOnUiThread {
-            Log.i(TAG,labels[0].label)
-            Log.i(TAG,labels[2].label)
-            Log.i(TAG,labels[0].score.toString())
-            Log.i(TAG,labels[1].score.toString())
-            Log.i(TAG,labels[2].score.toString())
-            Log.i(TAG, inferenceTime.toString())
-            Log.i(TAG,String.format("%.1f", inputFps))
-
+            binding.tvDetectedItem0.text = labels[0].label
+            binding.tvDetectedItem1.text = labels[1].label
+            binding.tvDetectedItem2.text = labels[2].label
+            binding.tvDetectedItem0Value.text = labels[0].score.toString()
+            binding.tvDetectedItem1Value.text = labels[1].score.toString()
+            binding.tvDetectedItem2Value.text = labels[2].score.toString()
+            binding.inferenceInfo.text =
+                getString(R.string.inference_time, inferenceTime)
+            binding.inputFpsInfo.text = String.format("%.1f", inputFps)
         }
     }
 
@@ -295,6 +363,4 @@ class WorkoutCameraActivity : AIFitnessActivity<WorkoutCameraVM,ActivityWorkoutC
         videoClassifier?.close()
         executor.shutdown()
     }
-
-
 }
